@@ -1,0 +1,66 @@
+\documentclass[a4paper]{article}
+\usepackage{lib/dice}
+\usepackage{lib/skill}
+\usepackage{lib/characters}
+\usepackage{multicol}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=10mm,
+ right=10mm,
+ top=1mm,
+}
+
+
+
+\renewcommand{\familydefault}{\sfdefault}
+\swrpgbackground
+
+\newlength{\boxh}
+\settoheight{\boxh}{A}
+
+\title{My Very Own Adventure}
+\author{Darth Maul}
+
+\begin{document}
+
+\maketitle
+
+\section{First Section}
+    All human things are subject to decay. And when fate summons, Monarchs must obey.
+
+
+\begin{multicols}{2}
+
+\section{Dice}
+
+Roll \difficulty\difficulty and upgrade twice. Add \boost or \setback\setback.
+Difficult checks may require the use of \challenge, but you may compensate for
+this using your \ability\ability or even \proficiency. The \force die is
+probably the rarest.
+
+\section{Symbols}
+
+Eveyone likes \success and while \advantage is better, \triumph is the best
+thing you can roll. If you're unfortunate, you might roll \failure, \threat or
+even \despair! Force dice can roll \light, \dark and \darklight. These symbols
+are roughly exported using Inkscape and can be improved upon to make them look
+nicer.
+
+\talent{title}{this is a very damn long text}
+
+\vspace{1em}
+\Characteristics{1}{3}{2}{2}{2}{2}
+\vspace{1em}
+
+\vspace{1em}
+\Creature[presence=1, soak=3, wounds=6]{}
+\vspace{1em}
+
+\vspace{1em}
+\Race[presence=1]{}
+\vspace{1em}
+
+\end{multicols}
+\end{document}

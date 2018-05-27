@@ -1,0 +1,223 @@
+\usepackage{moresize}
+\usepackage{pgfkeys}
+\usepackage{enumitem}
+
+\definecolor{race}{RGB}{243, 108, 33}
+\definecolor{creature}{RGB}{243, 108, 33}
+\definecolor{characteristic}{RGB}{0, 102, 255}
+\definecolor{derived}{RGB}{204, 0, 0}
+
+%%%%
+% Skill Ranks
+%%%%
+\newcommand\skill[1][0]{
+    \noindent
+    \begin{tikzpicture}[baseline=-0.5ex]
+        \tikzstyle{every node}=[signal, signal to=east, draw=gray, minimum height=.9em, minimum width=2mm];
+        \node[fill=\ifnum#1>0 black\else white\fi] (1) {};
+        \node[fill=\ifnum#1>1 black\else white\fi,signal from=west, right=0pt of 1] (2) {};
+        \node[fill=\ifnum#1>2 black\else white\fi,signal from=west, right=0pt of 2] (3)  {};
+        \node[fill=\ifnum#1>3 black\else white\fi,signal from=west, right=0pt of 3] (4) {};
+        \node[fill=\ifnum#1>4 black\else white\fi,signal from=west, signal to=0, right=0pt of 4] (5) {};
+    \end{tikzpicture}
+}
+
+%%%%%
+% Characteristics
+%%%%%
+
+\newcommand\charPart[2]{
+    \noindent
+    \begin{tikzpicture}
+    \node[shape=rectangle, draw, fill=characteristic, text depth=-0.25em, text height=1.25em, inner sep=0pt,outer sep=0pt, minimum height=8mm, minimum width=12mm, thick, font=\ssmall \sffamily\color{white}](label){\uppercase{#1}};
+    \node[shape=circle, thick, draw, above=-1em of label, fill=white]{\large\bfseries #2};
+    \end{tikzpicture}
+}
+
+\newcommand\Characteristics[6]{
+    \noindent
+    \hfill
+    \charPart{BRAWN}{#1}~\charPart{AGILITY}{#2}~\charPart{INTELLECT}{#3}~\charPart{CUNNING}{#4}~\charPart{WILLPOWER}{#5}~\charPart{PRESENCE}{#6}%
+    \hfill
+    \null
+}
+
+%%%%%
+% Derived stats
+%%%%%
+
+\newcommand\Derived[2]{
+    \noindent
+    \begin{tikzpicture}
+    \node[rectangle, draw, thick, inner sep=0mm, minimum height=4mm] (named) {
+        \tikz\node[
+            label={[rectangle, draw, fill=derived, thick, inner sep=0mm, font=\sffamily\color{white}, minimum height=4mm, minimum width=17mm]above: \small \uppercase{#1}}] (inner) {\bfseries\Large #2};
+    };
+    \node[below=-0.2em of named, font=\tiny](labels) {\hspace{.5em}\uppercase{\phantom{melee\qquad ranged}}};
+    \end{tikzpicture}
+}
+
+\newcommand\DerivedSplit[5]{
+    \noindent
+    \begin{tikzpicture}\draw[ultra thick] (inner.north) -- (named.south);
+    \node[rectangle, draw, thick, inner sep=0mm, minimum height=4mm] (named) {
+        \tikz\node[label={[rectangle, draw, thick, fill=derived, inner sep=0mm, font=\sffamily\color{white}, minimum height=4mm, minimum width=22mm]above:\small \uppercase{#1}}] (inner) {\Large\bfseries #2\qquad#3};
+    };
+    \node[below=-0.2em of named, font=\tiny](labels) {\hspace{.5em}\uppercase{#4 \qquad #5}};
+    \end{tikzpicture}
+}
+
+
+
+
+%%%%%
+% Vehicle Stat Line
+%%%%%
+
+\newcommand\Vehicle[7]{\noindent\begin{minipage}[c]{.47\linewidth} % Sil, Speed, Handling, Def, Armor, HTT, STT
+\vspace*{-2em}
+\charPart{Silhouette}{#1}\quad\charPart{Max Speed}{#2}\quad\charPart{Handling}{#3}
+
+\end{minipage}\hfill\noindent\begin{minipage}[c]{.47\linewidth}
+
+\Derived{Defense}{#4} \Derived{Armor}{#5}
+
+\Derived{HT Threshold}{#6} \Derived{SS Threshold}{#7}
+\end{minipage}
+}
+
+
+%%%%%
+% Race
+%%%%%
+
+% Set up the keys.  Only the ones directly under /myparbox
+% can be accepted as options to the \myparbox macro.
+\pgfkeys{
+    /race/.is family, /race,
+    % Here are the options that a user can pass
+    default/.style = {
+        name = Unnamed,
+        brawn = 2,
+        agility = 2,
+        intellect = 2,
+        cunning = 2,
+        willpower = 2,
+        presence = 2,
+        wounds = 10 + Brawn,
+        strain = 10 + Willpower,
+        xp = 10 XP,
+        special = None,
+    },
+    name/.estore in = \raceName,
+    brawn/.estore in = \raceBrawn,
+    agility/.estore in = \raceAgility,
+    intellect/.estore in = \raceIntellect,
+    cunning/.estore in = \raceCunning,
+    willpower/.estore in = \raceWillpower,
+    presence/.estore in = \racePresence,
+    wounds/.estore in = \raceWounds,
+    strain/.estore in = \raceStrain,
+    xp/.estore in = \raceXP,
+    special/.estore in = \raceSpecial,
+}
+
+\newcommand\Race[2][]{
+    \pgfkeys{/race, default, #1}%
+
+    \noindent{\LARGE\sffamily\color{race} \raceName}\\
+
+    \noindent\begin{minipage}[c]{\linewidth}
+    \noindent
+    \hfill
+    \charPart{BRAWN}{\raceBrawn}~\charPart{AGILITY}{\raceAgility}~\charPart{INTELLECT}{\raceIntellect}~\charPart{CUNNING}{\raceCunning}~\charPart{WILLPOWER}{\raceWillpower}~\charPart{PRESENCE}{\racePresence}%
+    \hfill
+    \null
+    \end{minipage}
+    \vspace{.2em}
+
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{0pt}%
+        \item \textbf{Wound Threshold:} \raceWounds
+        \item \textbf{Strain Threshold:} \raceStrain
+        \item \textbf{Starting Experience:} \raceXP
+        \item \textbf{Special Ability:} \raceSpecial
+    \end{itemize}
+}
+
+%%%%%
+% Creature
+%%%%%
+
+% Set up the keys.  Only the ones directly under /myparbox
+% can be accepted as options to the \myparbox macro.
+\pgfkeys{
+    /creature/.is family, /creature,
+    % Here are the options that a user can pass
+    default/.style = {
+        name = Unnamed,
+        type = Minion,
+        brawn = 2,
+        agility = 2,
+        intellect = 2,
+        cunning = 2,
+        willpower = 2,
+        presence = 2,
+        soak = 3,
+        wounds = 6,
+        meleedef = 0,
+        rangeddef = 0,
+        skills = None,
+        talents = None,
+        abilities = None,
+        equipment = None,
+    },
+    name/.estore in = \creatureName,
+    type/.estore in = \creatureType,
+    brawn/.estore in = \creatureBrawn,
+    agility/.estore in = \creatureAgility,
+    intellect/.estore in = \creatureIntellect,
+    cunning/.estore in = \creatureCunning,
+    willpower/.estore in = \creatureWillpower,
+    presence/.estore in = \creaturePresence,
+    soak/.estore in = \creatureSoak,
+    wounds/.estore in = \creatureWounds,
+    meleedef/.estore in = \creatureMelee,
+    rangeddef/.estore in = \creatureRanged,
+    skills/.estore in = \creatureSkills,
+    talents/.estore in = \creatureTalents,
+    abilities/.estore in = \creatureAbilities,
+    equipment/.estore in = \creatureEquipment,
+}
+
+\newcommand\Creature[2][]{
+    \pgfkeys{/creature, default, #1}%
+
+    \noindent{\LARGE\sffamily\color{creature} \creatureName \hspace{.1em} (\creatureType) }\\
+
+    \noindent\begin{minipage}[c]{\linewidth}
+    \noindent
+    \hfill
+    \charPart{BRAWN}{\creatureBrawn}~\charPart{AGILITY}{\creatureAgility}~\charPart{INTELLECT}{\creatureIntellect}~\charPart{CUNNING}{\creatureCunning}~\charPart{WILLPOWER}{\creatureWillpower}~\charPart{PRESENCE}{\creaturePresence}%
+    \hfill
+    \hspace*{\fill}
+    \Derived{Soak}{\creatureSoak}
+    \Derived{Wound Threshold}{\creatureWounds}
+    \DerivedSplit{Defense}{\creatureMelee}{\creatureRanged}{Melee}{Ranged}
+    \hspace*{\fill}
+    \null
+    \end{minipage}
+
+    \noindent
+    \textbf{Skills:} \creatureSkills
+
+    \noindent
+    \textbf{Talents:} \creatureTalents
+
+    \noindent
+    \textbf{Abilities:} \creatureAbilities
+
+    \noindent
+    \textbf{Equipment:} \creatureEquipment
+}
+
