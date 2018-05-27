@@ -1,0 +1,30 @@
+\subsubsection{Farsight}
+
+\begin{tikzpicture}
+    \draw ([xshift=0em]   0,   5) node[anchor=north east](pr){\TalentBox[width=52em, height=10em, tier=5, name=\psionicFarsightTitle]{\psionicFarsightDescription}};
+    \draw ([xshift=-42em] 0,   0) node[anchor=north east](aa){\TalentBox[width=11em, height=11em, tier=5,  name=\farsightControlATitle]{\farsightControlADescription}}
+          ([xshift=-42em] 5,   0) node[anchor=north east](ab){\TalentBox[width=11em, height=11em, tier=5,  name=\farsightControlBTitle]{\farsightControlBDescription}}
+          ([xshift=-42em]10,   0) node[anchor=north east](ac){\TalentBox[width=11em, height=11em, tier=5,  name=\farsightControlCTitle]{\farsightControlCDescription}}
+          ([xshift=-42em]15,   0) node[anchor=north east](ad){\TalentBox[width=11em, height=11em, tier=5,  name=\farsightDurationTitle]{\farsightDurationDescription}}
+          ([xshift=-42em] 0,  -7) node[anchor=north east](ba){\TalentBox[width=11em, height=11em, tier=10, name=\farsightRangeTitle]{\farsightRangeDescription}}
+          ([xshift=-42em] 5,  -7) node[anchor=north east](bb){\TalentBox[width=11em, height=11em, tier=5,  name=\farsightDurationTitle]{\farsightDurationDescription}}
+          ([xshift=-42em]10,  -7) node[anchor=north east](bc){\TalentBox[width=11em, height=11em, tier=10, name=\farsightControlDTitle]{\farsightControlDDescription}}
+          ([xshift=-42em]15,  -7) node[anchor=north east](bd){\TalentBox[width=11em, height=11em, tier=10, name=\farsightRangeTitle]{\farsightRangeDescription}}
+          ([xshift=-42em] 0, -14) node[anchor=north east](ca){\TalentBox[width=11em, height=11em, tier=15, name=\farsightControlETitle]{\farsightControlEDescription}}
+          ([xshift=-42em] 5, -14) node[anchor=north east](cb){\TalentBox[width=11em, height=11em, tier=10, name=\farsightControlFTitle]{\farsightControlFDescription}}
+          ([xshift=-42em]15, -14) node[anchor=north east](cd){\TalentBox[width=25em, height=11em, tier=20, name=\farsightMasteryTitle]{\farsightMasteryDescription}}
+    ;
+    \draw [gray,-,>=stealth, line width=6pt] (aa) -- (aa |- pr.south); 
+    \draw [gray,-,>=stealth, line width=6pt] (ac) -- (ac |- pr.south); 
+    \draw [gray,-,>=stealth, inner sep=0, line width=6pt] (aa) to (ba);
+    \draw [gray,-,>=stealth, inner sep=0, line width=6pt] (ab) to (bb);
+    \draw [gray,-,>=stealth, inner sep=0, line width=6pt] (ac) to (bc);
+    \draw [gray,-,>=stealth, inner sep=0, line width=6pt] (ab) to (ac);
+    \draw [gray,-,>=stealth, inner sep=0, line width=6pt] (ac) to (ad);
+    \draw [gray,-,>=stealth, inner sep=0, line width=6pt] (bb) to (cb);
+    \draw [gray,-,>=stealth, line width=6pt] (bc) -- (bc |- cd.north); 
+    \draw [gray,-,>=stealth, inner sep=0, line width=6pt] (bb) to (bc);
+    \draw [gray,-,>=stealth, inner sep=0, line width=6pt] (bc) to (bd);
+    \draw [gray,-,>=stealth, inner sep=0, line width=6pt] (ca) to (cb);
+    \draw [gray,-,>=stealth, inner sep=0, line width=6pt] (cb) to (cd);
+\end{tikzpicture}

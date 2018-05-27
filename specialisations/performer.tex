@@ -1,0 +1,65 @@
+\newcommand{\performerDescription}{
+\section{Performer}
+\epigraph{\textit{
+    "Some people think a club can solve any problem. Unless
+    you're a half-giant, there are more sophisticated ways of
+    settling a disagreement." } }{ Cabal, half‐elven bard }
+
+    Performers are master the art of entertainment, using their
+    performances to amuse nobles and templars and gain wealth.
+    Most performers can dazzle a crowd, or incite them to riot.
+    Performers tend to learn to play a variety of instruments,
+    or recite poetry or old legends by campfire. They can be
+    acrobats, performing dazzling displays of physical prowess.\\
+    \\
+    See \nref{tlttree:performer} for more information.
+}
+
+\newcommand{\performerTree}{
+    \newpage
+    \subsection{Performer Talent Tree}
+    \label{tlttree:performer}
+
+    \textbf{Class Skills:} Charm, Coordination, Deception, Streetwise
+    \newline
+
+    \begin{tikzpicture}
+        \draw ( 0,  0) node[anchor=north east](aa){\TalentBox[tier=5,  width=14em, active=\smoothTalkerActive,                 ranked=\smoothTalkerRanked,                 name=\smoothTalkerTitle]                 {\smoothTalkerDescription}}
+              ( 6,  0) node[anchor=north east](ab){\TalentBox[tier=5,  width=14em, active=\killWithKindnessActive,             ranked=\killWithKindnessRanked,             name=\killWithKindnessTitle]             {\killWithKindnessDescription}}
+              (12,  0) node[anchor=north east](ac){\TalentBox[tier=5,  width=14em, active=\distractingBehaviourActive,         ranked=\distractingBehaviourRanked,         name=\distractingBehaviourTitle]         {\distractingBehaviourDescription}}
+              ( 0, -5) node[anchor=north east](ba){\TalentBox[tier=10, width=14em, active=\distractingBehaviourActive,         ranked=\distractingBehaviourRanked,         name=\distractingBehaviourTitle]         {\distractingBehaviourDescription}}
+              ( 6, -5) node[anchor=north east](bb){\TalentBox[tier=10, width=14em, active=\congenialActive,                    ranked=\congenialRanked,                    name=\congenialTitle]                    {\congenialDescription}}
+              (12, -5) node[anchor=north east](bc){\TalentBox[tier=10, width=14em, active=\dodgeActive,                        ranked=\dodgeRanked,                        name=\dodgeTitle]                        {\dodgeDescription}}
+              ( 0,-10) node[anchor=north east](ca){\TalentBox[tier=15, width=14em, active=\distractingBehaviourActive,         ranked=\distractingBehaviourRanked,         name=\distractingBehaviourTitle]         {\distractingBehaviourDescription}}
+              ( 6,-10) node[anchor=north east](cb){\TalentBox[tier=15, width=14em, active=\intensePresenceActive,              ranked=\intensePresenceRanked,              name=\intensePresenceTitle]              {\intensePresenceDescription}}
+              (12,-10) node[anchor=north east](cc){\TalentBox[tier=15, width=14em, active=\naturalAthleteActive,               ranked=\naturalAthleteRanked,               name=\naturalAthleteTitle]               {\naturalAthleteDescription}}
+              ( 0,-15) node[anchor=north east](da){\TalentBox[tier=20, width=14em, active=\smoothTalkerActive,                 ranked=\smoothTalkerRanked,                 name=\smoothTalkerTitle]                 {\smoothTalkerDescription}}
+              ( 6,-15) node[anchor=north east](db){\TalentBox[tier=20, width=14em, active=\improvedDistractingBehaviourActive, ranked=\improvedDistractingBehaviourRanked, name=\improvedDistractingBehaviourTitle] {\improvedDistractingBehaviourDescription}}
+              (12,-15) node[anchor=north east](dc){\TalentBox[tier=20, width=14em, active=\deceptiveTauntActive,               ranked=\deceptiveTauntRanked,               name=\deceptiveTauntTitle]               {\deceptiveTauntDescription}}
+              ( 0,-20) node[anchor=north east](ea){\TalentBox[tier=25, width=14em, active=\biggestFanActive,                   ranked=\biggestFanRanked,                   name=\biggestFanTitle]                   {\biggestFanDescription}}
+              ( 6,-20) node[anchor=north east](eb){\TalentBox[tier=25, width=14em, active=\dedicationActive,                   ranked=\dedicationRanked,                   name=\dedicationTitle]                   {\dedicationDescription}}
+              (12,-20) node[anchor=north east](ec){\TalentBox[tier=25, width=14em, active=\coordinationDodgeActive,            ranked=\coordinationDodgeRanked,            name=\coordinationDodgeTitle]            {\coordinationDodgeDescription}}
+        ;
+        \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
+        \draw [gray,-,>=stealth, line width=6pt] (ac) to (bc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
+        \draw [gray,-,>=stealth, line width=6pt] (bb) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (bc) to (cc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
+        \draw [gray,-,>=stealth, line width=6pt] (cc) to (dc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (da) to (ea);
+        \draw [gray,-,>=stealth, line width=6pt] (db) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (dc) to (ec);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ba) to (bb);
+        \draw [gray,-,>=stealth, line width=6pt] (bc) to (bb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (cb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (da) to (db);
+        \draw [gray,-,>=stealth, line width=6pt] (dc) to (db);
+    \end{tikzpicture}
+}

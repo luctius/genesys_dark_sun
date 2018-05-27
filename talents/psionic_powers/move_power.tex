@@ -1,0 +1,39 @@
+\newcommand\psionicMoveTitle{ Move (Power)}
+\newcommand\psionicMoveDescription{
+    The Psionic can restrain one target, preventing it from acting.\\
+    The character may spend \darklight to immobilize a target within short range until the end of the character's next turn.
+    If the character used any \dark to generate \darklight, the target also suffers 1 wound per \darklight spent on the
+    check (ignoring soak).
+}
+\newcommand\psionicMoveTalent{ \Talent[name=\psionicMoveTitle, active=false, ranked=true]{\psionicMoveDescription} }
+
+\newcommand\moveDurationTitle{ Move Duration}
+\newcommand\moveDurationDescription{ Commit \force\force\force to sustain the ongoing effects of the power on each affected target. }
+\newcommand\moveDurationTalent{ \Talent[name=\moveDurationTitle, active=false, ranked=true]{\moveDurationDescription} }
+
+\newcommand\moveControlTitle{ Move Control}
+\newcommand\moveControlDescription{ Spend \darklight. While affected by Move, a target suffers strain equal to the user's Willpower whenever the target takes an action.  }
+\newcommand\moveControlTalent{ \Talent[name=\moveControlTitle, active=false, ranked=true]{\moveControlDescription} }
+
+\newcommand\moveMagnitudeTitle{ Move Magnitude}
+\newcommand\moveMagnitudeDescription{ Spend \darklight\darklight to affect 1 additional target within range per rank of Magnitude purchased.  }
+\newcommand\moveMagnitudeTalent{ \Talent[name=\moveMagnitudeTitle, active=false, ranked=true]{\moveMagnitudeDescription} }
+
+\newcommand\moveRangeTitle{ Move Range}
+\newcommand\moveRangeDescription{ Spend \darklight to increase power’s range by a number of range bands equal to Range upgrades purchased.  }
+\newcommand\moveRangeTalent{ \Talent[name=\moveRangeTitle, active=false, ranked=true]{\moveRangeDescription} }
+
+\newcommand\moveStrengthTitle{ Move Strength}
+\newcommand\moveStrengthDescription{ Spend \darklight to disorient the target for a number of rounds equal to Strength upgrades purchased.  }
+\newcommand\moveStrengthTalent{ \Talent[name=\moveStrengthTitle, active=false, ranked=true]{\moveStrengthDescription} }
+
+\newcommand\moveMasteryTitle{ Move Mastery}
+\newcommand\moveMasteryDescription{ 
+    When the Psionic is making a Move power check, if the check was not already opposed, the character may
+    roll an opposed Discipline vs. Discipline check against one target of the power. If no \dark were used
+    to generate \darklight and the user succeeds on the check, he may immediately stagger the target until
+    the end of his next turn. If any \dark were used to generate \darklight and the check succeeds, the target
+    suffers a Critical Injury, adding +10 to the roll per \darklight spent on the check.
+}
+\newcommand\moveMasteryTalent{ \Talent[name=\moveMasteryTitle, active=false, ranked=true]{\moveMasteryDescription} }
+

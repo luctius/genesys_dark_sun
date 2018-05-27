@@ -1,0 +1,95 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{lib/ds}[2018/05/28 Dark Sun Genesys RPG]
+
+\usepackage{titlesec}
+\usepackage[table]{xcolor}
+\usepackage{tabu}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,arrows,decorations.markings}
+\usepackage[bookmarksopen=false,bookmarks=true,bookmarksdepth=4]{hyperref}
+\usepackage{bookmark}
+\usepackage{multicol}
+\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{3em}
+\usepackage{geometry}
+\geometry{ a4paper, total={170mm,257mm}, left=10mm, right=10mm, top=10mm, bottom=20mm, }
+%\usepackage[pages=some]{background}
+\usepackage{eso-pic,graphicx,transparent}
+\usepackage{pgfkeys}
+\usepackage{enumitem}
+\usepackage{placeins}
+%\usepackage{luacode}
+
+\definecolor{race}{RGB}{243, 108, 33}
+\definecolor{creature}{RGB}{243, 108, 33}
+\definecolor{characteristic}{RGB}{204, 68, 0}
+\definecolor{derived}{RGB}{204, 0, 0}
+
+\definecolor{difficulty}{RGB}{82,34,127}
+\definecolor{boost}{RGB}{114,205,220}
+\definecolor{ability}{RGB}{64,174,74}
+\definecolor{proficiency}{RGB}{255,242,0}
+\definecolor{challenge}{RGB}{210,35,42}
+
+\definecolor{title}{RGB}{153, 51, 0}
+\definecolor{talent}{RGB}{204, 68, 0}
+\definecolor{concept}{RGB}{204, 68, 0}
+\definecolor{header}{RGB}{204, 102, 0}
+\definecolor{row}{RGB}{255, 255, 153}
+
+\definecolor{activetalent}{RGB}{204, 0, 0}
+\definecolor{passivetalent}{RGB}{204, 102, 0}
+
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{4}
+\setcounter{dbltopnumber}{3}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.7}
+
+\setcounter{secnumdepth}{4}
+
+\DeclareOption{background}{
+}
+\newcommand{\background}{
+    \AddToShipoutPictureBG{%
+        {\includegraphics[width=\paperwidth,height=\paperheight]{images/bg} }%
+    %        \transparent{0.1}\textcolor{white}{\rule{\paperwidth}{\paperheight}}
+    }
+}%
+
+\newcommand{\cref}[1]{
+    \autoref{#1}: ~\nameref{#1}
+}
+
+\newcommand{\tref}[1]{
+    Table:~\ref{#1}~\nameref{#1} on page ~\pageref{#1}
+}
+
+\newcommand{\nref}[1]{
+    \nameref{#1} on page ~\pageref{#1}
+}
+
+\newcommand{\epigraph}[2]{
+    \begin{quotation}
+        {\itshape#1}
+    \end{quotation}
+    \begin{flushright} -- #2
+    \end{flushright}
+    \vspace{3em}
+}
+
+\ProcessOptions\relax
+
+\newcommand{\constRacesShowImage}{true}
+\newcommand{\constUseSWGRPGDice}{true}
+
+\usepackage{lib/dice}
+\usepackage{lib/talent}
+\usepackage{lib/characters}
+\usepackage{lib/sections}
+\usepackage{lib/tables}
+
+\endinput

@@ -1,0 +1,28 @@
+\subsubsection{Enhance}
+
+\begin{tikzpicture}
+    \draw ([xshift=-2em]  0,     6) node[anchor=north east](pr){\TalentBox[width=52em, tier=10, name=\psionicEnhanceTitle]{\psionicEnhanceDescription}};
+    \draw ([xshift=-43em] 0,     0) node[anchor=north east](aa){\TalentBox[width=12em, tier=5,  name=\enhanceControlATitle]{\enhanceControlADescription}}
+          ([xshift=-43em] 5,     0) node[anchor=north east](ab){\TalentBox[width=12em, tier=5,  name=\enhanceControlBTitle]{\enhanceControlBDescription}}
+          ([xshift=-43em]14.5,   0) node[anchor=north east](ad){\TalentBox[width=25em, tier=10, name=\enhanceMagnitudeATitle]{\enhanceMagnitudeADescription}}
+          ([xshift=-43em] 0,    -5) node[anchor=north east](ba){\TalentBox[width=12em, tier=5,  name=\enhanceControlCTitle]{\enhanceControlCDescription}}
+          ([xshift=-43em] 5,    -5) node[anchor=north east](bb){\TalentBox[width=12em, tier=5,  name=\enhanceStrengthATitle]{\enhanceStrengthADescription}}
+          ([xshift=-43em]14.5,  -5) node[anchor=north east](bd){\TalentBox[width=25em, tier=10, name=\enhanceMagnitudeBTitle]{\enhanceMagnitudeBDescription}}
+          ([xshift=-43em] 0,   -10) node[anchor=north east](ca){\TalentBox[width=12em, tier=5,  name=\enhanceControlDTitle]{\enhanceControlDDescription}}
+          ([xshift=-43em]10,   -10) node[anchor=north east](cc){\TalentBox[width=25em, tier=10, name=\enhanceStrengthBTitle]{\enhanceStrengthBDescription}}
+          ([xshift=-43em]14.5, -10) node[anchor=north east](cd){\TalentBox[width=12em, tier=10, name=\enhanceRangeTitle]{\enhanceRangeDescription}}
+          ([xshift=-43em] 5,   -15) node[anchor=north east](db){\TalentBox[width=25em, tier=10, name=\enhanceControlETitle]{\enhanceControlEDescription}}
+          ([xshift=-43em]14.5, -15) node[anchor=north east](dd){\TalentBox[width=25em, tier=10, name=\enhanceMagnitudeCTitle]{\enhanceMagnitudeCDescription}}
+    ;
+    \draw [gray,-,>=stealth, line width=6pt] (aa) -- (aa |- pr.south); 
+    \draw [gray,-,>=stealth, line width=6pt] (ab) -- (ab |- pr.south); 
+    \draw [gray,-,>=stealth, line width=6pt] (ad) -- (ad |- pr.south); 
+    \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
+    \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
+    \draw [gray,-,>=stealth, line width=6pt] (ad) to (bd);
+    \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
+    \draw [gray,-,>=stealth, line width=6pt] (bb) -- (bb |- cc.north); 
+    \draw [gray,-,>=stealth, line width=6pt] (cd) -- (cd |- bd.south); 
+    \draw [gray,-,>=stealth, line width=6pt] (ca) -- (ca |- db.north); 
+    \draw [gray,-,>=stealth, line width=6pt] (cd) -- (cd |- dd.north); 
+\end{tikzpicture}

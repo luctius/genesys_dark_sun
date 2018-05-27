@@ -1,0 +1,34 @@
+\subsubsection{Bind}
+
+\begin{tikzpicture}
+    \draw ([xshift=0em]   0,   6) node[anchor=north east](pr){\TalentBox[width=52em, tier=15, name=\psionicBindTitle]{\psionicBindDescription}};
+    \draw ([xshift=-43em] 0,   0) node[anchor=north east](aa){\TalentBox[width=11em, tier=10, name=\bindRangeTitle]{\bindRangeDescription}}
+          ([xshift=-43em] 5,   0) node[anchor=north east](ab){\TalentBox[width=11em, tier=15, name=\bindMagnitudeTitle]{\bindMagnitudeDescription}}
+          ([xshift=-43em]10,   0) node[anchor=north east](ac){\TalentBox[width=11em, tier=10, name=\bindStrengthTitle]{\bindStrengthDescription}}
+          ([xshift=-43em]15,   0) node[anchor=north east](ad){\TalentBox[width=11em, tier=10, name=\bindControlTitle]{\bindControlDescription}}
+          ([xshift=-43em] 0,  -5) node[anchor=north east](ba){\TalentBox[width=11em, tier=15, name=\bindRangeTitle]{\bindRangeDescription}}
+          ([xshift=-43em] 5,  -5) node[anchor=north east](bb){\TalentBox[width=11em, tier=20, name=\bindMagnitudeTitle]{\bindMagnitudeDescription}}
+          ([xshift=-43em]10,  -5) node[anchor=north east](bc){\TalentBox[width=11em, tier=10, name=\bindStrengthTitle]{\bindStrengthDescription}}
+          ([xshift=-43em]15,  -5) node[anchor=north east](bd){\TalentBox[width=11em, tier=15, name=\bindDurationTitle]{\bindDurationDescription}}
+          ([xshift=-43em] 0, -10) node[anchor=north east](ca){\TalentBox[width=11em, tier=10, name=\bindControlTitle]{\bindControlDescription}}
+          ([xshift=-43em] 5, -10) node[anchor=north east](cb){\TalentBox[width=11em, tier=25, name=\bindMagnitudeTitle]{\bindStrengthDescription}}
+          ([xshift=-43em]15, -10) node[anchor=north east](cd){\TalentBox[width=25em, tier=15, name=\bindStrengthTitle]{\bindStrengthDescription}}
+          ([xshift=-43em] 0, -15) node[anchor=north east](da){\TalentBox[width=11em, tier=20, name=\bindRangeTitle]{\bindRangeDescription}}
+          ([xshift=-43em]15, -15) node[anchor=north east](db){\TalentBox[width=38em, tier=25, name=\bindStrengthTitle]{\bindStrengthDescription}}
+    ;
+    \draw [gray,-,>=stealth, line width=6pt] (aa) -- (aa |- pr.south); 
+    \draw [gray,-,>=stealth, line width=6pt] (ab) -- (ab |- pr.south); 
+    \draw [gray,-,>=stealth, line width=6pt] (ac) -- (ac |- pr.south); 
+    \draw [gray,-,>=stealth, line width=6pt] (ad) -- (ad |- pr.south); 
+    \draw [gray,-,>=stealth, line width=6pt] (aa) edge (ba);
+    \draw [gray,-,>=stealth, line width=6pt] (ab) edge (bb);
+    \draw [gray,-,>=stealth, line width=6pt] (ac) edge (bc);
+    \draw [gray,-,>=stealth, line width=6pt] (bc) edge (bd);
+    \draw [gray,-,>=stealth, line width=6pt] (ba) edge (ca);
+    \draw [gray,-,>=stealth, line width=6pt] (bb) edge (cb);
+    \draw [gray,-,>=stealth, line width=6pt] (bd) -- (bd |- cd.north); 
+    \draw [gray,-,>=stealth, line width=6pt] (ca) edge (da);
+    \draw [gray,-,>=stealth, line width=6pt] (da) edge (db);
+    \draw [gray,-,>=stealth, line width=6pt] (cb) -- (cb |- db.north); 
+    \draw [gray,-,>=stealth, line width=6pt] (cd) -- (cd |- db.north); 
+\end{tikzpicture}

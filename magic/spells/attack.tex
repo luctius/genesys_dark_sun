@@ -1,0 +1,45 @@
+\begin{table*}[!htb]
+\centering
+\small\caption{Attack Additional effects}
+\begin{GenesysTable}{l X}
+Cost                    & Effect\\
+\difficulty             & \textbf{Blast:} The attack gains the \nameref{iqty:blast} quality with a rating equal to your character's ranks in Education.\\
+\difficulty             & \textbf{Close Combat:} May select a target engaged with your character.\\
+\difficulty             & \textbf{Deadly:} The attack gains a Critical rating of 2. The attack also gains the \nameref{iqty:vicious} quality with a rating
+                            equal to the character's in knowledge\\
+\difficulty             & \textbf{Fire:} The attack gains the \nameref{iqty:burn} quality with a rating equal to your character's ranks in Education.\\
+\difficulty             & \textbf{Impact:} The attack gains the \nameref{iqty:knockdown} quality. The attack also gains the Disorient quality with a
+                            rating equal to the character's ranks in Education.\\
+\difficulty             & \textbf{Lightning:} The attack gains the \nameref{iqty:stun} quality with a rating equal to the character's ranks in Education.
+                            The attack also gains the \nameref{iqty:autofire} quality. (You must increase the difficulty by one to use the
+                            Auto-fire quality as normal.)\\
+\difficulty             & \textbf{Manipulative:} If the attack hits, you may spend \advantage to move the target up to one
+                            range band in any direction.\\
+\difficulty             & \textbf{Range:} Increase the range of the spell by one range band. This may be added multiple times, increasing
+                            the range by one range band each time.\\
+\difficulty             & \textbf{Quick Sand:} The attack gains the \nameref{iqty:ensnare} quality with a rating equal to the character's ranks in Education.\\
+\difficulty\difficulty  & \textbf{Destructive:} The attack gains the \nameref{iqty:sunder} quality. The attack also gains the Pierce quality with a
+                            rating equal to the character's ranks in Education.\\
+\difficulty\difficulty  & \textbf{Empowered:} The attack deals damage equal to twice the characteristic linked to the skill (instead
+                            of dealing damage equal to the characteristic). If the attack has the \nameref{iqty:blast} Blast quality, it affects
+                            all characters within short range, instead of engaged.\\
+\difficulty\difficulty  & \textbf{Poisonous:} If the attack deals damage, the target must immediately make a
+                            Hard(\difficulty\difficulty\difficulty) Resilience check or suffer wounds equal to the character's
+                            ranks in Education, and strain equal to the character's ranks in Education. This counts as a poison.\\
+\end{GenesysTable}
+\label{table:magic_attack}
+\end{table*}
+
+%TODO: replace Education?
+\subsubsection{Attack}
+\textbf{Skill:} Arcane\\
+\textbf{Concentration:} No\\
+Magic attacks are cast spell checks but additionally follow the normal rules for
+performing combat checks. When making a magic attack the character must select
+one target at short (but not enganged) range. The default difficulty is Easy
+(\difficulty). The attack deals damage equal to the casters Intelect plus one
+per uncancelled \success. The attack has no critical rating, so you may only
+inflict a Critical Injury with a \triumph.
+Before making a magical attack, you may choose any number of additional effects
+from~\tref{table:magic_attack}.
+

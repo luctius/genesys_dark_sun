@@ -1,0 +1,44 @@
+\subsubsection{Move}
+
+\begin{tikzpicture}
+    \draw ([xshift=0em]   0,   6) node[anchor=north east](pr){\TalentBox[width=52em, tier=10, name=\psionicMoveTitle]{\psionicMoveDescription}};
+    \draw ([xshift=-43em] 0,   0) node[anchor=north east](aa){\TalentBox[width=11em, tier=5,  name=\moveMagnitudeTitle]{\moveMagnitudeDescription}}
+          ([xshift=-43em] 5,   0) node[anchor=north east](ab){\TalentBox[width=11em, tier=10, name=\moveStrengthTitle]{\moveStrengthDescription}}
+          ([xshift=-43em]10,   0) node[anchor=north east](ac){\TalentBox[width=11em, tier=5,  name=\moveRangeTitle]{\moveRangeDescription}}
+          ([xshift=-43em]15,   0) node[anchor=north east](ad){\TalentBox[width=11em, tier=5,  name=\moveRangeTitle]{\moveRangeDescription}}
+          ([xshift=-43em] 0,  -5) node[anchor=north east](ba){\TalentBox[width=11em, tier=5,  name=\moveMagnitudeTitle]{\moveMagnitudeDescription}}
+          ([xshift=-43em] 5,  -5) node[anchor=north east](bb){\TalentBox[width=11em, tier=10, name=\moveStrengthTitle]{\moveStrengthDescription}}
+          ([xshift=-43em]15,  -5) node[anchor=north east](bd){\TalentBox[width=25em, tier=5,  name=\moveControlTitle]{\moveControlDescription}}
+          ([xshift=-43em] 0, -10) node[anchor=north east](ca){\TalentBox[width=11em, tier=10, name=\moveMagnitudeTitle]{\moveMagnitudeDescription}}
+          ([xshift=-43em] 5, -10) node[anchor=north east](cb){\TalentBox[width=11em, tier=15, name=\moveStrengthTitle]{\moveStrengthDescription}}
+          ([xshift=-43em]10, -10) node[anchor=north east](cc){\TalentBox[width=11em, tier=5,  name=\moveControlTitle]{\moveStrengthDescription}}
+          ([xshift=-43em]15, -10) node[anchor=north east](cd){\TalentBox[width=11em, tier=15, name=\moveRangeTitle]{\moveStrengthDescription}}
+          ([xshift=-43em] 0, -15) node[anchor=north east](da){\TalentBox[width=11em, tier=10, name=\moveMagnitudeTitle]{\moveMagnitudeDescription}}
+          ([xshift=-43em] 5, -15) node[anchor=north east](db){\TalentBox[width=11em, tier=20, name=\moveStrengthTitle]{\moveStrengthDescription}}
+          ([xshift=-43em]15, -15) node[anchor=north east](dd){\TalentBox[width=25em, tier=15, name=\moveControlTitle]{\moveControlDescription}}
+    ;
+    %\draw [gray,-,>=stealth, line width=6pt] (pr) to (aa);
+    \draw [gray,-,>=stealth, line width=6pt] (aa) -- (aa |- pr.south); 
+    %\draw [gray,-,>=stealth, line width=6pt] (pr) to (ab);
+    \draw [gray,-,>=stealth, line width=6pt] (ab) -- (ab |- pr.south); 
+    %\draw [gray,-,>=stealth, line width=6pt] (pr) to (ac);
+    \draw [gray,-,>=stealth, line width=6pt] (ac) -- (ac |- pr.south); 
+    %\draw [gray,-,>=stealth, line width=6pt] (pr) to (ad);
+    \draw [gray,-,>=stealth, line width=6pt] (ad) -- (ad |- pr.south); 
+    \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
+    \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
+    %\draw [gray,-,>=stealth, line width=6pt] (ac) to (bd);
+    \draw [gray,-,>=stealth, line width=6pt] (ac) -- (ac |- bd.north); 
+    \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
+    \draw [gray,-,>=stealth, line width=6pt] (bb) to (cb);
+    %\draw [gray,-,>=stealth, line width=6pt] (bd) to (cc);
+    \draw [gray,-,>=stealth, line width=6pt] (cc) -- (cc |- bd.south); 
+    %\draw [gray,-,>=stealth, line width=6pt] (bd) to (cd);
+    \draw [gray,-,>=stealth, line width=6pt] (cd) -- (cd |- bd.south); 
+    \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
+    \draw [gray,-,>=stealth, line width=6pt] (cb) to (db);
+    %\draw [gray,-,>=stealth, line width=6pt] (cc) to (dd);
+    \draw [gray,-,>=stealth, line width=6pt] (cc) -- (cc |- dd.north); 
+    %\draw [gray,-,>=stealth, line width=6pt] (cd) to (dd);
+    \draw [gray,-,>=stealth, line width=6pt] (cd) -- (cd |- dd.north); 
+\end{tikzpicture}

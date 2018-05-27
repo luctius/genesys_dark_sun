@@ -1,0 +1,46 @@
+\documentclass[a4paper, openany, twosides, 8pt]{report}
+\usepackage[background]{lib/ds}
+\usepackage{incgraph}
+\usepackage[11pt]{moresize}
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+
+%\usepackage{fancyhdr}
+%\pagestyle{plain}
+%\setlength\headheight{26pt}
+%
+%\setlength\headwidth{\paperwidth}
+%\renewcommand{\headrulewidth}{0pt}
+%\fancyhfoffset[L]{10mm}\fancyhfoffset[R]{10mm}
+%\chead{\includegraphics[width=\headwidth, height=10em]{images/banner.png}}
+%\renewcommand{\headrulewidth}{1pt}
+
+\renewcommand{\constUseSWGRPGDice}{true}
+
+\title{Dark Sun Conversion for GenesysRPG}
+\date{2018-06-05}
+\background
+
+\begin{document}
+\currentpdfbookmark{Title Page}{titlepage}
+\incgraph[documentpaper][width=\paperwidth,height=\paperheight]{images/front.jpg}
+
+\tableofcontents
+
+\input{talents/talents}
+
+\input{chapters/credits}
+\input{chapters/intro}
+\input{chapters/creation}
+\input{chapters/races}
+\input{chapters/specialisations}
+\input{chapters/skills}
+\input{chapters/talents}
+\input{chapters/equipment}
+%\input{chapters/combat}
+\input{chapters/magic}
+\input{chapters/adversaries}
+%\input{chapters/environment}
+
+%\input{chapters/test}
+
+\end{document}

@@ -1,0 +1,63 @@
+\newcommand{\thiefDescription}{
+\section{Thief}
+    \epigraph{\textit{"Marek, always helpful, said that the UnderTyr
+    catacombs are supposed to be haunted. Think I'll go make
+    some inquiries about where a 'heretic' like me can get some
+    holy earth. Always go prepared...."}}{ Janos, human rogue }
+
+    The thief pilfers what she can, knows her way around the labyrinth of the warrens of the city and knows the best fences and suppliers of illegal goods.
+    Skullduggery and Stealth are her livelihood, while Streetwise and her knowledge of the Underworld ensures she knows her way around town.\\
+    \\
+    See \nref{tlttree:thief} for more information.
+}
+
+\newcommand{\thiefTree}{
+    \newpage
+    \subsection{Thief Talent Tree}
+    \label{tlttree:thief}
+
+    \textbf{Class Skills:} Skullduggery, Stealth, Streetwise, Knowledge (Underworld)
+    \newline
+
+    \begin{tikzpicture}
+        \draw ( 0,  0) node[anchor=north east](aa){\TalentBox[tier=5,  width=14em, active=\streetWiseActive,          ranked=\streetWiseRanked,          name=\streetWiseTitle]          {\streetWiseDescription}}
+              ( 6,  0) node[anchor=north east](ab){\TalentBox[tier=5,  width=14em, active=\disableDeviceActive,       ranked=\disableDeviceRanked,       name=\disableDeviceTitle]       {\disableDeviceDescription}}
+              (12,  0) node[anchor=north east](ac){\TalentBox[tier=5,  width=14em, active=\indistinguishableActive,   ranked=\indistinguishableRanked,   name=\indistinguishableTitle]   {\indistinguishableDescription}}
+              ( 0, -5) node[anchor=north east](ba){\TalentBox[tier=10, width=14em, active=\elvenMarketContactsActive, ranked=\elvenMarketContactsRanked, name=\elvenMarketContactsTitle] {\elvenMarketContactsDescription}}
+              ( 6, -5) node[anchor=north east](bb){\TalentBox[tier=10, width=14em, active=\gritActive,                ranked=\gritRanked,                name=\gritTitle]                {\gritDescription}}
+              (12, -5) node[anchor=north east](bc){\TalentBox[tier=10, width=14em, active=\shortcutActive,            ranked=\shortcutRanked,            name=\shortcutTitle]            {\shortcutDescription}}
+              ( 0,-10) node[anchor=north east](ca){\TalentBox[tier=15, width=14em, active=\stalkerActive,             ranked=\stalkerRanked,             name=\stalkerTitle]             {\stalkerDescription}}
+              ( 6,-10) node[anchor=north east](cb){\TalentBox[tier=15, width=14em, active=\elvenMarketContactsActive, ranked=\elvenMarketContactsRanked, name=\elvenMarketContactsTitle] {\elvenMarketContactsDescription}}
+              (12,-10) node[anchor=north east](cc){\TalentBox[tier=15, width=14em, active=\rapidReactionActive,       ranked=\rapidReactionRanked,       name=\rapidReactionTitle]       {\rapidReactionDescription}}
+              ( 0,-15) node[anchor=north east](da){\TalentBox[tier=20, width=14em, active=\disableDeviceActive,       ranked=\disableDeviceRanked,       name=\disableDeviceTitle]       {\disableDeviceDescription}}
+              ( 6,-15) node[anchor=north east](db){\TalentBox[tier=20, width=14em, active=\naturalRogueActive,        ranked=\naturalRogueRanked,        name=\naturalRogueTitle]        {\naturalRogueDescription}}
+              (12,-15) node[anchor=north east](dc){\TalentBox[tier=20, width=14em, active=\streetWiseActive,          ranked=\streetWiseRanked,          name=\streetWiseTitle]          {\streetWiseDescription}}
+              ( 0,-20) node[anchor=north east](ea){\TalentBox[tier=25, width=14em, active=\masterOfShadowsActive,     ranked=\masterOfShadowsRanked,     name=\masterOfShadowsTitle]     {\masterOfShadowsDescription}}
+              ( 6,-20) node[anchor=north east](eb){\TalentBox[tier=25, width=14em, active=\dedicationActive,          ranked=\dedicationRanked,          name=\dedicationTitle]          {\dedicationDescription}}
+              (12,-20) node[anchor=north east](ec){\TalentBox[tier=25, width=14em, active=\indistinguishableActive,   ranked=\indistinguishableRanked,   name=\indistinguishableTitle]   {\indistinguishableDescription}}
+        ;
+        \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
+        \draw [gray,-,>=stealth, line width=6pt] (ac) to (bc);
+        \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
+        \draw [gray,-,>=stealth, line width=6pt] (bb) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (bc) to (cc);
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
+        \draw [gray,-,>=stealth, line width=6pt] (cb) to (db);
+        \draw [gray,-,>=stealth, line width=6pt] (cc) to (dc);
+        \draw [gray,-,>=stealth, line width=6pt] (da) to (ea);
+        \draw [gray,-,>=stealth, line width=6pt] (db) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (dc) to (ec);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ba) to (bb);
+        \draw [gray,-,>=stealth, line width=6pt] (bc) to (bb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (cc) to (cb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (da) to (db);
+        \draw [gray,-,>=stealth, line width=6pt] (dc) to (db);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ea) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (ec) to (eb);
+    \end{tikzpicture}
+}

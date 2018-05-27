@@ -1,0 +1,77 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{lib/skill}[2016/04/26 Star Wars RPG Symbols SkillS]
+
+\RequirePackage{ifthen}
+\usetikzlibrary{positioning, shapes, arrows}
+\RequirePackage{scalerel}
+%\RequirePackage{background}
+
+%Remove Numbering
+\setcounter{secnumdepth}{0}
+
+\newlength{\skillheight}
+\settoheight{\skillheight}{A}
+
+% Set up the keys.  Only the ones directly under /myparbox
+% can be accepted as options to the \myparbox macro.
+\pgfkeys{
+    /talentbox/.is family, /talentbox,
+    % Here are the options that a user can pass
+    default/.style = {
+        name = Unnamed,
+        width = 10em,
+        height = 10em,
+        marge = 0.2em,
+        titleHeight = 1.6em,
+        tier = 1,
+        active = false,
+        ranked = false,
+    },
+    name/.estore in = \talentboxName,
+    width/.estore in = \talentboxWidth,
+    height/.estore in = \talentboxHeight,
+    marge/.estore in = \talentboxMarge,
+    titleHeight/.estore in = \talentboxTitleHeight,
+    active/.estore in = \talentboxActive,
+    ranked/.estore in = \talentboxRanked,
+    tier/.estore in = \talentboxTier,
+}
+
+\newcommand\TalentBox[2][]{
+    \pgfkeys{/talentbox, default, #1}
+    %
+    \newcommand{\tier}{ \talentboxTier }
+    %
+    \tikz {
+        %
+        \coordinate (a) at (0em,0em);
+        \coordinate (b) at (\talentboxWidth,\talentboxHeight);
+        \coordinate[below left = \talentboxMarge and \talentboxMarge of b] (c) {};
+        \coordinate[below left = \talentboxTitleHeight and (\talentboxWidth - (\talentboxMarge * 2) ) of c] (d) {};
+        %%
+        \draw [fill=white, ultra thick] (a) rectangle (b);
+        \ifthenelse{ \equal{\talentboxActive}{true} }{
+            \draw [fill=activetalent] (c) rectangle (d);
+        }{
+            \draw [fill=passivetalent] (c) rectangle (d);
+        }
+        %
+        \node[above right] at (d) {\color{white}\large \uppercase{ \talentboxName } };
+        \node[below right, text width=\talentboxWidth-(2*\talentboxMarge)] at (d) {\color{black} \ssmall #2};
+        \ifthenelse{ \equal{\talentboxTier}{0} }{
+        }{
+            \draw [fill=black, ultra thick] (\talentboxWidth,0) rectangle (\talentboxWidth-1.6em,0+1.6em);
+            \node[above left] at ([xshift=-0pt]\talentboxWidth,0) {\color{white}\large \uppercase{\tier} };
+        }
+        %
+        \ifthenelse{ \equal{\talentboxRanked}{true} }{
+            \draw [fill=black, ultra thick] (a) rectangle (0+1.6em,0+1.6em);
+            \node[above right] at (a) {\color{white}\large \uppercase{R} };
+        }{}
+        %
+        \ifthenelse{ \equal{\talentboxActive}{true} }{
+            \draw [fill=black, ultra thick] (0+1.6em, 0) rectangle (0+3.2em,0+1.6em);
+            \node[above right] at (0+1.6em, 0) {\color{white}\large \uppercase{A} };
+        }{}
+    }
+}

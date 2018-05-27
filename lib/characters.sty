@@ -1,11 +1,8 @@
-\usepackage{moresize}
 \usepackage{pgfkeys}
 \usepackage{enumitem}
+\usetikzlibrary{positioning, shapes, arrows}
+\usepackage{graphicx}
 
-\definecolor{race}{RGB}{243, 108, 33}
-\definecolor{creature}{RGB}{243, 108, 33}
-\definecolor{characteristic}{RGB}{0, 102, 255}
-\definecolor{derived}{RGB}{204, 0, 0}
 
 %%%%
 % Skill Ranks
@@ -29,7 +26,7 @@
 \newcommand\charPart[2]{
     \noindent
     \begin{tikzpicture}
-    \node[shape=rectangle, draw, fill=characteristic, text depth=-0.25em, text height=1.25em, inner sep=0pt,outer sep=0pt, minimum height=8mm, minimum width=12mm, thick, font=\ssmall \sffamily\color{white}](label){\uppercase{#1}};
+    \node[shape=chamfered rectangle, draw, fill=characteristic, text depth=-0.25em, text height=1.25em, inner sep=0pt,outer sep=0pt, minimum height=8mm, minimum width=12mm, thick, chamfered rectangle corners={north west, north east}, font=\tiny \sffamily\color{white}](label){\uppercase{#1}};
     \node[shape=circle, thick, draw, above=-1em of label, fill=white]{\large\bfseries #2};
     \end{tikzpicture}
 }
@@ -49,21 +46,23 @@
 \newcommand\Derived[2]{
     \noindent
     \begin{tikzpicture}
-    \node[rectangle, draw, thick, inner sep=0mm, minimum height=4mm] (named) {
-        \tikz\node[
-            label={[rectangle, draw, fill=derived, thick, inner sep=0mm, font=\sffamily\color{white}, minimum height=4mm, minimum width=17mm]above: \small \uppercase{#1}}] (inner) {\bfseries\Large #2};
-    };
-    \node[below=-0.2em of named, font=\tiny](labels) {\hspace{.5em}\uppercase{\phantom{melee\qquad ranged}}};
+        \node[chamfered rectangle, chamfered rectangle corners={south west, south east}, draw, thick, inner sep=0mm, minimum height=4mm] (named) {
+            \tikz
+                \node[ label={[rectangle, draw, fill=derived, thick, inner sep=0mm, font=\sffamily\color{white}, minimum height=4mm, minimum width=12mm]above: \tiny \uppercase{#1}}] (inner) {\bfseries\Large #2};
+        };
+        \node[below=-0.2em of named, font=\tiny](labels) {\hspace{.5em}\uppercase{\phantom{melee\qquad ranged}}};
     \end{tikzpicture}
 }
 
 \newcommand\DerivedSplit[5]{
     \noindent
-    \begin{tikzpicture}\draw[ultra thick] (inner.north) -- (named.south);
-    \node[rectangle, draw, thick, inner sep=0mm, minimum height=4mm] (named) {
-        \tikz\node[label={[rectangle, draw, thick, fill=derived, inner sep=0mm, font=\sffamily\color{white}, minimum height=4mm, minimum width=22mm]above:\small \uppercase{#1}}] (inner) {\Large\bfseries #2\qquad#3};
-    };
-    \node[below=-0.2em of named, font=\tiny](labels) {\hspace{.5em}\uppercase{#4 \qquad #5}};
+    \begin{tikzpicture}
+        \node[chamfered rectangle, chamfered rectangle corners={south west, south east}, draw, thick, inner sep=0mm, minimum height=4mm] (named) {
+        \tikz
+            \node[label={[rectangle, draw, thick, fill=derived, inner sep=0mm, font=\sffamily\color{white}, minimum height=4mm, minimum width=22mm]above:\tiny \uppercase{#1}}] (inner) {\Large\bfseries #2\qquad#3};
+        };
+        \draw[ultra thick] (inner) -- (named.south);
+        \node[below=-0.2em of named, font=\tiny](labels) {\hspace{.5em}\uppercase{#4 \quad #5}};
     \end{tikzpicture}
 }
 
@@ -106,8 +105,8 @@
         presence = 2,
         wounds = 10 + Brawn,
         strain = 10 + Willpower,
-        xp = 10 XP,
-        special = None,
+        xp = 22 XP,
+        image = None,
     },
     name/.estore in = \raceName,
     brawn/.estore in = \raceBrawn,
@@ -119,30 +118,60 @@
     wounds/.estore in = \raceWounds,
     strain/.estore in = \raceStrain,
     xp/.estore in = \raceXP,
-    special/.estore in = \raceSpecial,
+    image/.estore in = \raceImage,
 }
 
-\newcommand\Race[2][]{
+\newcommand\Race[9][]{
     \pgfkeys{/race, default, #1}%
 
+    \vspace{1em}
+    \belowpdfbookmark{\raceName}{race-\raceName}
     \noindent{\LARGE\sffamily\color{race} \raceName}\\
 
-    \noindent\begin{minipage}[c]{\linewidth}
-    \noindent
-    \hfill
-    \charPart{BRAWN}{\raceBrawn}~\charPart{AGILITY}{\raceAgility}~\charPart{INTELLECT}{\raceIntellect}~\charPart{CUNNING}{\raceCunning}~\charPart{WILLPOWER}{\raceWillpower}~\charPart{PRESENCE}{\racePresence}%
-    \hfill
-    \null
-    \end{minipage}
-    \vspace{.2em}
+    \ifthenelse{ \equal{\constRacesShowImage}{true} }{
+        \ifthenelse{ \equal{\raceImage}{None} }{}{
+            \vspace{1em}
+            \includegraphics[width=0.7\linewidth]{\raceImage}
+            \vspace{1em}
+        }
+    }{}
 
-    \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{0pt}%
-        \item \textbf{Wound Threshold:} \raceWounds
-        \item \textbf{Strain Threshold:} \raceStrain
-        \item \textbf{Starting Experience:} \raceXP
-        \item \textbf{Special Ability:} \raceSpecial
-    \end{itemize}
+    \noindent #2
+    \vspace{2em}
+
+    \noindent\begin{minipage}[c]{\linewidth}
+        \noindent
+        \hfill
+            \charPart{BRAWN}{\raceBrawn}
+            \hspace{-1.2em}
+            \charPart{AGILITY}{\raceAgility}
+            \hspace{-1.2em}
+            \charPart{INTELLECT}{\raceIntellect}
+            \hspace{-1.2em}
+            \charPart{CUNNING}{\raceCunning}
+            \hspace{-1.2em}
+            \charPart{WILLPOWER}{\raceWillpower}
+            \hspace{-1.2em}
+            \charPart{PRESENCE}{\racePresence}%
+        \hfill
+        \null
+        \vspace{.2em}
+
+        \begin{itemize}[topsep=0pt, partopsep=0pt]
+            \setlength{\itemsep}{0pt}%
+            \item \textbf{Wound Threshold:} \raceWounds
+            \item \textbf{Strain Threshold:} \raceStrain
+            \item \textbf{Starting Experience:} \raceXP
+            \item \textbf{Special Ability:} #3
+            #4
+            #5
+            #6
+            #7
+            #8
+            #9
+        \end{itemize}
+    \end{minipage}
+    \vspace{2em}
 }
 
 %%%%%
@@ -165,12 +194,16 @@
         presence = 2,
         soak = 3,
         wounds = 6,
+        strain = 0,
         meleedef = 0,
         rangeddef = 0,
-        skills = None,
-        talents = None,
-        abilities = None,
-        equipment = None,
+        magicdef = 0,
+        psionicdef = 0,
+        %skills = None,
+        %talents = None,
+        %equipment = None,
+        summon = false,
+        image = None,
     },
     name/.estore in = \creatureName,
     type/.estore in = \creatureType,
@@ -182,42 +215,80 @@
     presence/.estore in = \creaturePresence,
     soak/.estore in = \creatureSoak,
     wounds/.estore in = \creatureWounds,
+    strain/.estore in = \creatureStrain,
     meleedef/.estore in = \creatureMelee,
     rangeddef/.estore in = \creatureRanged,
-    skills/.estore in = \creatureSkills,
-    talents/.estore in = \creatureTalents,
-    abilities/.estore in = \creatureAbilities,
-    equipment/.estore in = \creatureEquipment,
+    magicdef/.estore in = \creatureMagic,
+    psionicdef/.estore in = \creaturePsionic,
+    %skills/.estore in = \creatureSkills,
+    %talents/.estore in = \creatureTalents,
+    %equipment/.estore in = \creatureEquipment,
+    summon/.estore in = \creatureSummon,
+    image/.estore in = \creatureImage,
 }
 
-\newcommand\Creature[2][]{
+\newcommand\Creature[6][]{
     \pgfkeys{/creature, default, #1}%
 
-    \noindent{\LARGE\sffamily\color{creature} \creatureName \hspace{.1em} (\creatureType) }\\
+    \vspace{1em}
+    \belowpdfbookmark{\creatureName}{creature-\creatureName}
+    \label{creature:\creatureName}
+    \noindent{\LARGE\sffamily\color{creature} \creatureName \hspace{.1em} (\creatureType) }
 
+    \ifthenelse{ \equal{\constRacesShowImage}{true} }{
+        \ifthenelse{ \equal{\creatureImage}{None} }{}{
+            \begin{centering}
+            \includegraphics[width=0.8\linewidth]{\creatureImage}
+            \end{centering}
+        }
+    }{}
+
+    #2
+
+    \vspace{.2em}
     \noindent\begin{minipage}[c]{\linewidth}
-    \noindent
-    \hfill
-    \charPart{BRAWN}{\creatureBrawn}~\charPart{AGILITY}{\creatureAgility}~\charPart{INTELLECT}{\creatureIntellect}~\charPart{CUNNING}{\creatureCunning}~\charPart{WILLPOWER}{\creatureWillpower}~\charPart{PRESENCE}{\creaturePresence}%
-    \hfill
-    \hspace*{\fill}
-    \Derived{Soak}{\creatureSoak}
-    \Derived{Wound Threshold}{\creatureWounds}
-    \DerivedSplit{Defense}{\creatureMelee}{\creatureRanged}{Melee}{Ranged}
-    \hspace*{\fill}
-    \null
+        \noindent\begin{minipage}[c]{\linewidth}
+        \noindent
+        \hspace{1em}
+            \charPart{BRAWN}{\creatureBrawn}
+            \hspace{-1.2em}
+            \charPart{AGILITY}{\creatureAgility}
+            \hspace{-1.2em}
+            \charPart{INTELLECT}{\creatureIntellect}
+            \hspace{-1.2em}
+            \charPart{CUNNING}{\creatureCunning}
+            \hspace{-1.2em}
+            \charPart{WILLPOWER}{\creatureWillpower}
+            \hspace{-1.2em}
+            \charPart{PRESENCE}{\creaturePresence}%
+        \hfill
+        \null
+        \end{minipage}
+
+        \hspace{-0.6em}
+        \noindent\begin{minipage}[c]{\linewidth}
+        \noindent
+        \hfill
+        \hspace*{\fill}
+            \hspace{-3.0em}
+            \Derived{Soak}{\creatureSoak}
+            \hspace{-3.2em}
+            \DerivedSplit{Health}{\creatureWounds}{\creatureStrain}{Wounds}{Strain}
+            \hspace{-1.5em}
+            \DerivedSplit{Physical Defense}{\creatureMelee}{\creatureRanged}{Melee}{Ranged}
+            \hspace{-1.3em}
+            \DerivedSplit{Magic Defense}{\creatureMagic}{\creaturePsionic}{Magic}{Psionic}
+        \hspace*{\fill}
+        \null
+        \end{minipage}
+
+    \ifthenelse{ \equal{\creatureSummon}{None} } {}{
+        \noindent \textbf{Summon:} true \\
+    }
+    \noindent \textbf{Skills (group only):} #3 \\ %\creatureSkills\\
+    \noindent \textbf{Talents:} #4 \\ %\creatureTalents\\
+    \noindent \textbf{Abilities:} #5 \\ %#3\\
+    \noindent \textbf{Equipment:} #6 \\ %\creatureEquipment\\
     \end{minipage}
-
-    \noindent
-    \textbf{Skills:} \creatureSkills
-
-    \noindent
-    \textbf{Talents:} \creatureTalents
-
-    \noindent
-    \textbf{Abilities:} \creatureAbilities
-
-    \noindent
-    \textbf{Equipment:} \creatureEquipment
 }
 

@@ -1,0 +1,80 @@
+\newcommand{\arcanaDescription}{
+\section{Arcana}
+\epigraph{\textit{
+    "So what if the land becomes barren? It’s not like we're going to stick around."
+} }{
+    Datuu Dawnchaser, Elf Defiler
+}
+
+    Athasian wizards drain energy from the surrounding
+    soil. The method used labels the wizard as a defiler or a
+    preserver. Preservers have the self-control to gather
+    energy without destroying plants. Those who do not, or
+    who feel no remorse about the damage caused, become
+    Defilers. Defilers leave behind sterile soil and infertile ash
+    when they cast spells. Because of this, most wastelanders
+    blame wizards for the desert landscape that dominates
+    the Tablelands today, and their hatred extends to defilers
+    and preservers alike. In the seven cities, arcana magic is\\
+    outlawed and feared.\\
+    Writing is also illegal in the Tablelands, thus wizards
+    have to go to great lengths to conceal their spellbooks,
+    and they have refined this art to the point where even
+    fellow wizards can be hard pressed to identify a spell
+    book. When found, they are precious resources, hoarded
+    and studied by wizards thirsty for knowledge or power.\\
+    \\
+    See \nref{tlttree:arcana} for more information.
+}
+
+\newcommand{\arcanaTree}{
+    \newpage
+    \subsection{Arcana Talent Tree}
+    \label{tlttree:arcana}
+
+    \textbf{Class Skills:} Arcana, Deception, Alchemy, Vigilance
+    \newline
+
+    \begin{tikzpicture}
+        \draw ( 0,  0) node[anchor=north east](aa){\TalentBox[tier=5,  width=14em, active=\gritActive,            ranked=\gritRanked,            name=\gritTitle]            {\gritDescription}}
+              ( 6,  0) node[anchor=north east](ab){\TalentBox[tier=5,  width=14em, active=\arcanaCasterActive,    ranked=\arcanaCasterRanked,    name=\arcanaCasterTitle]    {\arcanaCasterDescription}}
+              (12,  0) node[anchor=north east](ac){\TalentBox[tier=5,  width=14em, active=\gritActive,            ranked=\gritRanked,            name=\gritTitle]            {\gritDescription}}
+              ( 0, -5) node[anchor=north east](ba){\TalentBox[tier=10, width=14em, active=\gentlePreserverActive, ranked=\gentlePreserverRanked, name=\gentlePreserverTitle] {\gentlePreserverDescription}}
+              ( 6, -5) node[anchor=north east](bb){\TalentBox[tier=10, width=14em, active=\disguiseCastingActive, ranked=\disguiseCastingRanked, name=\disguiseCastingTitle] {\disguiseCastingDescription}}
+              (12, -5) node[anchor=north east](bc){\TalentBox[tier=10, width=14em, active=\potentDefilerActive,   ranked=\potentDefilerRanked,   name=\potentDefilerTitle]   {\potentDefilerDescription}}
+              ( 0,-10) node[anchor=north east](ca){\TalentBox[tier=15, width=14em, active=\gentlePreserverActive, ranked=\gentlePreserverRanked, name=\gentlePreserverTitle] {\gentlePreserverDescription}}
+              ( 6,-10) node[anchor=north east](cb){\TalentBox[tier=15, width=14em, active=\signatureSpellActive,  ranked=\signatureSpellRanked,  name=\signatureSpellTitle]  {\signatureSpellDescription}}
+              (12,-10) node[anchor=north east](cc){\TalentBox[tier=15, width=14em, active=\potentDefilerActive,   ranked=\potentDefilerRanked,   name=\potentDefilerTitle]   {\potentDefilerDescription}}
+              ( 0,-15) node[anchor=north east](da){\TalentBox[tier=20, width=14em, active=\lingeringSpellActive,  ranked=\lingeringSpellRanked,  name=\lingeringSpellTitle]  {\lingeringSpellDescription}}
+              ( 6,-15) node[anchor=north east](db){\TalentBox[tier=20, width=14em, active=\distantSpellActive,    ranked=\distantSpellRanked,    name=\distantSpellTitle]    {\disguiseCastingDescription}}
+              (12,-15) node[anchor=north east](dc){\TalentBox[tier=20, width=14em, active=\shapeSpellActive,      ranked=\shapeSpellRanked,      name=\shapeSpellTitle]      {\shapeSpellDescription}}
+              ( 0,-20) node[anchor=north east](ea){\TalentBox[tier=25, width=14em, active=\quickenSpellActive,    ranked=\quickenSpellRanked,    name=\quickenSpellTitle]    {\quickenSpellDescription}}
+              ( 6,-20) node[anchor=north east](eb){\TalentBox[tier=25, width=14em, active=\dedicationActive,      ranked=\dedicationRanked,      name=\dedicationTitle]      {\dedicationDescription}}
+              (12,-20) node[anchor=north east](ec){\TalentBox[tier=25, width=14em, active=\signatureSpellActive,  ranked=\signatureSpellRanked,  name=\signatureSpellTitle]  {\signatureSpellDescription}}
+        ;
+        \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
+        \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
+        \draw [gray,-,>=stealth, line width=6pt] (ac) to (bc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
+        \draw [gray,-,>=stealth, line width=6pt] (bb) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (bc) to (cc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
+        \draw [gray,-,>=stealth, line width=6pt] (cb) to (db);
+        \draw [gray,-,>=stealth, line width=6pt] (cc) to (dc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (da) to (ea);
+        \draw [gray,-,>=stealth, line width=6pt] (db) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (dc) to (ec);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (cc) to (cb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (da) to (db);
+        \draw [gray,-,>=stealth, line width=6pt] (dc) to (db);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ea) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (ec) to (eb);
+    \end{tikzpicture}
+}

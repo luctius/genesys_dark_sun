@@ -1,0 +1,158 @@
+\chapter{Magic}\label{chap:magic}
+
+\epigraph{\textit{
+    "The Tablelands are a giant wasteland, to the untrained eye barren and devoid of life. When people see plants wither and
+    die when someone utters mysterious phrases accompanied by unknown gestures, they assume the worst. They cry wizard
+    and the mob instantly gathers to kill him. But if people venture into the wastes and look under the rocks, they will learn
+    that Athas is teeming with all sorts of life. And when the vermin swarm forth to envelop them, biting and crawling into
+    every orifice, do they see the irony?" } } { The Oracle, Blue Shrine Scrolls }
+
+
+\begin{table*}[!htb]
+\centering
+\small\caption{Penalties when casting spells}
+\begin{GenesysTable}{X X}
+Condition                                                       & Penalty\\
+The character does not have a free hand                         & +\setback \\
+The character is gagged, silenced or otherwise unable to speak  & +\setback\setback \\
+Penalty per 1 encumbrance or armor above 1                      & +\setback \\
+The character is in circumstances that interfere
+with their ability to concentrate, such as trying
+to cast while swimming or hanging from a rope,
+being buffeted by a sandstorm, or casting a spell
+that doesn't target the person they're fighting in
+hand-to-hand combat.                                           & +1 or more \difficulty \\
+\end{GenesysTable}
+\end{table*}
+
+\begin{table*}[!htb]
+\centering
+\small\caption{Spending Threat and Despair when casting spells}
+\begin{GenesysTable}{l X}
+Cost                               &    Result\\
+\threat or \despair                &    The magical energies exhaust the player, they suffer 2 strain or 1 wound (GM's choice)\newline
+                                        \newline
+                                        (When using the Defiling action) Plantlife in the area turns to ash. Using more \threat or \despair upgrades the area, or even includes wildlife.
+                                        This is narrative penalty and can include the attention of creatures who are quite unhappy with the state of the new area.
+                                        \newline
+                                        All arcane and primal casters, including the caster, suffer \setback untill this players next turn \\
+\threat\threat or \despair         &    The spell doesn’t take effect until the start of the next round, or after a minute in narrative gameplay.\newline
+                                        \newline
+                                        Until the end of the encounter, enemy spellcasters add \boost when casting a spell that targets this character.\\
+\threat\threat\threat or \despair  &    The spell is slightly more powerful than expected. One character of the GM's choice is targeted or otherwise affected by the spell as well.\newline
+                                        \newline
+                                        All other spellcasters and creatures attuned to magical energies within a day's travel become aware of the character (and depending on
+                                        their disposition, may be very interested in finding them and doing them harm). \\
+\despair                           &    The character overexerts themself or loses their magical connection and is unable to cast spells for the rest of the encounter or scene.\newline
+                                        \newline
+                                        The GM picks the target of the character's spell. If the caster is an NPC, the controlling player picks the target of the spell instead.\\
+\despair\despair                   &    The character completely lose control of their magical energies or draws the ire of their deity, suffering one Critical Injury (at the GM's
+                                        discretion, this may instead take the form of some of terrible or hilarious misfortune, such as temporarily being turned into a small woodland
+                                        creature, being struck by lightning on a clear day, swapping bodies with someone else in the encounter for the remainder of the day, or
+                                        summoning an avatar of divine or infernal wrath).\newline
+                                        \newline
+                                        (When using the Defiling action) A ally of the player gains a number of wounds equal to the number of \threat rolled.
+                                        \newline
+                                        If the caster is using an component from an component pouch, the pouch is now empty, and as to be refilled.\\
+\end{GenesysTable}
+\end{table*}
+
+\begin{multicols}{2}
+\section{Arcane}
+Both Arcane and Primal are skills, and are considered arcane magic. The
+difference between the two is spell access.  Characters can only use the
+Arcane or Primal skill to cast a spell if they have a talent allowing
+such use. Each spell has various options to raise the overal difficulty
+of the check, in exchange for various benefits. The overal difficulty of
+such a check can never be raised beyond Formidable
+(\difficulty\difficulty\difficulty\difficulty), after reductions.
+
+Casting a spell uses the requires using a~\textit{'Cast Spell'}
+Action, of which there are 2 variants.
+
+\subsection{Magical Actions}
+\subsubsection{Cast Spell (Defiling)} \label{action:defliling}
+Magic uses the energy of the environment and when a spell caster is unwilling or
+unable to supplement use their own energies, she has to draw all the energies
+needed from the environment. This has a devastating effect on the local area.
+When Defiling you gain a number of automatic \threat equal to the difficulty of
+the spell. \textit{These do not cancel any \advantage rolled by the player nor
+are they canceled by any. The player can choose to cancel any number of \threat
+with advantages, including zero}. Unlike \textbf{Cast Spell (Preserving)}, there is no strain cost
+associated with this action, and any \threat or \despair rolled in the check
+or gained by using this action, cannot be used to cause strain or wounds upon the
+caster. These \threat and \despair can be used as a narrative element. These can
+range from turning local plantlife to ash in a small radius op to draining entire
+areas of life. This should be scaled to the number of \threat and \despair rolled
+in the check must be used to strengthen the effect.
+
+\subsubsection{Cast Spell (Preserving)} \label{action:preserving}
+Preservers try to minimise the damage to animal and plant life and use
+only part of the magical energies needed to cast a spell from the environment.
+The rest of the magical energies needed are supplemented from their own bodies.
+However, when there is an abundant amount of life in the neighberhood it is
+easier to avoid permanent damage to the environment and thus it is less taxing
+to the preservers' body.  Using this action to cast a spell costs up a number of
+strain equal to the final difficulty of the spell Advantages from checks after
+this one cannot be used to recover this strain but can be used to recover existing
+strain.
+
+\subsection{Magical Manouvers}
+To use these manouvers, the character has to have atleast 1 rank in either
+the Arcane or the Primal skills and have a talent allowing them to use that
+skill to cast spells.
+
+\subsubsection{Counterspell}
+Most skilled mages or spellcasters can attempt to counter an opponent’s spells
+as they are being cast. If the character performs the counterspell maneuver,
+all opponents within medium range upgrade the difficulty of checks to cast
+spells once, until the end of the character's next turn.
+\subsubsection{Concentrate}
+Some magical effects might require concentration to sustain. If a magical action
+(or spell) can benefit from concentration, the action description notes this.
+Spells that can be sustained through concentration last until the end of the
+character's next turn (as noted in their description). However, if the character
+performs the concentrate maneuver during that next turn, the spell’s effects last
+until the end of the character’s following turn, instead. This can be sustained
+indefinitely by performing the concentrate maneuver each turn.
+
+\end{multicols}
+\begin{multicols}{2}
+\subsection{Arcane Spells}
+\input{magic/spells/attack}
+\input{magic/spells/barrier}
+\input{magic/spells/dispel}
+\input{magic/spells/illusion}
+\input{magic/spells/utility}
+%\input{magic/spells/enchantment}
+\end{multicols}
+\begin{multicols}{2}
+
+\subsection{Primal Spells}
+\input{magic/spells/augment}
+\input{magic/spells/conjure}
+\input{magic/spells/curse}
+\input{magic/spells/shape}
+
+\FloatBarrier
+
+\section{Psionics}
+Your rank in the Psionics skill determines your psionics rating.
+When using a psionics power, you roll a number of \force die equal to your
+psionics rating. You can use \darklight to enhance your psionics power,
+using \light is free, however \dark points show that you have a harder time,
+if you want to use \dark points, you lose 1 strain for each \dark point you
+use.
+
+In contrast to the Arcana and Primal skills, anyone with one or more ranks
+in Psionics can buy and use a Psionics Power, as listed below.
+
+\end{multicols}
+\newpage
+\input{magic/psionics/bind}
+\input{magic/psionics/enhance}
+\input{magic/psionics/farsight}
+%\input{magic/psionics/imbue}
+\input{magic/psionics/influence}
+\input{magic/psionics/move}
+\input{magic/psionics/sense}

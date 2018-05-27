@@ -1,0 +1,98 @@
+%%%%%
+% New Font
+%%%%%
+
+%\RequirePackage{fontspec}
+%\setsansfont{Bebas Neue}
+%\setmainfont{Crimson}
+
+%%%%%
+%Remove Numbering
+%%%%%
+
+\setcounter{secnumdepth}{0}
+
+
+%%%%%
+%Section text colours
+%%%%%
+
+%%%%%
+% Sectioning commands
+%%%%%
+
+%\titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
+
+
+%\titleformat{\chapter} {
+%   \normalfont\sffamily\Huge\bfseries\scshape}
+%  {}{0pt}
+%  {\begin{tikzpicture}[remember picture,overlay]
+%    \node[yshift=-3cm] at (current page.north west)
+%      {\begin{tikzpicture}[remember picture, overlay]
+%        \draw[fill=title] (0,0) rectangle
+%          (\paperwidth,3cm);
+%       \end{tikzpicture}
+%      };
+%   \end{tikzpicture}
+%  }
+
+
+\titleformat{\chapter}[block]{\Huge\bfseries\color{title}\sffamily}{\chaptertitlename\ \thechapter:}{0.5ex}{\Huge}{}
+\titleformat{\section}{\color{title}\sffamily\huge\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\sffamily\large\bfseries\color{title}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\sffamily\Large\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\subsubsection}{\sffamily\normalsize\color{concept}}{\thesubsubsection}{1em}{}
+
+\titlespacing*{\chapter}{0pt}{10pt}{40pt}
+\titlespacing*{\subsubsection}{0pt}{2ex plus 1ex minus .2ex}{0.75ex plus .2ex}
+\titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}[runin]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+
+%\titlespacing*{command}{left-sep}{before-sep}{after-sep}[right-sep]
+%\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+%\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+%\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+%\titlespacing*{\subparagraph}{\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+
+
+%Completely new list \verb|coloritemize|:
+\newlist{bulletlist}{description}{1}
+\setlist[bulletlist]{label=\textcolor{concept}{\textbullet}}
+
+\setlist[description]{%
+    topsep=30pt,               % space before start / after end of list
+    itemsep=5pt,               % space between items
+    %font={\bfseries\sffamily\color{concept}}, % if colour is needed
+    font={\color{concept}$\bullet$\quad\scshape\bfseries},
+}
+
+%%%%%
+% Misc sectional commands
+%%%%%
+
+\pgfkeys{
+    /talent/.is family, /talent,
+    % Here are the options that a user can pass
+    default/.style = {
+        name = Unnamed,
+        active = false,
+        ranked = false,
+    },
+    name/.estore in = \talentName,
+    active/.estore in = \talentActive,
+    ranked/.estore in = \talentRanked,
+}
+
+\newcommand\Talent[2][]{
+    \pgfkeys{/talent, default, #1}
+
+    \vspace{1.5em}
+    \belowpdfbookmark{\talentName}{talent-\talentName}
+    \noindent{\LARGE\sffamily\color{talent}\talentName}\\
+    \textbf{Activation:} \talentActive\\
+    \textbf{Ranked:} \talentRanked\\
+    #2
+}
+%\newcommand\Concept[1]{\bfseries\LARGE\sffamily\color{concept}#1}

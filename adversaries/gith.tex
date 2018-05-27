@@ -1,0 +1,54 @@
+\Creature[name=Gith Warrior, type=Minion, image=images/gith.png, agility=3, presence=1, soak=3, wounds=6]{
+    \textit{
+        Standing hunched before you is a vaguely reptilian
+        humanoid with hairless, greenish‐gray skin and jet black lidless
+        eyes. With clawed hands and feet and a fanged pronounced
+        underbite, the creature’s appearance is rendered all the more
+        strange by its bowlegged waddling gait.
+    }\\
+    \newline
+
+    Gith combat tactics usually involve ambushes. They
+    prefer to have a distinct advantage in numbers, and so
+    attack in mass. Their weapon of choice is an obsidian
+    spear designed for chopping and slashing rather than
+    piercing, but they will use any weapon they have access
+    to. They disdain the use of range weapons, since they
+    enjoy watching the pain and fear of their opponents.
+} {
+    % skill
+    Athletics, Melee (Light), Perception, Skulduggery, Stealth
+}{
+    % talents
+    None
+}{
+    \\ % ability
+    \textbf{- Ambusher:} A Gith Warrior may determine initiative using Skullduggery instead of Cool or Vigilance\\
+    \textbf{- Psionic Leap:} A Gith Warrior may once per encounter, as a manouver move from long to medium range using one manouver\\
+}{
+    \\ % equipment
+    \textbf{- Spear:} Melee (Light); Damage: 4; Critical: 4; Range [Engaged]; \nameref{iqty:accurate} 1, \nameref{iqty:defensive} 1\\
+    \textbf{- Shield:} Melee (Light); Damage: 2; Critical: 6; Range [Engaged]; \nameref{iqty:defensive} 1, \nameref{iqty:deflection} 1, \nameref{iqty:inaccurate} 1, \nameref{iqty:knockdown}\\
+    \textbf{- Leather Armour:} +1 Soak \\
+}
+
+\Creature[name=Gith Captain, type=Rival, brawn=3, agility=3, presence=1, soak=3, wounds=6]{
+} {
+    % skill
+    Athletics 2, Brawl 2, Melee (Light) 2, Leadership 1, Perception 2, Skulduggery 2, Stealth 2
+}{
+    % talents
+    None
+}{
+    \\ % ability
+    \textbf{- Ambusher:} A Gith Captain may determine initiative using Skullduggery instead of Cool or Vigilance\\
+    \textbf{- Psionic Leap:} A Gith Captain may once per encounter, as a manouver move from long to medium range using one manouver\\
+    \textbf{- Brain Fog:} All enemies in short range gain \setback on Arcana, Discipline, Psionics and Primal checks unless they succees in an Discipline check as an incidental\\
+    \textbf{- Pack Tactics:} A Gith Captain that uses the assist maneuver grants \boost\boost instead of \boost\\
+}{
+    \\ % equipment
+    \textbf{- Spear:} Melee (Light); Damage: 4; Critical: 4; Range [Engaged]; \nameref{iqty:accurate} 1, \nameref{iqty:defensive} 1\\
+    \textbf{- Shield:} Melee (Light); Damage: 2; Critical: 6; Range [Engaged]; \nameref{iqty:defensive} 1, \nameref{iqty:deflection} 1, \nameref{iqty:inaccurate} 1, \nameref{iqty:knockdown}\\
+    \textbf{- Chitin Armor:} +2 Soak, \nameref{iqty:solid}\\
+}
+

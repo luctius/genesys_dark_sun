@@ -1,0 +1,66 @@
+\newcommand{\psionDescription}{
+\section{Psion}
+\epigraph{\textit{
+    "Resist all you like. I have ways of making you think." } }{ Dechares, Dwarven inquisitor }
+
+    The psion learns the Way, a philosophy of mental 
+    discipline, to become master of his will, or innate mental 
+    power. Most aspiring psions seek out an instructor, a 
+    master of the Way. Most Athasian cities contain psionic 
+    academies where students receive instructions in 
+    exchange for money or loyal service.\\
+    \\
+    See \nref{tlttree:psion} for more information.
+}
+
+\newcommand{\psionTree}{
+    \newpage
+    \subsection{Psion Talent Tree}
+    \label{tlttree:psion}
+
+    \textbf{Class Skills:} Psionics, Perception, Vigilance, Discipline
+    \newline
+
+    \begin{tikzpicture}
+        \draw ( 0,  0) node[anchor=north east](aa){\TalentBox[tier=5,  width=14em, active=\uncannySensesActive,     ranked=\uncannySensesRanked,     name=\uncannySensesTitle]     {\uncannySensesDescription}}
+              ( 6,  0) node[anchor=north east](ab){\TalentBox[tier=5,  width=14em, active=\morePowerActive,         ranked=\morePowerRanked,         name=\morePowerTitle]         {\morePowerDescription}}
+              (12,  0) node[anchor=north east](ac){\TalentBox[tier=5,  width=14em, active=\senseDangerActive,       ranked=\senseDangerRanked,       name=\senseDangerTitle]       {\senseDangerDescription}}
+              ( 0, -5) node[anchor=north east](ba){\TalentBox[tier=10, width=14em, active=\morePowerActive,         ranked=\morePowerRanked,         name=\morePowerTitle]         {\morePowerDescription}}
+              ( 6, -5) node[anchor=north east](bb){\TalentBox[tier=10, width=14em, active=\senseDangerActive,       ranked=\senseDangerRanked,       name=\senseDangerTitle]       {\senseDangerDescription}}
+              (12, -5) node[anchor=north east](bc){\TalentBox[tier=10, width=14em, active=\uncannyReactionsActive,  ranked=\uncannyReactionsRanked,  name=\uncannyReactionsTitle]  {\uncannyReactionsDescription}}
+              ( 0,-10) node[anchor=north east](ca){\TalentBox[tier=15, width=14em, active=\uncannySensesActive,     ranked=\uncannySensesRanked,     name=\uncannySensesTitle]     {\uncannySensesDescription}}
+              ( 6,-10) node[anchor=north east](cb){\TalentBox[tier=15, width=14em, active=\balanceActive,           ranked=\balanceRanked,           name=\balanceTitle]           {\balanceDescription}}
+              (12,-10) node[anchor=north east](cc){\TalentBox[tier=15, width=14em, active=\slipperyMindActive,      ranked=\slipperyMindRanked,      name=\slipperyMindTitle]      {\slipperyMindDescription}}
+              ( 0,-15) node[anchor=north east](da){\TalentBox[tier=20, width=14em, active=\sleightOfMindActive,     ranked=\sleightOfMindRanked,     name=\sleightOfMindTitle]     {\sleightOfMindDescription}}
+              ( 6,-15) node[anchor=north east](db){\TalentBox[tier=20, width=14em, active=\invigorateActive,        ranked=\invigorateRanked,        name=\invigorateTitle]        {\invigorateDescription}}
+              (12,-15) node[anchor=north east](dc){\TalentBox[tier=20, width=14em, active=\uncannyReactionsActive,  ranked=\uncannyReactionsRanked,  name=\uncannyReactionsTitle]  {\uncannyReactionsDescription}}
+              ( 0,-20) node[anchor=north east](ea){\TalentBox[tier=25, width=14em, active=\overwhelmEmotionsActive, ranked=\overwhelmEmotionsRanked, name=\overwhelmEmotionsTitle] {\overwhelmEmotionsDescription}}
+              ( 6,-20) node[anchor=north east](eb){\TalentBox[tier=25, width=14em, active=\dedicationActive,        ranked=\dedicationRanked,        name=\dedicationTitle]        {\dedicationDescription}}
+              (12,-20) node[anchor=north east](ec){\TalentBox[tier=25, width=14em, active=\touchOfFateActive,       ranked=\touchOfFateRanked,       name=\touchOfFateTitle]       {\touchOfFateDescription}}
+        ;
+        \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
+        \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
+        \draw [gray,-,>=stealth, line width=6pt] (ac) to (bc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
+        \draw [gray,-,>=stealth, line width=6pt] (bb) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (bc) to (cc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
+        \draw [gray,-,>=stealth, line width=6pt] (cb) to (db);
+        \draw [gray,-,>=stealth, line width=6pt] (cc) to (dc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (da) to (ea);
+        \draw [gray,-,>=stealth, line width=6pt] (db) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (dc) to (ec);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (cc) to (cb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (da) to (db);
+        \draw [gray,-,>=stealth, line width=6pt] (dc) to (db);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ea) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (ec) to (eb);
+    \end{tikzpicture}
+}

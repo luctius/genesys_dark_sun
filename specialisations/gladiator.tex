@@ -1,0 +1,78 @@
+\newcommand{\gladiatorDescription}{
+\section{Gladiator}
+\epigraph{\textit{
+    "I might be a slave, but I am famous, I dine well, and my
+    company is that of the finest noble women. Tell me, what
+    do you have that I do not, slave trader - except the freedom
+    to feel miserable?"
+} } { Jarek, arena champion }
+
+    The arena is the battlefield of the gladiator. From
+    hand-to-hand combat in the mud pits of small forts to the
+    grand games of the city-states, the gladiator is a warrior
+    who fights to the sounds of people cheering his name or
+    cursing his presence. A master of crowd control and the
+    art of prolonged combat, gladiators are trained to fight.
+    They train to best wild beasts in deadly games for the
+    amusement of the masses. They fight for glory, wealth,
+    prestige and power. They fight to survive. Some are
+    merely slaves, having to fight and perhaps hoping to win
+    a chance to obtain freedom, while some fight willingly for
+    the thrill of combat or the promise of riches and fame.\\
+    \\
+    A gladiator often does not have the luxury of choosing her own weapons, and is
+    thus familiar with all melee combat skills. Finally she has to be a crowd
+    pleaser, for a pure and efficient kill does not attract a full stadium, and
+    therefor Charm is a career skill.\\
+    \\
+    See \nref{tlttree:gladiator} for more information.
+}
+
+\newcommand{\gladiatorTree}{
+    \newpage
+    \subsection{Gladiator Talent Tree}
+    \label{tlttree:gladiator}
+
+    \textbf{Class Skills:} Brawl, Melee (Light), Melee (Heavy), Charm
+    \newline
+
+    \begin{tikzpicture}
+        \draw ( 0,  0) node[anchor=north east](aa){\TalentBox[tier=5,  width=14em, active=\toughenedActive,       ranked=\toughenedRanked,        name=\toughenedTitle]        {\toughenedDescription}}
+              ( 6,  0) node[anchor=north east](ab){\TalentBox[tier=5,  width=14em, active=\frenziedAttackActive,  ranked=\frenziedAttackRanked,   name=\frenziedAttackTitle]   {\frenziedAttackDescription}}
+              (12,  0) node[anchor=north east](ac){\TalentBox[tier=5,  width=14em, active=\feralStrengthActive,   ranked=\feralStrengthRanked,    name=\feralStrengthTitle]    {\feralStrengthDescription}}
+              ( 0, -5) node[anchor=north east](ba){\TalentBox[tier=10, width=14em, active=\feralStrengthActive,   ranked=\feralStrengthRanked,    name=\feralStrengthTitle]    {\feralStrengthDescription}}
+              ( 6, -5) node[anchor=north east](bb){\TalentBox[tier=10, width=14em, active=\knockdownActive,       ranked=\knockdownRanked,        name=\knockdownTitle]        {\knockdownDescription}}
+              (12, -5) node[anchor=north east](bc){\TalentBox[tier=10, width=14em, active=\heroicFortitudeActive, ranked=\heroicFortitudeRanked,  name=\heroicFortitudeTitle]  {\heroicFortitudeDescription}}
+              ( 0,-10) node[anchor=north east](ca){\TalentBox[tier=15, width=14em, active=\hardyActive,           ranked=\hardyRanked,            name=\hardyTitle]            {\hardyDescription}}
+              ( 6,-10) node[anchor=north east](cb){\TalentBox[tier=15, width=14em, active=\lethalBlowsActive,     ranked=\lethalBlowsRanked,      name=\lethalBlowsTitle]      {\lethalBlowsDescription}}
+              (12,-10) node[anchor=north east](cc){\TalentBox[tier=15, width=14em, active=\toughenedActive,       ranked=\toughenedRanked,        name=\toughenedTitle]        {\toughenedDescription}}
+              ( 0,-15) node[anchor=north east](da){\TalentBox[tier=20, width=14em, active=\toughenedActive,       ranked=\toughenedRanked,        name=\toughenedTitle]        {\toughenedDescription}}
+              ( 6,-15) node[anchor=north east](db){\TalentBox[tier=20, width=14em, active=\feralStrengthActive,   ranked=\feralStrengthRanked,    name=\feralStrengthTitle]    {\feralStrengthDescription}}
+              (12,-15) node[anchor=north east](dc){\TalentBox[tier=20, width=14em, active=\naturalBrawlerActive,  ranked=\naturalBrawlerRanked,   name=\naturalBrawlerTitle]   {\naturalBrawlerDescription}}
+              ( 0,-20) node[anchor=north east](ea){\TalentBox[tier=25, width=14em, active=\frenziedAttackActive,  ranked=\frenziedAttackRanked,   name=\frenziedAttackTitle]   {\frenziedAttackDescription}}
+              ( 6,-20) node[anchor=north east](eb){\TalentBox[tier=25, width=14em, active=\dedicationActive,      ranked=\dedicationRanked,       name=\dedicationTitle]       {\dedicationDescription}}
+              (12,-20) node[anchor=north east](ec){\TalentBox[tier=25, width=14em, active=\defensiveStanceActive, ranked=\defensiveStanceRanked,  name=\defensiveStanceTitle]  {\defensiveStanceDescription}}
+        ;
+        \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
+        \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
+        \draw [gray,-,>=stealth, line width=6pt] (ac) to (bc);
+        \draw [gray,-,>=stealth, line width=6pt] (bb) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (bc) to (cc);
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
+        \draw [gray,-,>=stealth, line width=6pt] (db) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (dc) to (ec);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ba) to (bb);
+        \draw [gray,-,>=stealth, line width=6pt] (bc) to (bb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (cc) to (cb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (da) to (db);
+        \draw [gray,-,>=stealth, line width=6pt] (dc) to (db);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ea) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (ec) to (eb);
+
+    \end{tikzpicture}
+}

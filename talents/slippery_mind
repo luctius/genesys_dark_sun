@@ -1,0 +1,7 @@
+\newcommand\slipperyMindTitle{Slippery Mind}
+\newcommand\slipperyMindActive{false}
+\newcommand\slipperyMindRanked{true}
+\newcommand\slipperyMindDescription{ Requires Psionics 1. If under the effects of a Psionics power, perform the Slippery Minded action; make a Hard (\difficulty\difficulty\difficulty ) Deception check to immediately end effects of power. }
+\newcommand\slipperyMindTalent{ \Talent[name=\slipperyMindTitle, active=\slipperyMindActive, ranked=\slipperyMindRanked]{
+\slipperyMindDescription
+} }

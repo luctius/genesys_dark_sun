@@ -1,0 +1,28 @@
+\documentclass[a4paper, openright, 8pt]{report}
+\usepackage[background]{lib/ds}
+\usepackage{incgraph}
+\usepackage[11pt]{moresize}
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+
+\title{Dark Sun Conversions Races for GenesysRPG}
+\date{2018-06-05}
+
+\begin{document}
+
+%Show image in race section
+\renewcommand{\constRacesShowImage}{false}
+
+\begin{multicols*}{2}
+
+\input{races/dwarf}
+\input{races/elf}
+\input{races/half-elf}
+\input{races/half-giant}
+\input{races/halfling}
+\input{races/human}
+\input{races/mul}
+\input{races/thrikreen}
+
+\end{multicols*}
+
+\end{document}
