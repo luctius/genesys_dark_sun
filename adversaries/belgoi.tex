@@ -1,0 +1,82 @@
+\Creature[name=Belgoi Craven, type=Minion, image=images/belgoi.png, agility=3, presence=1, soak=1, wounds=4, meleedef=1, rangeddef=1, magicdef=0, psionicdef=0]
+{
+    % description
+    \textit{
+        When seen from a distance, this creature appears human,
+        but its blue skin, clawed hands and webbed, three‐toed feet
+        soon give it away. The creature has no teeth, no visible
+        ears, and its hair is black and stringy.
+    }\\
+    \\
+    Belgoi are a race of savage humanoids that live in the
+    most desolate of places, since no other race will allow
+    them nearby. Belgoi seem to revel in destruction, and are
+    considered to be second only to the defilers in the damage
+    they do to the world around them.\\
+    \\
+    The weakest belgoi are cowardly, craven, creatures that
+    rely on their stronger kin for cover and aid. They seek
+    to gang up on wounded or isolated foes.\\
+    \\
+    Belgoi attempt to use the cover of darkness to mask
+    their attacks. Usually, when attacking a group of
+    creatures, they use their \textit{psionic dominate} power
+    to draw a single individual away from the main group, to
+    a place where they can use their Strength damage ability
+    uninterrupted. They then attempt to draw out the next
+    creature, and so on, until they feel confident that they
+    can overcome the rest of the group without loss.\\
+    If forced into melee combat, the belgoi use claws so
+    they can use their Strength damage ability, and usually
+    will not use weapons. When a battle turns against the
+    belgoi, they retreat and return later with reinforcements.
+    Only by killing the entire raiding party can a battle with
+    the belgoi be prevented from turning into a long running
+    engagement lasting for days.
+}{
+    Athletics, Stealth, Perception
+}{
+    None
+}{
+    \\ % ability
+    \textbf{- Minor Psionics Dominate: } Once per encounter, As an
+        action, a Belgoi Craven may attempt to \textit{Dominate} a
+        sentient creature. Make an opposed \textbf{Psionics vs Discipline}.
+        If the target has heard a Belgoi Bell this turn, they gain a
+        \setback. On success sentient creature gains \nameref{iqty:disorient} 1
+        and uses its next turn to move towards the Belgoi.\\
+}{
+    \\ % equipment
+    \textbf{- Claw: } Brawl; Damage: 6; Critical: 4; Range [Engaged]\\
+    \textbf{- Belgoi Bell: } Manouver to Activate: Sentient creatures who hear the bell (medium range), gain a \setback to resist \textit{Psionics Dominate}.\\
+}
+
+\Creature[name=Belgoi Craven, type=Rival, brawn=3, agility=3, presence=1, soak=3, wounds=12, meleedef=1, rangeddef=1, magicdef=0, psionicdef=1]
+{
+    % description
+    \textit{
+        Slinking through the wastes alone, a belgoi stalker
+        watches for travelers who are struggling to survive,
+        engaged in a fight, or otherwise distracted. Flitting on
+        the edges of a battle, the stalker gently rings its bell,
+        drawing a lone victim away from the group.
+    }\\
+}{
+    % skill
+    Athletics 2, Stealth 2, Perception 2, Psionics 3
+}{
+    % talents
+    None
+}{
+    \\ % ability
+    \textbf{- Psionics Dominate: } As an action, a Belgoi may attempt
+        to \textit{Dominate} a sentient creature. Make an opposed
+        \textbf{Psionics vs Discipline}. If the target has heard a
+        Belgoi Bell this turn, they gain a \setback. On success
+        sentient creature gains \nameref{iqty:disorient} 1 and uses
+        its next turn to move towards the Belgoi.\\
+}{
+    \\ % equipment
+    \textbf{- Claw: } Brawl; Damage: 6; Critical: 3; Range [Engaged]\\
+    \textbf{- Belgoi Bell: } Manouver to Activate: Sentient creatures who hear the bell (medium range), gain a \setback to resist \textit{Psionics Dominate}.\\
+}

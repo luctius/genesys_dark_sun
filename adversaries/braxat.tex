@@ -1,0 +1,59 @@
+\Creature[name=Braxat Raider, type=Rival, image=images/braxat.png, brawn=3, presence=1, soak=3, wounds=14, meleedef=0, rangeddef=0, magicdef=0, psionicdef=0]
+{
+    % description
+    \textit{
+        A huge humanoid of mixed stock, mostly a combination of
+        mammalian and reptilian, this creature has a thick shell that
+        covers its back and a handful of horny protrusions on the top of
+        its head.
+    }\\
+    \\
+    Braxats are hunters, and they fight like them. They use
+    psionics to disable their opponents, thereby reducing risks
+    to themselves. After attacking with psionics braxats will
+    move in as close as they can while still being able to keep
+    their opponents within their reach. Braxats have a breath
+    weapon as well that they can employ, but they use it as a
+    last resort since the acid can cause their prey to become
+    inedible.
+}{
+    % skill
+    Melee (Heavy) 2, Brawl 2, Perception 1, Psionics 1
+}{
+    % talents
+    None
+}{
+    \\ % ability
+    \textbf{- Acid Breath: } Once per Encounter, the Braxat can activate
+        his breath weapon. When he does so, until the end of his next turn,
+        it counts as a weapon with the following profile:
+            Brawl; Damage 6; Critical 3; Range [Short]; Burn 2, Blast 6).\\
+    \textbf{- Psionic Agonize: } As an action, a Braxat may attempt to
+        \textit{Agonize} an opponent. Make an opposed \textbf{Psionics vs Discipline}.
+        On success the opponent 4 Damage and \nameref{iqty:ensnare} 1.\\
+}{
+    \\ % equipment
+    \textbf{- Great Club: } Melee (Heavy); Damage: 6; Critical: 5; Range [Engaged], \nameref{iqty:disorient} 4, \nameref{iqty:knockdown}\\
+}
+
+\Creature[name=Braxat Lord, type=Nemesis, brawn=4, presence=1, soak=6, wounds=18, meleedef=1, rangeddef=1, magicdef=0, psionicdef=2]
+{
+}{
+    % skill
+    Melee (Heavy) 3, Brawl 2, Perception 2, Psionics 2
+}{
+    % talents
+    None
+}{
+    \\ % ability
+    \textbf{- Acid Breath: } Once per Encounter, the Braxat can activate
+        his breath weapon. When he does so, until the end of his next turn,
+        it counts as a weapon with the following profile:
+            Brawl; Damage 6; Critical 3; Range [Short]; Burn 2, Blast 6).
+    \textbf{- Psionic Agonize: } As an action, a Braxat may attempt to
+        \textit{Agonize} an opponent. Make an opposed \textbf{Psionics vs Discipline}.
+        On success the opponent 4 Damage and \nameref{iqty:ensnare} 1.\\
+}{
+    \\ % equipment
+    \textbf{- Great Club: } Melee (Heavy); Damage: 7; Critical: 5; Range [Engaged], \nameref{iqty:disorient} 4, \nameref{iqty:knockdown}\\
+}
