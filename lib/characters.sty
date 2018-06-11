@@ -125,6 +125,7 @@
     \pgfkeys{/race, default, #1}%
 
     \vspace{1em}
+    \noindent\begin{minipage}[c]{\linewidth}
     \belowpdfbookmark{\raceName}{race-\raceName}
     \noindent{\LARGE\sffamily\color{race} \raceName}\\
 
@@ -135,6 +136,7 @@
             \vspace{1em}
         }
     }{}
+    \end{minipage}
 
     \noindent #2
     \vspace{2em}
@@ -231,6 +233,7 @@
     \pgfkeys{/creature, default, #1}%
 
     \vspace{1em}
+    \noindent\begin{minipage}[c]{\linewidth}
     \belowpdfbookmark{\creatureName}{creature-\creatureName}
     \label{creature:\creatureName}
     \noindent{\LARGE\sffamily\color{creature} \creatureName \hspace{.1em} (\creatureType) }
@@ -242,6 +245,7 @@
             \end{centering}
         }
     }{}
+    \end{minipage}
 
     #2
 
