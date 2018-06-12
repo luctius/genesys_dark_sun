@@ -1,0 +1,72 @@
+\Creature[name=Kank Worker, type=Minion, intellect=0, presence=1, soak=3, wounds=6, meleedef=0, rangeddef=0, magicdef=0, psionicdef=0]
+{
+    % description
+    \textit{
+        This creature is a large insect with a black, chitinous
+        exoskeleton and long, waving antennae. Its body is divided into
+        a head, thorax and abdomen, and it has a pair of curved
+        mandibles with which it produces a curious clicking noise.
+    }\\
+    \\
+    Many kanks roam wild across the Tablelands, as well
+    as being herded. These large, docile insects have black
+    chitinous exoskeletons, which are divided into three
+    sections: head, thorax, and abdomen. They can carry
+    objects with their multi–jointed pincers, or use them in
+    combat.\\
+    \\
+    A worker only goes into combat when all the soldiers
+    are dead or it is backed up into a corner. Workers strike
+    with their pincers when in combat and try to get a hold.
+}{
+    % skill
+    Brawl, Perception
+}{
+    % talents
+}{
+    \\ % ability
+    \textbf{- Grapple: } A Kank may spend \advantage\advantage after an attack
+     and enemies must spend two maneuvers to disengage tfrom your character.\\
+}{
+    \\ % equipment
+    \textbf{- Pincer Strike: } Brawl; Damage: 4; Critical: 5; Range [Engaged], Grapple\\
+}
+
+\Creature[name=Kank Soldier, type=Rival, brawn=3, intellect=0, presence=1, soak=4, wounds=13, meleedef=0, rangeddef=0, magicdef=0, psionicdef=0]
+{
+    % description
+    \textit{
+        This creature is a large insect with a black, chitinous
+        exoskeleton and long, waving antennae. Its body is divided into
+        a head, thorax and abdomen, and it has a pair of curved
+        mandibles with which it produces a curious clicking noise.
+    }\\
+    \\
+    With powerful mandibles and a poisonous bite,
+    soldier kanks are the warriors of their hive. When
+    domesticated, soldier kanks are often used as caravan
+    mounts, as they can travel for a full day at top speed
+    while carrying a tremendous amount of weight for their
+    size.\\
+    \\
+    A soldier is the first line of defense for the hive. A
+    soldier strikes with its pincers when in combat and tries to
+    get a hold. A soldierʹs bite is poisonous.
+}{
+    % skill
+    Brawl 3, Perception 2
+}{
+    % talents
+}{
+    \\ % ability
+    \textbf{- Grapple: } A Kank may spend \advantage\advantage after an attack
+         and enemies must spend two maneuvers to disengage from a kank.\\
+    \textbf{- Poison: } If the attack deals damage, the target must immediately make a
+        Hard(\difficulty\difficulty\difficulty) Resilience check or suffer 1 wound per turn.
+        The target can me another \textbf{Hard} (\difficulty\difficulty\difficulty) check
+        at the end of each round to stop the poison. An \nameref{alcitm:antitoxin} or
+        \textbf{Average} (\difficulty\difficulty) medicine check will also stop the poison.\\
+}{
+    \\ % equipment
+    \textbf{- Pincer Strike: } Brawl; Damage: 5; Critical: 5; Range [Engaged], Grapple, Poison\\
+}
