@@ -1,1 +1,60 @@
-Mercenary Soldier
+\newcommand{\mercenaryDescription}{
+\section{Mercenary}
+%\epigraph{\textit{
+%    "Mercenary quote"
+%} }{
+%    Mercenary quotee
+%}
+%    Some Description
+%    \\
+    See \nref{tlttree:mercenary} for more information.
+}
+
+\newcommand{\mercenaryTree}{
+    \newpage
+    \subsection{Mercenary Talent Tree}
+    \label{tlttree:mercenary}
+
+    \textbf{Class Skills:} Discipline, Leadership, Melee (Heavy), Melee (Light)
+    \newline
+
+    \begin{tikzpicture}
+        \draw ( 0,  0) node[anchor=north east](aa){\TalentBox[tier=5,  width=14em, active=\commandActive,                ranked=\commandRanked,                name=\commandTitle]                {\commandDescription}}
+              ( 6,  0) node[anchor=north east](ab){\TalentBox[tier=5,  width=14em, active=\secondWindActive,             ranked=\secondWindRanked,             name=\secondWindTitle]             {\secondWindDescription}}
+              (12,  0) node[anchor=north east](ac){\TalentBox[tier=5,  width=14em, active=\sideStepActive,               ranked=\sideStepRanked,               name=\sideStepTitle]               {\sideStepDescription}}
+              ( 0, -5) node[anchor=north east](ba){\TalentBox[tier=10, width=14em, active=\secondWindActive,             ranked=\secondWindRanked,             name=\secondWindTitle]             {\secondWindDescription}}
+              ( 6, -5) node[anchor=north east](bb){\TalentBox[tier=10, width=14em, active=\confidenceActive,             ranked=\confidenceRanked,             name=\confidenceTitle]             {\confidenceDescription}}
+              (12, -5) node[anchor=north east](bc){\TalentBox[tier=10, width=14em, active=\strongArmActive,              ranked=\strongArmRanked,              name=\strongArmTitle]              {\strongArmDescription}}
+              ( 0,-10) node[anchor=north east](ca){\TalentBox[tier=15, width=14em, active=\fieldCommanderActive,         ranked=\fieldCommanderRanked,         name=\fieldCommanderTitle]         {\fieldCommanderDescription}}
+              ( 6,-10) node[anchor=north east](cb){\TalentBox[tier=15, width=14em, active=\commandActive,                ranked=\commandRanked,                name=\commandTitle]                {\commandDescription}}
+              (12,-10) node[anchor=north east](cc){\TalentBox[tier=15, width=14em, active=\naturalBrawlerActive,         ranked=\naturalBrawlerRanked,         name=\naturalBrawlerTitle]         {\naturalBrawlerDescription}}
+              ( 0,-15) node[anchor=north east](da){\TalentBox[tier=20, width=14em, active=\improvedFieldCommanderActive, ranked=\improvedFieldCommanderRanked, name=\improvedFieldCommanderTitle] {\improvedFieldCommanderDescription}}
+              ( 6,-15) node[anchor=north east](db){\TalentBox[tier=20, width=14em, active=\gritActive,                   ranked=\gritRanked,                   name=\gritTitle]                   {\gritDescription}}
+              (12,-15) node[anchor=north east](dc){\TalentBox[tier=20, width=14em, active=\toughenedActive,              ranked=\toughenedRanked,              name=\toughenedTitle]              {\toughenedDescription}}
+              ( 0,-20) node[anchor=north east](ea){\TalentBox[tier=25, width=14em, active=\deadlyAccuracyActive,         ranked=\deadlyAccuracyRanked,         name=\deadlyAccuracyTitle]         {\deadlyAccuracyDescription}}
+              ( 6,-20) node[anchor=north east](eb){\TalentBox[tier=25, width=14em, active=\trueAimActive,                ranked=\trueAimRanked,                name=\trueAimTitle]                {\trueAimDescription}}
+              (12,-20) node[anchor=north east](ec){\TalentBox[tier=25, width=14em, active=\dedicationActive,             ranked=\dedicationRanked,             name=\dedicationTitle]             {\dedicationDescription}}
+        ;
+        \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
+        \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
+        \draw [gray,-,>=stealth, line width=6pt] (ac) to (bc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
+        \draw [gray,-,>=stealth, line width=6pt] (bb) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (bc) to (cc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
+        \draw [gray,-,>=stealth, line width=6pt] (cb) to (db);
+        \draw [gray,-,>=stealth, line width=6pt] (cc) to (dc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (db) to (eb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ba) to (bb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (cc) to (cb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ea) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (ec) to (eb);
+    \end{tikzpicture}
+}

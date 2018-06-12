@@ -1,4 +1,75 @@
-%Augment
-%Barrier
-%Conjure
-%Curse
+\newcommand{\primalDescription}{
+\section{Primal}
+\epigraph{\textit{
+    "A spirit took me in, when neither of my parents would
+    accept me. Athas provides for those who care for it. We
+    live in a desert simply because no-one cares for the land."
+} }{
+    Sutura, half‐elven druid 
+}
+    Athasian primal casters, often refered to as druids,
+    are the protectors of Athas' dying 
+    landscape. Patient and often unforgiving, they try to 
+    preserve and reclaim the barren lands that surround the 
+    Tyr region. Well armed with spells and abilities from the 
+    Spirits of the Land, they work to bolster Athas’ failing 
+    ecology. 
+    Often, druids prefer to remain hidden, observing the 
+    behavior of creatures and people before passing 
+    judgment. Travelers to an oasis are often unaware they 
+    are being observed; wanton destruction of the oasis will 
+    find themselves under the full fury of the druid and his 
+    many abilities. 
+    \\
+    See \nref{tlttree:primal} for more information.
+}
+
+\newcommand{\primalTree}{
+    \newpage
+    \subsection{Primal Talent Tree}
+    \label{tlttree:primal}
+
+    \textbf{Class Skills:} Knowledge(Nature), Medicine, Primal, Survival
+    \newline
+
+    \begin{tikzpicture}
+        \draw ( 0,  0) node[anchor=north east](aa){\TalentBox[tier=5,  width=14em, active=\gritActive,            ranked=\gritRanked,            name=\gritTitle]            {\gritDescription}}
+              ( 6,  0) node[anchor=north east](ab){\TalentBox[tier=5,  width=14em, active=\primalCasterActive,    ranked=\primalCasterRanked,    name=\primalCasterTitle]    {\primalCasterDescription}}
+              (12,  0) node[anchor=north east](ac){\TalentBox[tier=5,  width=14em, active=\animalCompanionActive, ranked=\animalCompanionRanked, name=\animalCompanionTitle] {\animalCompanionDescription}}
+              ( 0, -5) node[anchor=north east](ba){\TalentBox[tier=10, width=14em, active=\gentlePreserverActive, ranked=\gentlePreserverRanked, name=\gentlePreserverTitle] {\gentlePreserverDescription}}
+              ( 6, -5) node[anchor=north east](bb){\TalentBox[tier=10, width=14em, active=\disguiseCastingActive, ranked=\disguiseCastingRanked, name=\disguiseCastingTitle] {\disguiseCastingDescription}}
+              (12, -5) node[anchor=north east](bc){\TalentBox[tier=10, width=14em, active=\shapeshifterActive,    ranked=\shapeshifterRanked,    name=\shapeshifterTitle]    {\shapeshifterDescription}}
+              ( 0,-10) node[anchor=north east](ca){\TalentBox[tier=15, width=14em, active=\gentlePreserverActive, ranked=\gentlePreserverRanked, name=\gentlePreserverTitle] {\gentlePreserverDescription}}
+              ( 6,-10) node[anchor=north east](cb){\TalentBox[tier=15, width=14em, active=\gritActive,            ranked=\gritRanked,            name=\gritTitle]            {\gritDescription}}
+              (12,-10) node[anchor=north east](cc){\TalentBox[tier=15, width=14em, active=\oneWithNatureActive,   ranked=\oneWithNatureRanked,   name=\oneWithNatureTitle]   {\oneWithNatureDescription}}
+              ( 0,-15) node[anchor=north east](da){\TalentBox[tier=20, width=14em, active=\gentlePreserverActive, ranked=\gentlePreserverRanked, name=\gentlePreserverTitle] {\gentlePreserverDescription}}
+              ( 6,-15) node[anchor=north east](db){\TalentBox[tier=20, width=14em, active=\lingeringSpellActive,  ranked=\lingeringSpellRanked,  name=\lingeringSpellTitle]  {\disguiseCastingDescription}}
+              (12,-15) node[anchor=north east](dc){\TalentBox[tier=20, width=14em, active=\shapeshifterActive,    ranked=\shapeshifterRanked,    name=\shapeshifterTitle]    {\shapeshifterDescription}}
+              ( 0,-20) node[anchor=north east](ea){\TalentBox[tier=25, width=14em, active=\quickenSpellActive,    ranked=\quickenSpellRanked,    name=\quickenSpellTitle]    {\quickenSpellDescription}}
+              ( 6,-20) node[anchor=north east](eb){\TalentBox[tier=25, width=14em, active=\dedicationActive,      ranked=\dedicationRanked,      name=\dedicationTitle]      {\dedicationDescription}}
+              (12,-20) node[anchor=north east](ec){\TalentBox[tier=25, width=14em, active=\shapeshifterActive,    ranked=\shapeshifterRanked,    name=\shapeshifterTitle]    {\shapeshifterDescription}}
+        ;
+        \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
+        \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
+        \draw [gray,-,>=stealth, line width=6pt] (ac) to (bc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
+        \draw [gray,-,>=stealth, line width=6pt] (bb) to (cb);
+        \draw [gray,-,>=stealth, line width=6pt] (bc) to (cc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
+        \draw [gray,-,>=stealth, line width=6pt] (cb) to (db);
+        \draw [gray,-,>=stealth, line width=6pt] (cc) to (dc);
+
+        \draw [gray,-,>=stealth, line width=6pt] (da) to (ea);
+        \draw [gray,-,>=stealth, line width=6pt] (db) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (dc) to (ec);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ca) to (cb);
+
+        \draw [gray,-,>=stealth, line width=6pt] (da) to (db);
+
+        \draw [gray,-,>=stealth, line width=6pt] (ea) to (eb);
+        \draw [gray,-,>=stealth, line width=6pt] (ec) to (eb);
+    \end{tikzpicture}
+}
