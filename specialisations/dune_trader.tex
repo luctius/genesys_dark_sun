@@ -1,1 +1,61 @@
-Entrepreneur
+\newcommand{\duneTraderDescription}{
+\section{Dune Trader}
+\epigraph{\textit{
+    "duneTrader quote"
+} }{
+    duneTrader quotee
+}
+    Some Description
+    \\
+    See \nref{tlttree:duneTrader} for more information.
+}
+
+\newcommand{\duneTraderTree}{
+    \newpage
+    \subsection{Dune Trader Talent Tree}
+    \label{tlttree:duneTrader}
+
+    \textbf{Class Skills:} Deception, Negotiation, Knowledge (Geography), Knowledge (Underworld)
+    \newline
+
+    \begin{tikzpicture}
+        \draw ( 0,  0) node(aa)[inner sep=0]{\TalentBox[tier=5] {knowSomebody}}
+              ( 6,  0) node(ab)[inner sep=0]{\TalentBox[tier=5] {convincingDemeanor}}
+              (12,  0) node(ac)[inner sep=0]{\TalentBox[tier=5] {wheelAndDeal}}
+              ( 0, -5) node(ba)[inner sep=0]{\TalentBox[tier=10]{wheelAndDeal}}
+              ( 6, -5) node(bb)[inner sep=0]{\TalentBox[tier=10]{grit}}
+              (12, -5) node(bc)[inner sep=0]{\TalentBox[tier=10]{smoothTalker}}
+              ( 0,-10) node(ca)[inner sep=0]{\TalentBox[tier=15]{knowSomebody}}
+              ( 6,-10) node(cb)[inner sep=0]{\TalentBox[tier=15]{nobodysFool}}
+              (12,-10) node(cc)[inner sep=0]{\TalentBox[tier=15]{smoothTalker}}
+              ( 0,-15) node(da)[inner sep=0]{\TalentBox[tier=20]{nobodysFool}}
+              ( 6,-15) node(db)[inner sep=0]{\TalentBox[tier=20]{steelyNerves}}
+              (12,-15) node(dc)[inner sep=0]{\TalentBox[tier=20]{elvenMarketContacts}}
+              ( 0,-20) node(ea)[inner sep=0]{\TalentBox[tier=25]{knowSomebody}}
+              ( 6,-20) node(eb)[inner sep=0]{\TalentBox[tier=25]{naturalNegotiator}}
+              (12,-20) node(ec)[inner sep=0]{\TalentBox[tier=25]{dedication}}
+        ;
+
+        \tikzstyle{bar}=[gray,-,>=stealth, line width=6pt]
+
+        \draw [bar] (aa) to (ba);
+
+        \draw [bar] (ba) to (ca);
+
+        \draw [bar] (ca) to (da);
+
+        \draw [bar] (da) to (ea);
+
+        \draw [bar] (ba) to (bb);
+        \draw [bar] (bc) to (bb);
+
+        \draw [bar] (ca) to (cb);
+        \draw [bar] (cc) to (cb);
+
+        \draw [bar] (da) to (db);
+        \draw [bar] (dc) to (db);
+
+        \draw [bar] (ea) to (eb);
+        \draw [bar] (ec) to (eb);
+    \end{tikzpicture}
+}
