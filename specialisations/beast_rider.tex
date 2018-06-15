@@ -1,1 +1,65 @@
-Beast Rider
+\newcommand{\beastRiderDescription}{
+\section{Beast Rider}
+\epigraph{\textit{
+    "beastRider quote"
+} }{
+    beastRider quotee
+}
+    Some Description
+    \\
+    See \nref{tlttree:beastRider} for more information.
+}
+
+\newcommand{\beastRiderTree}{
+    \newpage
+    \subsection{Beast Rider Talent Tree}
+    \label{tlttree:beastRider}
+
+    \textbf{Class Skills:} Athletics, Perception, Survival, Knowledge (Nature)
+    \newline
+
+    \begin{tikzpicture}
+        \draw ( 0,  0) node(aa)[inner sep=0]{\TalentBox[tier=5] {beastWrangler}}
+              ( 6,  0) node(ab)[inner sep=0]{\TalentBox[tier=5] {toughened}}
+              (12,  0) node(ac)[inner sep=0]{\TalentBox[tier=5] {forager}}
+              ( 0, -5) node(ba)[inner sep=0]{\TalentBox[tier=10]{expertHandler}}
+              ( 6, -5) node(bb)[inner sep=0]{\TalentBox[tier=10]{expertTracker}}
+              (12, -5) node(bc)[inner sep=0]{\TalentBox[tier=10]{toughened}}
+              ( 0,-10) node(ca)[inner sep=0]{\TalentBox[tier=15]{expertTracker}}
+              ( 6,-10) node(cb)[inner sep=0]{\TalentBox[tier=15]{beastWrangler}}
+              (12,-10) node(cc)[inner sep=0]{\TalentBox[tier=15]{letsRide}}
+              ( 0,-15) node(da)[inner sep=0]{\TalentBox[tier=20]{improvedSpur}}
+              ( 6,-15) node(db)[inner sep=0]{\TalentBox[tier=20]{spur}}
+              (12,-15) node(dc)[inner sep=0]{\TalentBox[tier=20]{naturalOutdoorsman}}
+              ( 0,-20) node(ea)[inner sep=0]{\TalentBox[tier=25]{soothingTone}}
+              ( 6,-20) node(eb)[inner sep=0]{\TalentBox[tier=25]{dedication}}
+              (12,-20) node(ec)[inner sep=0]{\TalentBox[tier=25]{grit}}
+        ;
+
+        \tikzstyle{bar}=[gray,-,>=stealth, line width=6pt]
+
+        \draw [bar] (aa) to (ba);
+        \draw [bar] (ab) to (bb);
+        \draw [bar] (ac) to (bc);
+
+        \draw [bar] (ba) to (ca);
+        \draw [bar] (bb) to (cb);
+
+        \draw [bar] (cb) to (db);
+        \draw [bar] (cc) to (dc);
+
+        \draw [bar] (da) to (ea);
+        \draw [bar] (dc) to (ec);
+
+        \draw [bar] (ba) to (bb);
+        \draw [bar] (bc) to (bb);
+
+        \draw [bar] (ca) to (cb);
+        \draw [bar] (cc) to (cb);
+
+        \draw [bar] (da) to (db);
+        \draw [bar] (dc) to (db);
+
+        \draw [bar] (ec) to (eb);
+    \end{tikzpicture}
+}
