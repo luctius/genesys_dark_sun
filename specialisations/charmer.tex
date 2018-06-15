@@ -19,43 +19,46 @@
     \newline
 
     \begin{tikzpicture}
-        \draw ( 0,  0) node[anchor=north east](aa){\TalentBox[tier=5,  width=14em, active=\smoothTalkerActive,              ranked=\smoothTalkerRanked,              name=\smoothTalkerTitle]              {\smoothTalkerDescription}}
-              ( 6,  0) node[anchor=north east](ab){\TalentBox[tier=5,  width=14em, active=\inspiringRhetoricActive,         ranked=\inspiringRhetoricRanked,         name=\inspiringRhetoricTitle]         {\inspiringRhetoricDescription}}
-              (12,  0) node[anchor=north east](ac){\TalentBox[tier=5,  width=14em, active=\gritActive,                      ranked=\gritRanked,                      name=\gritTitle]                      {\gritDescription}}
-              ( 0, -5) node[anchor=north east](ba){\TalentBox[tier=10, width=14em, active=\killWithKindnessActive,          ranked=\killWithKindnessRanked,          name=\killWithKindnessTitle]          {\killWithKindnessDescription}}
-              ( 6, -5) node[anchor=north east](bb){\TalentBox[tier=10, width=14em, active=\improvedInspiringRhetoricActive, ranked=\improvedInspiringRhetoricRanked, name=\improvedInspiringRhetoricTitle] {\improvedInspiringRhetoricDescription}}
-              (12, -5) node[anchor=north east](bc){\TalentBox[tier=10, width=14em, active=\congenialActive,                 ranked=\congenialRanked,                 name=\congenialTitle]                 {\congenialDescription}}
-              ( 0,-10) node[anchor=north east](ca){\TalentBox[tier=15, width=14em, active=\disarmingSmileActive,            ranked=\disarmingSmileRanked,            name=\disarmingSmileTitle]            {\disarmingSmileDescription}}
-              ( 6,-10) node[anchor=north east](cb){\TalentBox[tier=15, width=14em, active=\worksLikeACharmActive,           ranked=\worksLikeACharmRanked,           name=\worksLikeACharmTitle]           {\worksLikeACharmDescription}}
-              (12,-10) node[anchor=north east](cc){\TalentBox[tier=15, width=14em, active=\disarmingSmileActive,            ranked=\disarmingSmileRanked,            name=\disarmingSmileTitle]            {\disarmingSmileDescription}}
-              ( 0,-15) node[anchor=north east](da){\TalentBox[tier=20, width=14em, active=\smoothTalkerActive,              ranked=\smoothTalkerRanked,              name=\smoothTalkerTitle]              {\smoothTalkerDescription}}
-              ( 6,-15) node[anchor=north east](db){\TalentBox[tier=20, width=14em, active=\intensePresenceActive,           ranked=\intensePresenceRanked,           name=\intensePresenceTitle]           {\intensePresenceDescription}}
-              (12,-15) node[anchor=north east](dc){\TalentBox[tier=20, width=14em, active=\justKiddingActive,               ranked=\justKiddingRanked,               name=\justKiddingTitle]               {\justKiddingDescription}}
-              ( 0,-20) node[anchor=north east](ea){\TalentBox[tier=25, width=14em, active=\naturalCharmerActive,            ranked=\naturalCharmerRanked,            name=\naturalCharmerTitle]            {\naturalCharmerDescription}}
-              ( 6,-20) node[anchor=north east](eb){\TalentBox[tier=25, width=14em, active=\dedicationActive,                ranked=\dedicationRanked,                name=\dedicationTitle]                {\dedicationDescription}}
-              (12,-20) node[anchor=north east](ec){\TalentBox[tier=25, width=14em, active=\dontShootActive,                 ranked=\dontShootRanked,                 name=\dontShootTitle]                 {\dontShootDescription}}
+        \draw ( 0,  0) node(aa)[inner sep=0]{\TalentBox[tier=5] {smoothTalker}}
+              ( 6,  0) node(ab)[inner sep=0]{\TalentBox[tier=5] {inspiringRhetoric}}
+              (12,  0) node(ac)[inner sep=0]{\TalentBox[tier=5] {grit}}
+              ( 0, -5) node(ba)[inner sep=0]{\TalentBox[tier=10]{killWithKindness}}
+              ( 6, -5) node(bb)[inner sep=0]{\TalentBox[tier=10]{improvedInspiringRhetoric}}
+              (12, -5) node(bc)[inner sep=0]{\TalentBox[tier=10]{congenial}}
+              ( 0,-10) node(ca)[inner sep=0]{\TalentBox[tier=15]{disarmingSmile}}
+              ( 6,-10) node(cb)[inner sep=0]{\TalentBox[tier=15]{worksLikeACharm}}
+              (12,-10) node(cc)[inner sep=0]{\TalentBox[tier=15]{disarmingSmile}}
+              ( 0,-15) node(da)[inner sep=0]{\TalentBox[tier=20]{smoothTalker}}
+              ( 6,-15) node(db)[inner sep=0]{\TalentBox[tier=20]{intensePresence}}
+              (12,-15) node(dc)[inner sep=0]{\TalentBox[tier=20]{justKidding}}
+              ( 0,-20) node(ea)[inner sep=0]{\TalentBox[tier=25]{naturalCharmer}}
+              ( 6,-20) node(eb)[inner sep=0]{\TalentBox[tier=25]{dedication}}
+              (12,-20) node(ec)[inner sep=0]{\TalentBox[tier=25]{dontShoot}}
         ;
-        \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
-        \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
-        \draw [gray,-,>=stealth, line width=6pt] (ac) to (bc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
-        \draw [gray,-,>=stealth, line width=6pt] (bc) to (cc);
+        \tikzstyle{bar}=[gray,-,>=stealth, line width=6pt]
 
-        \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
-        \draw [gray,-,>=stealth, line width=6pt] (cc) to (dc);
+        \draw [bar] (aa) to (ba);
+        \draw [bar] (ab) to (bb);
+        \draw [bar] (ac) to (bc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (da) to (ea);
-        \draw [gray,-,>=stealth, line width=6pt] (dc) to (ec);
+        \draw [bar] (ba) to (ca);
+        \draw [bar] (bc) to (cc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (bc) to (bb);
+        \draw [bar] (ca) to (da);
+        \draw [bar] (cc) to (dc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (cc) to (cb);
+        \draw [bar] (da) to (ea);
+        \draw [bar] (dc) to (ec);
 
-        \draw [gray,-,>=stealth, line width=6pt] (da) to (db);
-        \draw [gray,-,>=stealth, line width=6pt] (dc) to (db);
+        \draw [bar] (bc) to (bb);
 
-        \draw [gray,-,>=stealth, line width=6pt] (ea) to (eb);
-        \draw [gray,-,>=stealth, line width=6pt] (ec) to (eb);
+        \draw [bar] (cc) to (cb);
+
+        \draw [bar] (da) to (db);
+        \draw [bar] (dc) to (db);
+
+        \draw [bar] (ea) to (eb);
+        \draw [bar] (ec) to (eb);
     \end{tikzpicture}
 }

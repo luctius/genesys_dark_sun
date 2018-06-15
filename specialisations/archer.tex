@@ -7,7 +7,7 @@
     is a career skill. If you can't see your target you surely can't hit it, thus
     an archer is often perceptive. Discipline is needed to for that inner focus
     to hit that tiny spot in the distance. Finally in the heat of the moment, he
-    needs to keep his Cool, so that he doesn not let his projectile fly too early.\\
+    needs to keep his Cool, so that he does not let his projectile fly too early.\\
     \\
     See \nref{tlttree:archer} for more information.
 }
@@ -21,34 +21,43 @@
     \newline
 
     \begin{tikzpicture}
-        \draw ( 0,  0) node[anchor=north east](aa){\TalentBox[tier=5, width=14em, active=\expertTrackerActive,   ranked=\expertTrackerRanked,   name=\expertTrackerTitle]   {\expertTrackerDescription}}
-              ( 6,  0) node[anchor=north east](ab){\TalentBox[tier=5, width=14em, active=\sniperShotActive,      ranked=\sniperShotRanked,      name=\sniperShotTitle]      {\sniperShotDescription}}
-              (12,  0) node[anchor=north east](ac){\TalentBox[tier=5, width=14em, active=\gritActive,            ranked=\gritRanked,            name=\gritTitle]            {\gritDescription}}
-              ( 0, -5) node[anchor=north east](ba){\TalentBox[tier=10, width=14em, active=\lethalBlowsActive,     ranked=\lethalBlowsRanked,     name=\lethalBlowsTitle]     {\lethalBlowsDescription}}
-              ( 6, -5) node[anchor=north east](bb){\TalentBox[tier=10, width=14em, active=\trueAimActive,         ranked=\trueAimRanked,         name=\trueAimTitle]         {\trueAimDescription}}
-              (12, -5) node[anchor=north east](bc){\TalentBox[tier=10, width=14em, active=\deadlyAccuracyActive,  ranked=\deadlyAccuracyRanked,  name=\deadlyAccuracyTitle]  {\deadlyAccuracyDescription}}
-              ( 0,-10) node[anchor=north east](ca){\TalentBox[tier=15, width=14em, active=\trueAimActive,         ranked=\trueAimRanked,         name=\trueAimTitle]         {\trueAimDescription}}
-              ( 6,-10) node[anchor=north east](cb){\TalentBox[tier=15, width=14em, active=\lethalBlowsActive,     ranked=\lethalBlowsRanked,     name=\lethalBlowsTitle]     {\lethalBlowsDescription}}
-              (12,-10) node[anchor=north east](cc){\TalentBox[tier=15, width=14em, active=\sniperShotActive,      ranked=\sniperShotRanked,      name=\sniperShotTitle]      {\sniperShotDescription}}
-              ( 0,-15) node[anchor=north east](da){\TalentBox[tier=20, width=14em, active=\expertTrackerActive,   ranked=\expertTrackerRanked,   name=\expertTrackerTitle]   {\expertTrackerDescription}}
-              ( 6,-15) node[anchor=north east](db){\TalentBox[tier=20, width=14em, active=\deadlyAccuracyActive,  ranked=\deadlyAccuracyRanked,  name=\deadlyAccuracyTitle]  {\deadlyAccuracyDescription}}
-              (12,-15) node[anchor=north east](dc){\TalentBox[tier=20, width=14em, active=\toughenedActive,       ranked=\toughenedRanked,       name=\toughenedTitle]       {\toughenedDescription}}
-              ( 0,-20) node[anchor=north east](ea){\TalentBox[tier=25, width=14em, active=\quickFixActive,        ranked=\quickFixRanked,        name=\quickFixTitle]        {\quickFixDescription}}
-              ( 6,-20) node[anchor=north east](eb){\TalentBox[tier=25, width=14em, active=\naturalMarksmanActive, ranked=\naturalMarksmanRanked, name=\naturalMarksmanTitle] {\naturalMarksmanDescription}}
-              (12,-20) node[anchor=north east](ec){\TalentBox[tier=25, width=14em, active=\dedicationActive,      ranked=\dedicationRanked,      name=\dedicationTitle]      {\dedicationDescription}}
+        \draw ( 0,  0) node(aa)[inner sep=0]{\TalentBox[tier=5] {expertTracker}}
+              ( 6,  0) node(ab)[inner sep=0]{\TalentBox[tier=5] {sniperShot}}
+              (12,  0) node(ac)[inner sep=0]{\TalentBox[tier=5] {grit}}
+              ( 0, -5) node(ba)[inner sep=0]{\TalentBox[tier=10]{lethalBlows}}
+              ( 6, -5) node(bb)[inner sep=0]{\TalentBox[tier=10]{trueAim}}
+              (12, -5) node(bc)[inner sep=0]{\TalentBox[tier=10]{deadlyAccuracy}}
+              ( 0,-10) node(ca)[inner sep=0]{\TalentBox[tier=15]{trueAim}}
+              ( 6,-10) node(cb)[inner sep=0]{\TalentBox[tier=15]{lethalBlows}}
+              (12,-10) node(cc)[inner sep=0]{\TalentBox[tier=15]{sniperShot}}
+              ( 0,-15) node(da)[inner sep=0]{\TalentBox[tier=20]{expertTracker}}
+              ( 6,-15) node(db)[inner sep=0]{\TalentBox[tier=20]{deadlyAccuracy}}
+              (12,-15) node(dc)[inner sep=0]{\TalentBox[tier=20]{toughened}}
+              ( 0,-20) node(ea)[inner sep=0]{\TalentBox[tier=25]{quickFix}}
+              ( 6,-20) node(eb)[inner sep=0]{\TalentBox[tier=25]{naturalMarksman}}
+              (12,-20) node(ec)[inner sep=0]{\TalentBox[tier=25]{dedication}}
         ;
-        \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
-        \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
-        \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
-        \draw [gray,-,>=stealth, line width=6pt] (bb) to (cb);
-        \draw [gray,-,>=stealth, line width=6pt] (bc) to (cc);
-        \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
-        \draw [gray,-,>=stealth, line width=6pt] (cb) to (db);
-        \draw [gray,-,>=stealth, line width=6pt] (cb) to (cc);
-        \draw [gray,-,>=stealth, line width=6pt] (da) to (ea);
-        \draw [gray,-,>=stealth, line width=6pt] (db) to (eb);
-        \draw [gray,-,>=stealth, line width=6pt] (dc) to (ec);
-        \draw [gray,-,>=stealth, line width=6pt] (db) to (dc);
-        \draw [gray,-,>=stealth, line width=6pt] (ea) to (eb);
+
+        \tikzstyle{bar}=[gray,-,>=stealth, line width=6pt]
+
+        \draw [bar] (aa) to (ba);
+        \draw [bar] (ab) to (bb);
+
+        \draw [bar] (ba) to (ca);
+        \draw [bar] (bb) to (cb);
+        \draw [bar] (bc) to (cc);
+
+        \draw [bar] (ca) to (da);
+        \draw [bar] (cb) to (db);
+
+        \draw [bar] (da) to (ea);
+        \draw [bar] (db) to (eb);
+        \draw [bar] (dc) to (ec);
+
+        \draw [bar] (cb) to (cc);
+
+        \draw [bar] (db) to (dc);
+
+        \draw [bar] (ea) to (eb);
     \end{tikzpicture}
 }

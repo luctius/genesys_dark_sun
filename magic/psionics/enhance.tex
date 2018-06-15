@@ -1,28 +1,31 @@
 \subsubsection{Enhance}
 
 \begin{tikzpicture}
-    \draw ([xshift=-2em]  0,     6) node[anchor=north east](pr){\TalentBox[width=52em, tier=10, name=\psionicEnhanceTitle]{\psionicEnhanceDescription}};
-    \draw ([xshift=-43em] 0,     0) node[anchor=north east](aa){\TalentBox[width=12em, tier=5,  name=\enhanceControlATitle]{\enhanceControlADescription}}
-          ([xshift=-43em] 5,     0) node[anchor=north east](ab){\TalentBox[width=12em, tier=5,  name=\enhanceControlBTitle]{\enhanceControlBDescription}}
-          ([xshift=-43em]14.5,   0) node[anchor=north east](ad){\TalentBox[width=25em, tier=10, name=\enhanceMagnitudeATitle]{\enhanceMagnitudeADescription}}
-          ([xshift=-43em] 0,    -5) node[anchor=north east](ba){\TalentBox[width=12em, tier=5,  name=\enhanceControlCTitle]{\enhanceControlCDescription}}
-          ([xshift=-43em] 5,    -5) node[anchor=north east](bb){\TalentBox[width=12em, tier=5,  name=\enhanceStrengthATitle]{\enhanceStrengthADescription}}
-          ([xshift=-43em]14.5,  -5) node[anchor=north east](bd){\TalentBox[width=25em, tier=10, name=\enhanceMagnitudeBTitle]{\enhanceMagnitudeBDescription}}
-          ([xshift=-43em] 0,   -10) node[anchor=north east](ca){\TalentBox[width=12em, tier=5,  name=\enhanceControlDTitle]{\enhanceControlDDescription}}
-          ([xshift=-43em]10,   -10) node[anchor=north east](cc){\TalentBox[width=25em, tier=10, name=\enhanceStrengthBTitle]{\enhanceStrengthBDescription}}
-          ([xshift=-43em]14.5, -10) node[anchor=north east](cd){\TalentBox[width=12em, tier=10, name=\enhanceRangeTitle]{\enhanceRangeDescription}}
-          ([xshift=-43em] 5,   -15) node[anchor=north east](db){\TalentBox[width=25em, tier=10, name=\enhanceControlETitle]{\enhanceControlEDescription}}
-          ([xshift=-43em]14.5, -15) node[anchor=north east](dd){\TalentBox[width=25em, tier=10, name=\enhanceMagnitudeCTitle]{\enhanceMagnitudeCDescription}}
+    \draw ( -13,  -2) node(pr){\TalentBox[width=45em, tier=10]{psionicEnhance}};
+    \draw ( -20,  -7) node(aa){\TalentBox[width=10em, tier=5]{enhanceControlA}}
+          ( -15,  -7) node(ab){\TalentBox[width=10em, tier=5]{enhanceControlB}}
+          (  -8,  -7) node(ad){\TalentBox[width=20em, tier=10]{enhanceMagnitudeA}}
+          ( -20, -12) node(ba){\TalentBox[width=10em, tier=5]{enhanceControlC}}
+          ( -15, -12) node(bb){\TalentBox[width=10em, tier=5]{enhanceStrengthA}}
+          (  -8, -12) node(bd){\TalentBox[width=20em, tier=10]{enhanceMagnitudeB}}
+          ( -20, -17) node(ca){\TalentBox[width=10em, tier=5]{enhanceControlD}}
+          ( -13, -17) node(cc){\TalentBox[width=20em, tier=10]{enhanceStrengthB}}
+          (  -6, -17) node(cd){\TalentBox[width=10em, tier=10]{enhanceRange}}
+          ( -17, -22) node(db){\TalentBox[width=20em, tier=10]{enhanceControlE}}
+          (  -8, -22) node(dd){\TalentBox[width=20em, tier=10]{enhanceMagnitudeC}}
     ;
-    \draw [gray,-,>=stealth, line width=6pt] (aa) -- (aa |- pr.south); 
-    \draw [gray,-,>=stealth, line width=6pt] (ab) -- (ab |- pr.south); 
-    \draw [gray,-,>=stealth, line width=6pt] (ad) -- (ad |- pr.south); 
-    \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
-    \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
-    \draw [gray,-,>=stealth, line width=6pt] (ad) to (bd);
-    \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
-    \draw [gray,-,>=stealth, line width=6pt] (bb) -- (bb |- cc.north); 
-    \draw [gray,-,>=stealth, line width=6pt] (cd) -- (cd |- bd.south); 
-    \draw [gray,-,>=stealth, line width=6pt] (ca) -- (ca |- db.north); 
-    \draw [gray,-,>=stealth, line width=6pt] (cd) -- (cd |- dd.north); 
+
+    \tikzstyle{bar}=[gray,-,>=stealth, line width=6pt]
+
+    \draw [bar] (aa) -- (aa |- pr.south);
+    \draw [bar] (ab) -- (ab |- pr.south);
+    \draw [bar] (ad) -- (ad |- pr.south);
+    \draw [bar] (aa) edge (ba);
+    \draw [bar] (ab) edge (bb);
+    \draw [bar] (ad) edge (bd);
+    \draw [bar] (ba) edge (ca);
+    \draw [bar] (bb) -- (bb |- cc.north);
+    \draw [bar] (cd) -- (cd |- bd.south);
+    \draw [bar] (ca) -- (ca |- db.north);
+    \draw [bar] (cd) -- (cd |- dd.north);
 \end{tikzpicture}

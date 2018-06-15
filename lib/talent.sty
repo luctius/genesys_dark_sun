@@ -18,60 +18,57 @@
     /talentbox/.is family, /talentbox,
     % Here are the options that a user can pass
     default/.style = {
-        name = Unnamed,
-        width = 10em,
-        height = 10em,
+        width = 12em,
+        height = 7em,
         marge = 0.2em,
         titleHeight = 1.6em,
         tier = 1,
-        active = false,
-        ranked = false,
     },
-    name/.estore in = \talentboxName,
     width/.estore in = \talentboxWidth,
     height/.estore in = \talentboxHeight,
     marge/.estore in = \talentboxMarge,
     titleHeight/.estore in = \talentboxTitleHeight,
-    active/.estore in = \talentboxActive,
-    ranked/.estore in = \talentboxRanked,
     tier/.estore in = \talentboxTier,
+    combined/.style= {
+        name=\csname #1Title\endcsname,
+        active=\csname #1Active\endcsname,
+        ranked=\csname #1Ranked\endcsname,
+    },
 }
 
 \newcommand\TalentBox[2][]{
     \pgfkeys{/talentbox, default, #1}
     %
-    \newcommand{\tier}{ \talentboxTier }
-    %
+    \noindent
     \tikz {
-        %
-        \coordinate (a) at (0em,0em);
-        \coordinate (b) at (\talentboxWidth,\talentboxHeight);
-        \coordinate[below left = \talentboxMarge and \talentboxMarge of b] (c) {};
-        \coordinate[below left = \talentboxTitleHeight and (\talentboxWidth - (\talentboxMarge * 2) ) of c] (d) {};
-        %%
-        \draw [fill=white, ultra thick] (a) rectangle (b);
-        \ifthenelse{ \equal{\talentboxActive}{true} }{
-            \draw [fill=activetalent] (c) rectangle (d);
+        \ifthenelse{ \equal{\csname #2Active\endcsname}{true} }{
+            \tikzstyle{title}=[draw,fill=activetalent]
         }{
-            \draw [fill=passivetalent] (c) rectangle (d);
+            \tikzstyle{title}=[draw,fill=passivetalent]
         }
         %
-        \node[above right] at (d) {\color{white}\large \uppercase{ \talentboxName } };
-        \node[below right, text width=\talentboxWidth-(2*\talentboxMarge)] at (d) {\color{black} \ssmall #2};
-        \ifthenelse{ \equal{\talentboxTier}{0} }{
-        }{
-            \draw [fill=black, ultra thick] (\talentboxWidth,0) rectangle (\talentboxWidth-1.6em,0+1.6em);
-            \node[above left] at ([xshift=-0pt]\talentboxWidth,0) {\color{white}\large \uppercase{\tier} };
+        \node[chamfered rectangle, chamfered rectangle corners={north west, south east, north east},
+                draw, thick, inner sep=0mm, minimum height=\talentboxHeight] (outer)  {
+            \tikz \node[label={[chamfered rectangle, chamfered rectangle corners={north west, north east},
+                        title, draw, thick, inner sep=0mm, font=\sffamily\color{white},
+                        minimum height=\talentboxTitleHeight, minimum width=\talentboxWidth-(2*\talentboxMarge)]
+                        above: \large \csname #2Title\endcsname}, text width=\talentboxWidth-(2*\talentboxMarge)] (inner) {
+                    \small \csname #2Description\endcsname};
+        };
+        %
+        \ifthenelse{ \equal{\talentboxTier}{0} }{}{
+            \node[chamfered rectangle, chamfered rectangle corners={south west, south east, north east, north west}, draw, thick, inner sep=0mm,
+                title, font=\sffamily\color{white}] at (outer.south east) {\large \uppercase{\talentboxTier} };
         }
         %
-        \ifthenelse{ \equal{\talentboxRanked}{true} }{
-            \draw [fill=black, ultra thick] (a) rectangle (0+1.6em,0+1.6em);
-            \node[above right] at (a) {\color{white}\large \uppercase{R} };
+        \ifthenelse{ \equal{\csname #2Ranked\endcsname}{true} }{
+            \node[chamfered rectangle, chamfered rectangle corners={south west, south east, north east, north west}, draw, thick, inner sep=0mm,
+                title, font=\sffamily\color{white}] at (outer.north west) {\large \uppercase{R} };
         }{}
         %
-        \ifthenelse{ \equal{\talentboxActive}{true} }{
-            \draw [fill=black, ultra thick] (0+1.6em, 0) rectangle (0+3.2em,0+1.6em);
-            \node[above right] at (0+1.6em, 0) {\color{white}\large \uppercase{A} };
+        \ifthenelse{ \equal{\csname #2Active\endcsname}{true} }{
+            \node[chamfered rectangle, chamfered rectangle corners={south west, south east, north east, north west}, draw, thick, inner sep=0mm,
+                title, font=\sffamily\color{white}] at (outer.north east) {\large \uppercase{A}};
         }{}
     }
 }

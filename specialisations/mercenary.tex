@@ -19,42 +19,45 @@
     \newline
 
     \begin{tikzpicture}
-        \draw ( 0,  0) node[anchor=north east](aa){\TalentBox[tier=5,  width=14em, active=\commandActive,                ranked=\commandRanked,                name=\commandTitle]                {\commandDescription}}
-              ( 6,  0) node[anchor=north east](ab){\TalentBox[tier=5,  width=14em, active=\secondWindActive,             ranked=\secondWindRanked,             name=\secondWindTitle]             {\secondWindDescription}}
-              (12,  0) node[anchor=north east](ac){\TalentBox[tier=5,  width=14em, active=\sideStepActive,               ranked=\sideStepRanked,               name=\sideStepTitle]               {\sideStepDescription}}
-              ( 0, -5) node[anchor=north east](ba){\TalentBox[tier=10, width=14em, active=\secondWindActive,             ranked=\secondWindRanked,             name=\secondWindTitle]             {\secondWindDescription}}
-              ( 6, -5) node[anchor=north east](bb){\TalentBox[tier=10, width=14em, active=\confidenceActive,             ranked=\confidenceRanked,             name=\confidenceTitle]             {\confidenceDescription}}
-              (12, -5) node[anchor=north east](bc){\TalentBox[tier=10, width=14em, active=\strongArmActive,              ranked=\strongArmRanked,              name=\strongArmTitle]              {\strongArmDescription}}
-              ( 0,-10) node[anchor=north east](ca){\TalentBox[tier=15, width=14em, active=\fieldCommanderActive,         ranked=\fieldCommanderRanked,         name=\fieldCommanderTitle]         {\fieldCommanderDescription}}
-              ( 6,-10) node[anchor=north east](cb){\TalentBox[tier=15, width=14em, active=\commandActive,                ranked=\commandRanked,                name=\commandTitle]                {\commandDescription}}
-              (12,-10) node[anchor=north east](cc){\TalentBox[tier=15, width=14em, active=\naturalBrawlerActive,         ranked=\naturalBrawlerRanked,         name=\naturalBrawlerTitle]         {\naturalBrawlerDescription}}
-              ( 0,-15) node[anchor=north east](da){\TalentBox[tier=20, width=14em, active=\improvedFieldCommanderActive, ranked=\improvedFieldCommanderRanked, name=\improvedFieldCommanderTitle] {\improvedFieldCommanderDescription}}
-              ( 6,-15) node[anchor=north east](db){\TalentBox[tier=20, width=14em, active=\gritActive,                   ranked=\gritRanked,                   name=\gritTitle]                   {\gritDescription}}
-              (12,-15) node[anchor=north east](dc){\TalentBox[tier=20, width=14em, active=\toughenedActive,              ranked=\toughenedRanked,              name=\toughenedTitle]              {\toughenedDescription}}
-              ( 0,-20) node[anchor=north east](ea){\TalentBox[tier=25, width=14em, active=\deadlyAccuracyActive,         ranked=\deadlyAccuracyRanked,         name=\deadlyAccuracyTitle]         {\deadlyAccuracyDescription}}
-              ( 6,-20) node[anchor=north east](eb){\TalentBox[tier=25, width=14em, active=\trueAimActive,                ranked=\trueAimRanked,                name=\trueAimTitle]                {\trueAimDescription}}
-              (12,-20) node[anchor=north east](ec){\TalentBox[tier=25, width=14em, active=\dedicationActive,             ranked=\dedicationRanked,             name=\dedicationTitle]             {\dedicationDescription}}
+        \draw ( 0,  0) node(aa)[inner sep=0]{\TalentBox[tier=5] {command}}
+              ( 6,  0) node(ab)[inner sep=0]{\TalentBox[tier=5] {secondWind}}
+              (12,  0) node(ac)[inner sep=0]{\TalentBox[tier=5] {sideStep}}
+              ( 0, -5) node(ba)[inner sep=0]{\TalentBox[tier=10]{secondWind}}
+              ( 6, -5) node(bb)[inner sep=0]{\TalentBox[tier=10]{confidence}}
+              (12, -5) node(bc)[inner sep=0]{\TalentBox[tier=10]{strongArm}}
+              ( 0,-10) node(ca)[inner sep=0]{\TalentBox[tier=15]{fieldCommander}}
+              ( 6,-10) node(cb)[inner sep=0]{\TalentBox[tier=15]{command}}
+              (12,-10) node(cc)[inner sep=0]{\TalentBox[tier=15]{naturalBrawler}}
+              ( 0,-15) node(da)[inner sep=0]{\TalentBox[tier=20]{improvedFieldCommander}}
+              ( 6,-15) node(db)[inner sep=0]{\TalentBox[tier=20]{grit}}
+              (12,-15) node(dc)[inner sep=0]{\TalentBox[tier=20]{toughened}}
+              ( 0,-20) node(ea)[inner sep=0]{\TalentBox[tier=25]{deadlyAccuracy}}
+              ( 6,-20) node(eb)[inner sep=0]{\TalentBox[tier=25]{trueAim}}
+              (12,-20) node(ec)[inner sep=0]{\TalentBox[tier=25]{dedication}}
         ;
-        \draw [gray,-,>=stealth, line width=6pt] (aa) to (ba);
-        \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
-        \draw [gray,-,>=stealth, line width=6pt] (ac) to (bc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
-        \draw [gray,-,>=stealth, line width=6pt] (bb) to (cb);
-        \draw [gray,-,>=stealth, line width=6pt] (bc) to (cc);
+        \tikzstyle{bar}=[gray,-,>=stealth, line width=6pt]
 
-        \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
-        \draw [gray,-,>=stealth, line width=6pt] (cb) to (db);
-        \draw [gray,-,>=stealth, line width=6pt] (cc) to (dc);
+        \draw [bar] (aa) to (ba);
+        \draw [bar] (ab) to (bb);
+        \draw [bar] (ac) to (bc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (db) to (eb);
+        \draw [bar] (ba) to (ca);
+        \draw [bar] (bb) to (cb);
+        \draw [bar] (bc) to (cc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (ba) to (bb);
+        \draw [bar] (ca) to (da);
+        \draw [bar] (cb) to (db);
+        \draw [bar] (cc) to (dc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (ca) to (cb);
-        \draw [gray,-,>=stealth, line width=6pt] (cc) to (cb);
+        \draw [bar] (db) to (eb);
 
-        \draw [gray,-,>=stealth, line width=6pt] (ea) to (eb);
-        \draw [gray,-,>=stealth, line width=6pt] (ec) to (eb);
+        \draw [bar] (ba) to (bb);
+
+        \draw [bar] (ca) to (cb);
+        \draw [bar] (cc) to (cb);
+
+        \draw [bar] (ea) to (eb);
+        \draw [bar] (ec) to (eb);
     \end{tikzpicture}
 }

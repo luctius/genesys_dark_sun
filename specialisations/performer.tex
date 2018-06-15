@@ -24,42 +24,45 @@
     \newline
 
     \begin{tikzpicture}
-        \draw ( 0,  0) node[anchor=north east](aa){\TalentBox[tier=5,  width=14em, active=\smoothTalkerActive,                 ranked=\smoothTalkerRanked,                 name=\smoothTalkerTitle]                 {\smoothTalkerDescription}}
-              ( 6,  0) node[anchor=north east](ab){\TalentBox[tier=5,  width=14em, active=\killWithKindnessActive,             ranked=\killWithKindnessRanked,             name=\killWithKindnessTitle]             {\killWithKindnessDescription}}
-              (12,  0) node[anchor=north east](ac){\TalentBox[tier=5,  width=14em, active=\distractingBehaviourActive,         ranked=\distractingBehaviourRanked,         name=\distractingBehaviourTitle]         {\distractingBehaviourDescription}}
-              ( 0, -5) node[anchor=north east](ba){\TalentBox[tier=10, width=14em, active=\distractingBehaviourActive,         ranked=\distractingBehaviourRanked,         name=\distractingBehaviourTitle]         {\distractingBehaviourDescription}}
-              ( 6, -5) node[anchor=north east](bb){\TalentBox[tier=10, width=14em, active=\congenialActive,                    ranked=\congenialRanked,                    name=\congenialTitle]                    {\congenialDescription}}
-              (12, -5) node[anchor=north east](bc){\TalentBox[tier=10, width=14em, active=\dodgeActive,                        ranked=\dodgeRanked,                        name=\dodgeTitle]                        {\dodgeDescription}}
-              ( 0,-10) node[anchor=north east](ca){\TalentBox[tier=15, width=14em, active=\distractingBehaviourActive,         ranked=\distractingBehaviourRanked,         name=\distractingBehaviourTitle]         {\distractingBehaviourDescription}}
-              ( 6,-10) node[anchor=north east](cb){\TalentBox[tier=15, width=14em, active=\intensePresenceActive,              ranked=\intensePresenceRanked,              name=\intensePresenceTitle]              {\intensePresenceDescription}}
-              (12,-10) node[anchor=north east](cc){\TalentBox[tier=15, width=14em, active=\naturalAthleteActive,               ranked=\naturalAthleteRanked,               name=\naturalAthleteTitle]               {\naturalAthleteDescription}}
-              ( 0,-15) node[anchor=north east](da){\TalentBox[tier=20, width=14em, active=\smoothTalkerActive,                 ranked=\smoothTalkerRanked,                 name=\smoothTalkerTitle]                 {\smoothTalkerDescription}}
-              ( 6,-15) node[anchor=north east](db){\TalentBox[tier=20, width=14em, active=\improvedDistractingBehaviourActive, ranked=\improvedDistractingBehaviourRanked, name=\improvedDistractingBehaviourTitle] {\improvedDistractingBehaviourDescription}}
-              (12,-15) node[anchor=north east](dc){\TalentBox[tier=20, width=14em, active=\deceptiveTauntActive,               ranked=\deceptiveTauntRanked,               name=\deceptiveTauntTitle]               {\deceptiveTauntDescription}}
-              ( 0,-20) node[anchor=north east](ea){\TalentBox[tier=25, width=14em, active=\biggestFanActive,                   ranked=\biggestFanRanked,                   name=\biggestFanTitle]                   {\biggestFanDescription}}
-              ( 6,-20) node[anchor=north east](eb){\TalentBox[tier=25, width=14em, active=\dedicationActive,                   ranked=\dedicationRanked,                   name=\dedicationTitle]                   {\dedicationDescription}}
-              (12,-20) node[anchor=north east](ec){\TalentBox[tier=25, width=14em, active=\coordinationDodgeActive,            ranked=\coordinationDodgeRanked,            name=\coordinationDodgeTitle]            {\coordinationDodgeDescription}}
+        \draw ( 0,  0) node(aa)[inner sep=0]{\TalentBox[tier=5] {smoothTalker}}
+              ( 6,  0) node(ab)[inner sep=0]{\TalentBox[tier=5] {killWithKindness}}
+              (12,  0) node(ac)[inner sep=0]{\TalentBox[tier=5] {distractingBehaviour}}
+              ( 0, -5) node(ba)[inner sep=0]{\TalentBox[tier=10]{distractingBehaviour}}
+              ( 6, -5) node(bb)[inner sep=0]{\TalentBox[tier=10]{congenial}}
+              (12, -5) node(bc)[inner sep=0]{\TalentBox[tier=10]{dodge}}
+              ( 0,-10) node(ca)[inner sep=0]{\TalentBox[tier=15]{distractingBehaviour}}
+              ( 6,-10) node(cb)[inner sep=0]{\TalentBox[tier=15]{intensePresence}}
+              (12,-10) node(cc)[inner sep=0]{\TalentBox[tier=15]{naturalAthlete}}
+              ( 0,-15) node(da)[inner sep=0]{\TalentBox[tier=20]{smoothTalker}}
+              ( 6,-15) node(db)[inner sep=0]{\TalentBox[tier=20]{improvedDistractingBehaviour}}
+              (12,-15) node(dc)[inner sep=0]{\TalentBox[tier=20]{deceptiveTaunt}}
+              ( 0,-20) node(ea)[inner sep=0]{\TalentBox[tier=25]{biggestFan}}
+              ( 6,-20) node(eb)[inner sep=0]{\TalentBox[tier=25]{dedication}}
+              (12,-20) node(ec)[inner sep=0]{\TalentBox[tier=25]{coordinationDodge}}
         ;
-        \draw [gray,-,>=stealth, line width=6pt] (ab) to (bb);
-        \draw [gray,-,>=stealth, line width=6pt] (ac) to (bc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (ba) to (ca);
-        \draw [gray,-,>=stealth, line width=6pt] (bb) to (cb);
-        \draw [gray,-,>=stealth, line width=6pt] (bc) to (cc);
+        \tikzstyle{bar}=[gray,-,>=stealth, line width=6pt]
 
-        \draw [gray,-,>=stealth, line width=6pt] (ca) to (da);
-        \draw [gray,-,>=stealth, line width=6pt] (cc) to (dc);
+        \draw [bar] (ab) to (bb);
+        \draw [bar] (ac) to (bc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (da) to (ea);
-        \draw [gray,-,>=stealth, line width=6pt] (db) to (eb);
-        \draw [gray,-,>=stealth, line width=6pt] (dc) to (ec);
+        \draw [bar] (ba) to (ca);
+        \draw [bar] (bb) to (cb);
+        \draw [bar] (bc) to (cc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (ba) to (bb);
-        \draw [gray,-,>=stealth, line width=6pt] (bc) to (bb);
+        \draw [bar] (ca) to (da);
+        \draw [bar] (cc) to (dc);
 
-        \draw [gray,-,>=stealth, line width=6pt] (ca) to (cb);
+        \draw [bar] (da) to (ea);
+        \draw [bar] (db) to (eb);
+        \draw [bar] (dc) to (ec);
 
-        \draw [gray,-,>=stealth, line width=6pt] (da) to (db);
-        \draw [gray,-,>=stealth, line width=6pt] (dc) to (db);
+        \draw [bar] (ba) to (bb);
+        \draw [bar] (bc) to (bb);
+
+        \draw [bar] (ca) to (cb);
+
+        \draw [bar] (da) to (db);
+        \draw [bar] (dc) to (db);
     \end{tikzpicture}
 }
