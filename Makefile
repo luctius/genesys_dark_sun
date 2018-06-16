@@ -22,6 +22,10 @@ FILES= \
 	$(null)
 
 all: output/dark_sun_rpg.pdf output/dark_sun_rpg_swgdice.pdf output/ds_races.pdf output/ds_specs.pdf
+show_races: output/ds_races.pdf
+	xdg-open $<
+show_specs: output/ds_specs.pdf
+	xdg-open $<
 show: output/dark_sun_rpg_swgdice.pdf
 	xdg-open $<
 spell: $(NAME)
