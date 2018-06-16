@@ -8,6 +8,12 @@
 \date{2018-06-05}
 
 \begin{document}
+
+%Show image in race section
+\renewcommand{\constRacesShowImage}{false}
+%use \nameref for item qualities or show default name
+\renewcommand{\constReferItemQualities}{false}
+
 \input{talents/talents}
 
 \input{specialisations/arcana}
@@ -19,44 +25,4 @@
 \input{specialisations/thief}
 \thiefTree
 
-\newpage
-\subsection {Item Qualities}
-\begin{multicols}{2}
-\input{items/qualities/accurate}
-\input{items/qualities/autofire}
-\input{items/qualities/backup}
-\input{items/qualities/blast}
-\input{items/qualities/brace}
-\input{items/qualities/burn}
-\input{items/qualities/concealable}
-\input{items/qualities/concussive}
-\input{items/qualities/cumbersome}
-\input{items/qualities/defensive}
-\input{items/qualities/deflection}
-\input{items/qualities/disarm}
-\input{items/qualities/disorient}
-\input{items/qualities/ensnare}
-\input{items/qualities/flimsy}
-\input{items/qualities/fragile}
-\input{items/qualities/inaccurate}
-\input{items/qualities/inferior}
-\input{items/qualities/knockdown}
-\input{items/qualities/limited_ammo}
-\input{items/qualities/noisy}
-\input{items/qualities/pierce}
-\input{items/qualities/prepare}
-\input{items/qualities/reach}
-\input{items/qualities/reinforced}
-\input{items/qualities/restrictive}
-\input{items/qualities/returning}
-\input{items/qualities/slow_firing}
-\input{items/qualities/solid}
-\input{items/qualities/stun_damage}
-\input{items/qualities/stun}
-\input{items/qualities/sunder}
-\input{items/qualities/superior}
-\input{items/qualities/thrown}
-\input{items/qualities/unwieldy}
-\input{items/qualities/vicious}
-\end{multicols}
 \end{document}
