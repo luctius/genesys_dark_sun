@@ -58,56 +58,19 @@ Cost                               &    Result\\
 \end{table*}
 
 \begin{multicols}{2}
-\section{Arcane}
-Both Arcane and Primal are skills, and are considered arcane magic. The
-difference between the two is spell access.  Characters can only use the
-Arcane or Primal skill to cast a spell if they have a talent allowing
-such use. Each spell has various options to raise the overal difficulty
-of the check, in exchange for various benefits. The overal difficulty of
-such a check can never be raised beyond Formidable
-(\difficulty\difficulty\difficulty\difficulty), after reductions.
 
-Casting a spell uses the requires using a~\textit{'Cast Spell'}
-Action, of which there are 2 variants.
-
-\subsection{Magical Actions}
-\subsubsection{Cast Spell (Defiling)} \label{action:defliling}
-Magic uses the energy of the environment and when a spell caster is unwilling or
-unable to supplement use their own energies, she has to draw all the energies
-needed from the environment. This has a devastating effect on the local area.
-When Defiling you gain a number of automatic \threat equal to the difficulty of
-the spell. \textit{These do not cancel any \advantage rolled by the player nor
-are they canceled by any. The player can choose to cancel any number of \threat
-with advantages, including zero}. Unlike \textbf{Cast Spell (Preserving)}, there is no strain cost
-associated with this action, and any \threat or \despair rolled in the check
-or gained by using this action, cannot be used to cause strain or wounds upon the
-caster. These \threat and \despair can be used as a narrative element. These can
-range from turning local plantlife to ash in a small radius op to draining entire
-areas of life. This should be scaled to the number of \threat and \despair rolled
-in the check must be used to strengthen the effect.
-
-\subsubsection{Cast Spell (Preserving)} \label{action:preserving}
-Preservers try to minimise the damage to animal and plant life and use
-only part of the magical energies needed to cast a spell from the environment.
-The rest of the magical energies needed are supplemented from their own bodies.
-However, when there is an abundant amount of life in the neighberhood it is
-easier to avoid permanent damage to the environment and thus it is less taxing
-to the preservers' body.  Using this action to cast a spell costs up a number of
-strain equal to the final difficulty of the spell Advantages from checks after
-this one cannot be used to recover this strain but can be used to recover existing
-strain.
-
-\subsection{Magical Manouvers}
+\section{Magical Manouvers}
 To use these manouvers, the character has to have atleast 1 rank in either
 the Arcane or the Primal skills and have a talent allowing them to use that
 skill to cast spells.
 
-\subsubsection{Counterspell}
+\subsection{Counterspell}
 Most skilled mages or spellcasters can attempt to counter an opponent’s spells
 as they are being cast. If the character performs the counterspell maneuver,
 all opponents within medium range upgrade the difficulty of checks to cast
 spells once, until the end of the character's next turn.
-\subsubsection{Concentrate}
+
+\subsection{Concentrate}
 Some magical effects might require concentration to sustain. If a magical action
 (or spell) can benefit from concentration, the action description notes this.
 Spells that can be sustained through concentration last until the end of the
@@ -115,6 +78,23 @@ character's next turn (as noted in their description). However, if the character
 performs the concentrate maneuver during that next turn, the spell’s effects last
 until the end of the character’s following turn, instead. This can be sustained
 indefinitely by performing the concentrate maneuver each turn.
+
+\section{Arcane}
+Characters can only use the Arcane skill to cast a spell if they have a talent
+allowing such use. Each spell has various options to raise the overal difficulty
+of the check, in exchange for various benefits. The overal difficulty of
+such a check can never be raised beyond (\difficulty\difficulty\difficulty\difficulty\difficulty),
+after reductions. Casting a spell costs 2 Strain. In addition, when casting an
+arcane spell the user adds a number of \force die equal to their Arcana rank.
+\darklight thrown during the skill check can be used to substitute a \success or
+an \advantage. However, using \light cost an extra Strain, simulating the
+extra energy used from within and \dark used during casting constitude the use
+of Defiling magic. The GM is encouraged to narrate this effect on the environment
+and it is certainly possible that there are actual consequences for its use. People
+notice defiling magic, especially when it is used often or a lot \darklight is used at
+once.\\
+\\
+\textit{TODO: Is it better to use 1:1.5 \force die instead of 1.1?}
 
 \end{multicols}
 \begin{multicols}{2}
@@ -127,6 +107,14 @@ indefinitely by performing the concentrate maneuver each turn.
 %\input{magic/spells/enchantment}
 \end{multicols}
 \begin{multicols}{2}
+
+\section{Primal}
+
+As with Arcana, Characters can only use the Primal skill to cast a spell if they
+have a talent allowing such use. Each spell has various options to raise the overal
+difficulty, but while there are no implements to be used, Primal magic can use Spell
+Components to enhance the potenty of their spells or reduce their difficulty.
+(See \cref{itmmgc:spellcomponentpouch} for more information).
 
 \subsection{Primal Spells}
 \input{magic/spells/augment}
@@ -141,11 +129,13 @@ Your rank in the Psionics skill determines your psionics rating.
 When using a psionics power, you roll a number of \force die equal to your
 psionics rating. You can use \darklight to enhance your psionics power,
 using \light is free, however \dark points show that you have a harder time,
-if you want to use \dark points, you lose 1 strain for each \dark point you
+if you want to use \dark points, you lose 1 Strain for each \dark point you
 use.
 
 In contrast to the Arcana and Primal skills, anyone with one or more ranks
-in Psionics can buy and use a Psionics Power, as listed below.
+in Psionics can buy and use a Psionics Power, as listed below.\\
+\\
+\textit{TODO: Are the psionic trees competitive with Arcana and Primal?}
 
 \end{multicols}
 \newpage
