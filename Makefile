@@ -34,22 +34,24 @@ spell: $(NAME)
 output/dark_sun_rpg.pdf: docs/dark_sun_rpg.tex $(FILES)
 	rubber -v --pdf $< ; mv -f *.aux *.log *.toc *.pdf output/
 	mv $@ $@.big
-	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big output/character_sheet.pdf
+	pdftk $@.big output/character_sheet.pdf cat output $@
 	rm output/*.big
+	#gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPreserveAnnots=true -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big output/character_sheet.pdf
 output/dark_sun_rpg_swgdice.pdf: docs/dark_sun_rpg_swgdice.tex $(FILES)
 	rubber -v --pdf $< ; mv -f *.aux *.log *.toc *.pdf output/
 	mv $@ $@.big
-	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big output/character_sheet.pdf
+	pdftk $@.big output/character_sheet.pdf cat output $@
 	rm output/*.big
+	#gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPreserveAnnots=true -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big output/character_sheet.pdf
 output/ds_specs.pdf: docs/ds_specs.tex $(FILES)
 	rubber -v --pdf $< ; mv -f *.aux *.log *.pdf output/
 	mv $@ $@.big
-	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPreserveAnnots=true -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big
 	rm output/*.big
 output/ds_races.pdf: docs/ds_races.tex $(FILES)
 	rubber -v --pdf $< ; mv -f *.aux *.log *.pdf output/
 	mv $@ $@.big
-	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPreserveAnnots=true -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big
 	rm output/*.big
 output/character_sheet.pdf: images/character_sheet.svg
 	inkscape -z --file=$< --export-pdf=$@

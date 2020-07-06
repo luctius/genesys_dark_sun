@@ -77,10 +77,12 @@
     % Here are the options that a user can pass
     default/.style = {
         name = Unnamed,
+        label = unnamedlabel,
         active = false,
         ranked = false,
     },
     name/.estore in = \talentName,
+    label/.estore in = \talentLabel,
     active/.estore in = \talentActive,
     ranked/.estore in = \talentRanked,
 }
@@ -89,8 +91,8 @@
     \pgfkeys{/talent, default, #1}
 
     \vspace{1.5em}
-    \belowpdfbookmark{\talentName}{talent-\talentName}
-    \noindent{\LARGE\sffamily\color{talent}\talentName}\\
+    \subsection{\talentName}
+    \label{talent:\talentLabel}
     \textbf{Activation:} \talentActive\\
     \textbf{Ranked:} \talentRanked\\
     #2
