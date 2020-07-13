@@ -5,8 +5,8 @@
 \RequirePackage{float}
 \captionsetup[table]{justification=raggedright, font={sf, bf, small, color=concept}, skip=0.5ex}
 
-\newcommand\HeadRow{\rowfont{\noindent\sffamily\bfseries\color{white}}\rowcolor{header}}
-\newcommand\RowColors{\rowcolors{2}{white}{row}}
+\newcommand\HeadRow{\rowfont{\noindent\sffamily\bfseries\color{header}}\rowcolor{white}}
+\newcommand\RowColors{\rowcolors{1}{gray}{}}
 
 \newenvironment{GenesysTable}[1]{%
     \par\vspace*{8pt}\noindent\RowColors
