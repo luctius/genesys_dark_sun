@@ -28,7 +28,7 @@ The XP listed on the race information section is your starting XP. This may be u
 After character creation is completed, the only way to gain upgrades to characteristics is by buying the Dedication Talent, at the end of most talent trees.
 
 \section{Combine Specialisations}
-Choose 2 Specialisations from \cref{chap:specs}, which will be combined to become your career.
+Choose 2 Specialisations from \chapterref{specs}, which will be combined to become your career.
 
 The skills mentioned on the talent tree will be your career skills and both talent
 trees are now accessible for you to spend XP on.\\
@@ -40,17 +40,14 @@ is forbidden. This includes ranks gained from your chosen race.
 \section{Invest Experience Points}
 
 \begin{table*}[!htb]
-\centering
-\small\caption{Investing Experience Points}
-\begin{GenesysTable}{l X X}
+\begin{GenesysTable}{Investing Experience Points}{experience}{ =l +X +X}
 Option                               & Cost                                                                                       & Limit \\
-increase characteristics.            & 10 times the purchased rating in experience. Each rating must be purchased sequentially.   & May not raise any characteristic above rank 5 at character creation. May not be purchased after character creation. \\
-purchase ranks in career skills.     & The purchased rank times 5 experience.  Each rank must be purchased sequentially.          & May not raise any skill above rank 2 at character creation. \\
-purchase ranks in non-career skills. & The purchased rank times 5 experience plus 5 XP. Each rank must be purchased sequentially. & May not raise any skill above rank 2 at character creation. \\
-purchase talents.                    & The purchased talents cost as indicated in the tree.                                       & No special limits; only standard limits apply. \\
-purchase new specialisation.         & Ten times the number of specialisations (including the new one).                           & No special limits; only standard limits apply. \\
+Increase characteristics.            & 10 times the purchased rating in experience. Each rating must be purchased sequentially.   & May not raise any characteristic above rank 5 at character creation. May not be purchased after character creation. \\
+Purchase ranks in career skills.     & The purchased rank times 5 experience.  Each rank must be purchased sequentially.          & May not raise any skill above rank 2 at character creation. \\
+Purchase ranks in non-career skills. & The purchased rank times 5 experience plus 5 XP. Each rank must be purchased sequentially. & May not raise any skill above rank 2 at character creation. \\
+Purchase talents.                    & The purchased talents cost as indicated in the tree.                                       & No special limits; only standard limits apply. \\
+Purchase new specialisation.         & Ten times the number of specialisations (including the new one).                           & No special limits; only standard limits apply. \\
 \end{GenesysTable}
-\label{table:experience}
 \end{table*}
 
 \section{Determine Derived Attributes}
@@ -58,9 +55,7 @@ purchase new specialisation.         & Ten times the number of specialisations (
 After having spend your initial Experience Points, the Derived Atrributes are determined as follows:
 
 \begin{table*}[!htb]
-\centering
-\small\caption{Determining Derived Attributes}
-\begin{GenesysTable}{l X}
+\begin{GenesysTable}{Determining Derived Attributes}{derived}{ =l +X}
 Attribute & Method \\
 Defense             & Default to zero, potentially modified by the characters race.\\
 Soak                & Equal to Brawn Rating. Increases to Brawn increases Soak.\\
@@ -68,7 +63,6 @@ Strain Threshold    & Determined by Race and Willpower, Increases to Willpower \
 Wound Threshold     & Determined by Race and Brawn, Increases to Brawn \textbf{do not} increase WT.\\
 Encumbrance         & Brawn Rating plus 5, Increases to Brawn increases your Encumbrance.\\
 \end{GenesysTable}
-\label{table:derived}
 \end{table*}
 
 \section{Determine Character Motivation}
@@ -159,23 +153,18 @@ Your motivation has two main components; \textbf{Why} and \textbf{What}.\\
 \textbf{Why:} Why \textit{are} you protective of your little sister says more about your character. The motivation behind the motivation so to say. This are the beginnings of a characters personality.\\
 These motivations are just examples and you are free to create your own motivation.\\
 
-\begin{table*}[!hbtp]
-\centering
-\small\caption{Motivation}
-\begin{GenesysTable}{l X}
+\begin{table*}[!htb]
+\begin{GenesysTable}{Motivation}{motivation}{ =l +X}
 D10 Dice Roll & Result \\
 1-3           & Ambition \\
 4-6           & Cause \\
 7-9           & Relationship \\
 10            & Roll one in any two categories \\
 \end{GenesysTable}
-\label{table:motivation}
 \end{table*}
 
-\begin{table*}[!hbtp]
-\centering
-\small\caption{Motivation: Ambition}
-\begin{GenesysTable}{l X}
+\begin{table*}[!htb]
+\begin{GenesysTable}{Motivation: Ambition}{motivation-ambition}{ =l +X}
 D100 Dice Roll & Result \\
 01 - 10 & \textbf{Friendship:} Your character seeks to be liked by others and goes out of the way to make a good impression. Your character seeks to be accepted by a community or faction. \\
 11 - 20 & \textbf{Love:} Your character seeks romantic affection and intimacy from another character. Your character might already have a true love or may strive to find someone to love and be loved by. \\
@@ -188,14 +177,11 @@ D100 Dice Roll & Result \\
 81 - 90 & \textbf{Power:} Your character craves power and authority over others. The character may pursue privilege, social status, or rank to achieve this goal. \\
 91 - 00 & \textbf{Vengeance:} Someone or something wronged your character in the past, and the character has sworn to exact revenge against the aggrieving party. \\
 \end{GenesysTable}
-\label{table:motivation_ambition}
 \end{table*}
 
 %Todo: create more Cause Motivations
-\begin{table*}[!hbtp]
-\centering
-\small\caption{Motivation: Cause}
-\begin{GenesysTable}{l X}
+\begin{table*}[!htb]
+\begin{GenesysTable}{Motivation: Cause}{motivation-cause}{ =l +X}
 D100 Dice Roll & Result \\
 01 - 10 & \textbf{Religion/Spirituality:} The character actively supports some sort of religious or spirital belief.\\
 11 - 20 & \textbf{The Weak/Charity:} The character fights for the underdog, disliking bullies, slavers and nobles. She'll put the interests of those in need before her own and may donate time or money to the less fortunate.\\
@@ -208,13 +194,10 @@ D100 Dice Roll & Result \\
 81 - 90 & \textbf{Capitalism:} The character is an ubabashed capitalist and fights for the rights of the dune traders and the merchant guilds, sometimes running counter to the wishes of either a Sorcerer-king or criminels\\
 91 - 00 & \textbf{Support the Tirant:} The character actually supports the goals and methods of am important tirant and does her best to advance its cause. This could be a Sorcerer-king, or an other important tyranical figure.\\
 \end{GenesysTable}
-\label{table:motivation_cause}
 \end{table*}
 
-\begin{table*}[!hbtp]
-\centering
-\small\caption{Motivation: Relationship}
-\begin{GenesysTable}{l X}
+\begin{table*}[!htb]
+\begin{GenesysTable}{Motivation: Relationship}{motivation-relationship}{ =l +X}
 D100 Dice Roll & Result \\
 01 - 10 & \textbf{Place of Origin:} The character is deeply prideful of where she grew up. This could be a specific city or tribe or race. The character strives to better the place of origin and its people and will defend it with her life.\\
 11 - 20 & \textbf{Pet:} The character is close with a pet or animal companion of some sort of relatively small non-combatant.\\
@@ -227,64 +210,60 @@ D100 Dice Roll & Result \\
 81 - 90 & \textbf{Master:} The player is a (former) slave and seeks his approval. \\
 91 - 00 & \textbf{Former Nemesis:} The character has formed a close bond with a former nemesis or rival. Although things are patched beteen them, they could still be competitive.\\
 \end{GenesysTable}
-\label{table:motivation_relationship}
 \end{table*}
 
 \section{Wild Talents}
 
 Psionics is rampant on Athas and your character is now exception. Wether she has particular training in \textit{The Way of the Mind} or has never thought about it, she has atleast some minor psionic wild talent.
-This talent has been with you since the day you were born and it is not something you consiously think about. You may choose one such talent from \tref{table:psionics_wild_talents}, or work with your GM to create a new one.
+This talent has been with you since the day you were born and it is not something you consiously think about. You may choose one such talent from \tableref{psionic-wild-talents}, or work with your GM to create a new one.
 
-\begin{table*}[!hbtp]
-\centering
-\small\caption{Psionics Wild Talents}
-\begin{GenesysTable}{l X}
-Name                    & Description \\
-Psionic Charge          & Once per encounter, the psionic may suffer 2 Strain and use its free maneuver to move from medium
+\begin{table*}[!htb]
+\begin{GenesysTable}{Psionic Wild Talents}{psionic-wild-talents}{ =l +l +X}
+Roll & Name               & Description \\
+1   & Psionic Charge      & Once per encounter, the psionic may suffer 2 Strain and use its free maneuver to move from medium
                             range to engaged to attack a target, and add 2 Damage to the attack.\\
-Psionic Communication   & The psionic can communicate with other beings at medium range using a simple form of telepathy. This
+2   & Psionic Communication & The psionic can communicate with other beings at medium range using a simple form of telepathy. This
                             is a free action and the psionic can designate whom can hear the communication. The communication is
                             one-way, unless the receiving party also is able to communication Psionicly.\\
-Psionic Howl            & Once per encounter, as a free action, the psionic may suffer 1 Strain to generate a Psionic Howl.
+3   & Psionic Howl            & Once per encounter, as a free action, the psionic may suffer 1 Strain to generate a Psionic Howl.
                             Any enemy hearing the howl must make a \textbf{Hard} Discipline (\difficulty\difficulty\difficulty)
                             check or become \iqtyref{disorient} for one round plus one additional round for every \threat
                             generated.\\
-Psionics Hunter         & Roll \force on Initiative checks; gain a \success per \light rolled.\\
-Psionic Illusion        & If the psionic is targetted during combat, the psionic may, as an incidental, suffer 2 Strain
+4   & Psionics Hunter     & Roll \force on Initiative checks; gain a \success per \light rolled.\\
+5   & Psionic Illusion    & If the psionic is targetted during combat, the psionic may, as an incidental, suffer 2 Strain
                             to have the Combat checks targeting the psionic use Willpower in place of the
                             characteristic normally associated with that skill, and the \iqtyref{pierce} quality
                             do not reduce a the psionics Soak.\\
-Psionic Leader          & As an incidental, the psionic may suffer 2 Strain to give all allies within medium range a
+6   & Psionic Leader      & As an incidental, the psionic may suffer 2 Strain to give all allies within medium range a
                             \boost to a Discipline check.\\
-Psionic Manipulation    & By emitting pheromones and altering their skin color, the psionic can affect emotional
+7   & Psionic Manipulation & By emitting pheromones and altering their skin color, the psionic can affect emotional
                             states of other sentients. Once per check as an incidental, you may suffer 2 Strain
                             to upgrade the ability of a Charm, Deception, or Negotiation check against a living
                             sentient being within short range once.\\
-Psionic Mimic           & At the GM's discresion, the psionic may make and opposed Charm or Deception versus Vigilance
+8   & Psionic Mimic       & At the GM's discresion, the psionic may make and opposed Charm or Deception versus Vigilance
                             check as an action to pretend to be a friend, companion, loved one, or of the same species
                             as its target.\\
-Psionic MindFog         & Once per encounter, the psionic may activate Psionic Mindfog as an action and sustain it with a manouvre.
+9   & Psionic MindFog     & Once per encounter, the psionic may activate Psionic Mindfog as an action and sustain it with a manouvre.
                             Once activated the psionic may \textbf{Hard} (\difficulty\difficulty\difficulty) check. If he succeeds,
                             all enemies in Short range add \threat to all skill checks while Psionic MindFog is sustained.\\
-Psionic Negotiator      & Add \boost to any Negotiation or Streetwise checks unless the target is resistant to Psionic powers.\\
-Psionic Precognition    & The psionic occasionally sees glimpses of the future, letting them predict certain events even
+10  & Psionic Negotiator  & Add \boost to any Negotiation or Streetwise checks unless the target is resistant to Psionic powers.\\
+11  & Psionic Precognition & The psionic occasionally sees glimpses of the future, letting them predict certain events even
                             before they occur.\\
-Psionic Sensitivity     & Once per scene, the psionic may make an \textbf{Average} (\difficulty\difficulty) Perception check to detect all Psionic-sensitive
+12  & Psionic Sensitivity & Once per scene, the psionic may make an \textbf{Average} (\difficulty\difficulty) Perception check to detect all Psionic-sensitive
                             creatures or characters with a Psionics rating within medium range.\\
-Psionic Shield          & Once per session, as a action, the psionic may activate or deactivate Psionic Shield; while active,
+13  & Psionic Shield      & Once per session, as a action, the psionic may activate or deactivate Psionic Shield; while active,
                             the psionic gains defense 2, but cannot use the Move maneuver.\\
-Psionic Soothing        & Once per encounter, the psionic may make an \textbf{Average} (\difficulty\difficulty) Charm check
+14  & Psionic Soothing    & Once per encounter, the psionic may make an \textbf{Average} (\difficulty\difficulty) Charm check
                             to heal 1 strain per \success from all friendly creatures within medium range.\\
-Psionic Visage          & As an action, the psionic may suffer 2 Strain and make an opposed Deception check versus Vigilance
+15  & Psionic Visage      & As an action, the psionic may suffer 2 Strain and make an opposed Deception check versus Vigilance
                             [when multiple opponents are present, the best Vigilance skill determines difficulty] to
                             create illusion of greater size and threat. If the psionic succeeds, all opponents present must
                             make a \textbf{Hard} (\difficulty\difficulty\difficulty) Fear check.\\
 \end{GenesysTable}
-\label{table:psionics_wild_talents}
 \end{table*}
 
 \section{Buy Starting Gear}
 By default, your character starts with 500cp with which you can buy gear from during character creation and 9d10cp pocket money, which you can not use during character creation.
-See \cref{chap:equipment} for more information.
+See \chapterref{equipment} for more information.
 
 \end{multicols}

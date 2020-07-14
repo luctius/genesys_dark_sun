@@ -5,16 +5,36 @@
 \RequirePackage{float}
 \captionsetup[table]{justification=raggedright, font={sf, bf, small, color=concept}, skip=0.5ex}
 
-\newcommand\HeadRow{\rowfont{\noindent\sffamily\bfseries\color{header}}\rowcolor{white}}
-\newcommand\RowColors{\rowcolors{1}{gray}{}}
+\newcommand\HeadRow{\rowfont{\noindent\sffamily\bfseries\color{white}}\rowcolor{header}}
+\newcommand\RowColors{\rowcolors{5}{gray}{}}
 
-\newenvironment{GenesysTable}[1]{%
-    \par\vspace*{8pt}\noindent\RowColors
-    \tabulinesep=1.2mm
-    \small\begin{tabu} to \linewidth {#1}
-    \HeadRow
-  }
-{\end{tabu}}
+\newcommand*{\@rowstyle}{}
+
+\newcommand*{\rowstyle}[1]{% sets the style of the next row
+  \gdef\@rowstyle{#1}%
+  \@rowstyle\ignorespaces%
+}
+
+\newcolumntype{=}{% resets the row style
+  >{\gdef\@rowstyle{}}%
+}
+
+\newcolumntype{+}{% adds the current row style to the next column
+  >{\@rowstyle}%
+}
+
+\newenvironment{GenesysTable}[3]{%
+    \centering
+    \small\caption{#1}
+    \label{table:#2}
+
+    \par\vspace*{8pt}\noindent\rowcolors{1}{row}{}
+    \small\tabularx{\linewidth}{#3}
+    \rowcolor{header}\rowstyle{\noindent\sffamily\bfseries\color{white}}
+}
+{
+    \endtabularx
+}
 
 %%%%%
 % Spacing for the Special line on tables

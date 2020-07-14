@@ -2,9 +2,7 @@
 \begin{multicols}{2}
 
 \begin{table}[H]
-\centering
-\small\caption{Magic and Psionic Gear}
-\begin{GenesysTable}{X l l l}
+\begin{GenesysTable}{Magic and Psionic Gear}{magic-and-psionic-gear}{ =X +l +l +l}
 Name                                         & Encumbrance & Price & Rarity \\
 \nameref{itmmgc:healingfruit}                & 0           & 30    & 5 \\
 \nameref{itmmgc:spellcomponentpouch}         & 1           & 50    & (I) 3 \\
@@ -25,14 +23,12 @@ A spell component pouch contains the spell components neccesary to cast Primal
 Spells. A spell component pouch can contain one or more components, which must
 be bought seperately or be sought out. An spell component is empty when a \despair
 is used to 'damage' the spell component using a magic skill check, in which case
-the spell component must either be bought again or sought after anew. See~\tref{table:spell_components} for a list for Spell Components.
+the spell component must either be bought again or sought after anew. See~\tableref{spell-components} for a list for Spell Components.
 
 \textit{TODO: Create better spell component names, and are they balanced?}
 
 \begin{table*}[htb]
-\centering
-\small\caption{Spell Components}
-\begin{GenesysTable}{l l l X}
+\begin{GenesysTable}{Spell Components}{spell-components}{ =X +l +l +l}
 Component   & Cost      & Rarity    & Description \\
 S1          & (I) 800   & 7         & When casting an conjure spell to summon an elemental,
                                             adding the Summon Ally effect does not increas its
@@ -46,7 +42,6 @@ S3          & (I) 1000  & 9         & When casting a spell, the caster may count
                                             required to activate any added effect.\\
 %S4          &          & Rarity     & Attack spells cast by the user increase their base damage by 4.\\
 \end{GenesysTable}
-\label{table:spell_components}
 \end{table*}
 
 \end{multicols}
