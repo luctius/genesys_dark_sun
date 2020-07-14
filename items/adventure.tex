@@ -180,8 +180,11 @@ A vial is made out of glass and holds 1 ounce of liquid.
 
 \end{multicols}
 \hrulefill
+
 \subsubsection{Alchemical Items}
-\begin{table*}[!htb]
+
+\begin{multicols}{2}
+\begin{table}[H]
 \begin{GenesysTable}{Alchemical Items}{alchemical-items}{ =X +l +l +l}
 Name                              & Encum & Price & Rarity \\
 \nameref{alcitm:acid}             & 0     & 50    & 2      \\
@@ -193,8 +196,7 @@ Name                              & Encum & Price & Rarity \\
 \nameref{alcitm:thunderstone}     & 0     & 150   & 3      \\
 \nameref{alcitm:tindertwig}       & 0     & 5     & 0      \\
 \end{GenesysTable}
-\end{table*}
-\begin{multicols}{2}
+\end{table}
 
 \paragraph{Acid} \label{alcitm:acid}
 You can throw a flask of acid as a weapon with an
@@ -263,8 +265,107 @@ tindertwig is a maneuver (rather than an action), and
 lighting any other fire with one is a maneuver.
 
 \end{multicols}
+\hrulefill
+
+\subsubsection{Poisons}
+
+\begin{multicols}{2}
+
+\begin{table}[H]
+\begin{GenesysTable}{Poisons}{poisons}{ =X +l +l}
+Name                        & Price & Rarity \\
+\nameref{poison:anesthetic} &  375  & 5      \\
+\nameref{poison:befuddle}   &  460  & 6      \\
+\nameref{poison:blinding}   &  900  & 8      \\
+\nameref{poison:weakness}   &  900  & 8      \\
+\nameref{poison:suggestion} & 1000  & 9      \\
+\nameref{poison:paralysis}  &  525  & 6      \\
+\nameref{poison:neurotoxin} &  300  & 4      \\
+\end{GenesysTable}
+\end{table}
+
+\paragraph{Anesthetic} \label{poison:anesthetic}
+A single dose has an \textbf{Average} (\difficulty\difficulty) difficulty,
+while two or more doses combined into a single application have
+a \textbf{Hard} (\difficulty\difficulty\difficulty) difficulty The poison
+inflicts 5 strain if the target fails the check. If the check
+generates one to two \threat, the target must also give up his
+free maneuver during his next turn (he may still take two maneuvers,
+however); if it generates \threat\threat\threat or more, he's
+staggered during his next turn. Finally, the CM can spend \despair
+to make the target test against the poison again during the next
+round, as the poison remains in his system.
+
+\paragraph{Befuddle Poison} \label{poison:befuddle}
+A single dose has an \textbf{Average} (\difficulty\difficulty) difficulty,
+while two or more doses combined into a single application have
+a \textbf{Hard} (\difficulty\difficulty\difficulty). If the check is
+failed the target adds \setback\setback to any \textbf{Intelligence} based
+skill check for the next 3 rounds, if the roll results in 1-2
+\threat the character also gains \setback on \textbf{Willpower}
+checks. If three or more \threat are rolled they upgrade the
+difficulty of the next \textbf{Intelligence} check they make by 1. If
+\despair is rolled the end check must be made again on the next turn.
+
+\paragraph{Blinding Poison} \label{poison:blinding}
+This poison can be ingested, or entered into the bloodstream.
+one dose requires an \textbf{Average} (\difficulty\difficulty\difficulty)
+resilience check, while 2 doses requires a \textbf{Hard} check. If the target
+fails they find it hard to see for 3 turns progressively getting worse,
+each round the poison is active they add \setback die to any check
+that requires vision.(1 die first turn, 2 second, etc.) if \threat\threat\threat
+are rolled, the target also upgrades the difficulty of the same tests
+by 1. \despair forces the target to make the check again on their next turn.
+
+\paragraph{Poison of Weakness} \label{poison:weakness}
+A single dose has an \textbf{Average} (\difficulty\difficulty), while two or more
+doses combined into a single application have a
+\textbf{Hard} (\difficulty\difficulty\difficulty). On a failed check the
+target lowers their brawn trait by 1 for 2 rounds, and suffer 1 strain
+for each \threat rolled. A \despair can be spent to make them check for
+the poison again in the next round.
+
+\paragraph{Poison of Suggestion} \label{poison:suggestion}
+This poison must be ingested to take effect. the victim must make an
+\textbf{Average} (\difficulty\difficulty) Resilience check or for the next hour
+the target will be extremely susceptible to suggestions made to them.
+They will lower the difficulty of all social checks made to convince
+them to easy. The gm has discretion to keep the target from harming
+themselves or others at a suggestion. If the target rolls \threat\threat\threat
+while resisting, they will have a hard time remembering exactly what
+happened during the hour they were under the poisons effects, if they
+roll \despair they will believe that all suggestions they followed
+were their idea. otherwise, once the hour is up they will realize
+they have been drugged and act accordingly.
+
+\paragraph{Paralysis Poison} \label{poison:paralysis}
+When applied to a weapon (as a maneuver), causes anyone
+struck by the poison to make a \textbf{Hard} (\difficulty\difficulty\difficulty)
+resilience check on their turn or become immobilized for
+the next 3 turns, they also suffer 1 strain per \threat
+rolled, and if they roll a \despair they have to make the
+check again next round.
+
+\paragraph{Neurotoxin} \label{poison:neurotoxin}
+This poison may be introduced into the target's body via
+aerosol deployment, food ingestion, or injection (via an
+applicator or dart). Resisting a single dose has an \textbf{Average} (\difficulty\difficulty)
+difficulty, while two or more doses combined into a single
+application have a \textbf{Hard} (\difficulty\difficulty\difficulty) difficulty.
+The poison inflicts 5 wounds if the target fails the check. Each
+threat generated inflicts one strain on the target as the effort
+of fighting the poison overwhelms him. Finally, the CM can
+spend \despair to make the target test against the poison
+again during the next round, as the poison remains in his system.
+
+\end{multicols}
+\hrulefill
+
 \subsubsection{Tools and Kits}
-\begin{table*}[!htb]
+
+\begin{multicols}{2}
+
+\begin{table}[H]
 \begin{GenesysTable}{Tools and Kits}{tools-and-kits}{ =X +l +l +l}
 Name                             & Encum & Price & Rarity \\
 \nameref{kititm:alchemistslab}   & 5     & 50    & 6      \\
@@ -274,8 +375,7 @@ Name                             & Encum & Price & Rarity \\
 \nameref{kititm:healerskit}      & 1     & 100   & 2      \\
 \nameref{kititm:thievestools}    & 0     & 100   & 7      \\
 \end{GenesysTable}
-\end{table*}
-\begin{multicols}{2}
+\end{table}
 
 \paragraph{Alchemist's Lab} \label{kititm:alchemistslab}
 This lab is used for making alchemical items, and

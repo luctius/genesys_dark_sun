@@ -18,16 +18,16 @@ To create your character you have to do the following, which will be explaind in
     \item [Invest Experience Points] Invest the experience points gained from your starting race.
     \item [Determine Derived Attributes] Determine your Defense, Soak, Strain Threshold, Wound Threshold and Encumbrance.
     \item [Choose Motivation] Choose your character's main motivation.
-    \item [Choose Wild Talent] Choose your Psionic Wild Talent.
+    \item [Choose Wild Talent] Choose or roll for your Psionic Wild Talent.
     \item [Buy Starting Gear] Use your starting money to buy your first gear.
 \end{description}
 
-\section{Select Race}
+\subsection{Select Race}
 Choose a race from the supplied list. Important factors personality, characteristics, abilities and starting experience.
 The XP listed on the race information section is your starting XP. This may be used during character creating to upgrade characteristics, buy new skills or new talents.
 After character creation is completed, the only way to gain upgrades to characteristics is by buying the Dedication Talent, at the end of most talent trees.
 
-\section{Combine Specialisations}
+\subsection{Combine Specialisations}
 Choose 2 Specialisations from \chapterref{specs}, which will be combined to become your career.
 
 The skills mentioned on the talent tree will be your career skills and both talent
@@ -37,7 +37,11 @@ a skill in both specialisations, you may choose it twice to put two ranks in tha
 skill. Having more than two ranks in any one skill at the end of character creation
 is forbidden. This includes ranks gained from your chosen race.
 
-\section{Invest Experience Points}
+\subsection{Invest Experience Points}
+Your race determines your starting experience. Use that to buy your starting
+characteristics, skill ranks and talents, using \tableref{experience}. Since you
+may not increase your characteristics after character creation, it is recommended
+to invest most of your starting experience in your characteristics.
 
 \begin{table*}[!htb]
 \begin{GenesysTable}{Investing Experience Points}{experience}{ =l +X +X}
@@ -50,12 +54,12 @@ Purchase new specialisation.         & Ten times the number of specialisations (
 \end{GenesysTable}
 \end{table*}
 
-\section{Determine Derived Attributes}
+\subsection{Determine Derived Attributes}
 
-After having spend your initial Experience Points, the Derived Atrributes are determined as follows:
+After having spend your initial Experience Points, the Derived Atrributes are determined via \tableref{derived-attributes}.
 
 \begin{table*}[!htb]
-\begin{GenesysTable}{Determining Derived Attributes}{derived}{ =l +X}
+\begin{GenesysTable}{Determining Derived Attributes}{derived-attributes}{ =l +X}
 Attribute & Method \\
 Defense             & Default to zero, potentially modified by the characters race.\\
 Soak                & Equal to Brawn Rating. Increases to Brawn increases Soak.\\
@@ -65,7 +69,7 @@ Encumbrance         & Brawn Rating plus 5, Increases to Brawn increases your Enc
 \end{GenesysTable}
 \end{table*}
 
-\section{Determine Character Motivation}
+\subsection{Determine Character Motivation}
 %There are four types of motivation, desire, fear, strength, flaw. Your character has atleast one of each, but one major and multiple minor ones are also possible. Examples of such motivations are below. Each can be randomly determined if the player so chooses.
 
 %\subsection{Desire}
@@ -151,7 +155,7 @@ Your motivation has two main components; \textbf{Why} and \textbf{What}.\\
 \textbf{What:} What is the motivation about, are you protective of your little sister, or do you look up to your master? These are important for your place in the world, and can be used to explain why a certain quest or mission is important for you.\\
 
 \textbf{Why:} Why \textit{are} you protective of your little sister says more about your character. The motivation behind the motivation so to say. This are the beginnings of a characters personality.\\
-These motivations are just examples and you are free to create your own motivation.\\
+The tables \tableref{motivation}, \tableref{motivation-ambition}, \tableref{motivation-cause}, \tableref{motivations-relationship} are just examples and you are free to create your own motivation.\\
 
 \begin{table*}[!htb]
 \begin{GenesysTable}{Motivation}{motivation}{ =l +X}
@@ -165,67 +169,67 @@ D10 Dice Roll & Result \\
 
 \begin{table*}[!htb]
 \begin{GenesysTable}{Motivation: Ambition}{motivation-ambition}{ =l +X}
-D100 Dice Roll & Result \\
-01 - 10 & \textbf{Friendship:} Your character seeks to be liked by others and goes out of the way to make a good impression. Your character seeks to be accepted by a community or faction. \\
-11 - 20 & \textbf{Love:} Your character seeks romantic affection and intimacy from another character. Your character might already have a true love or may strive to find someone to love and be loved by. \\
-21 - 30 & \textbf{Freedom:} The character desires the freedom to do what she wants. This could be a passion to overcome one or more of her current obligations or to see herself or others freed from the shackles of bondage and servitude in all its forms.\\
-31 - 40 & \textbf{Fame:} Your character seeks the limelight and wants to be famous. They pursue anything that can garner attention and praise. \\
-41 - 50 & \textbf{Greed:} Money is the primairy motivator for this character. The character may be active in business, investing or tried and true methods of pilfering to increase the weight of her money pouch. \\
-51 - 60 & \textbf{Status:} The character wants to elevate her social standing - gaining titles, commendations, and accolades. The character can come from humble beginnings or otherwise strive for a higher position than where she began. \\
-61 - 70 & \textbf{Expertise:} Your character wants to excel in a chosen field or skill. To achieve perfection, your character practices constantly. \\
-71 - 80 & \textbf{Wanderlust / Novelty:} The characer is driven to explore the region and rarely stays in one place for long. She's motivated to uncover ruins or unexplored regions. Alternatively, this character is driven to experience new sensations and activities, perhaps rather hedonisticly.\\
-81 - 90 & \textbf{Power:} Your character craves power and authority over others. The character may pursue privilege, social status, or rank to achieve this goal. \\
-91 - 00 & \textbf{Vengeance:} Someone or something wronged your character in the past, and the character has sworn to exact revenge against the aggrieving party. \\
+D10 Dice Roll & Result \\
+ 1 & \textbf{Friendship:} Your character seeks to be liked by others and goes out of the way to make a good impression. Your character seeks to be accepted by a community or faction. \\
+ 2 & \textbf{Love:} Your character seeks romantic affection and intimacy from another character. Your character might already have a true love or may strive to find someone to love and be loved by. \\
+ 3 & \textbf{Freedom:} The character desires the freedom to do what she wants. This could be a passion to overcome one or more of her current obligations or to see herself or others freed from the shackles of bondage and servitude in all its forms.\\
+ 4 & \textbf{Fame:} Your character seeks the limelight and wants to be famous. They pursue anything that can garner attention and praise. \\
+ 5 & \textbf{Greed:} Money is the primairy motivator for this character. The character may be active in business, investing or tried and true methods of pilfering to increase the weight of her money pouch. \\
+ 6 & \textbf{Status:} The character wants to elevate her social standing - gaining titles, commendations, and accolades. The character can come from humble beginnings or otherwise strive for a higher position than where she began. \\
+ 7 & \textbf{Expertise:} Your character wants to excel in a chosen field or skill. To achieve perfection, your character practices constantly. \\
+ 8 & \textbf{Wanderlust / Novelty:} The characer is driven to explore the region and rarely stays in one place for long. She's motivated to uncover ruins or unexplored regions. Alternatively, this character is driven to experience new sensations and activities, perhaps rather hedonisticly.\\
+ 9 & \textbf{Power:} Your character craves power and authority over others. The character may pursue privilege, social status, or rank to achieve this goal. \\
+10 & \textbf{Vengeance:} Someone or something wronged your character in the past, and the character has sworn to exact revenge against the aggrieving party. \\
 \end{GenesysTable}
 \end{table*}
 
 %Todo: create more Cause Motivations
 \begin{table*}[!htb]
 \begin{GenesysTable}{Motivation: Cause}{motivation-cause}{ =l +X}
-D100 Dice Roll & Result \\
-01 - 10 & \textbf{Religion/Spirituality:} The character actively supports some sort of religious or spirital belief.\\
-11 - 20 & \textbf{The Weak/Charity:} The character fights for the underdog, disliking bullies, slavers and nobles. She'll put the interests of those in need before her own and may donate time or money to the less fortunate.\\
-21 - 30 & \textbf{Defilement} The character seeks to destroy all life on Athas and uses or supports Defilement wherever possible. \\
-31 - 40 & \textbf{The Way} You seek to advance The Way of the Mind in whatever capacity. You probably remain neutral in most affairs of politics and seek to advance your, or your schools, understanding of the Way. \\
-41 - 50 & \textbf{Overthrow the Tirant:} The character despises an important authority figure and everything that it stands for. The character actively gets involved in attempts to make life hard for that figure.\\
-51 - 60 & \textbf{Crime:} The character supports the idea of black-markets, scams, thieves and others that fall outside of the law. The character needs not to be a criminal herself but may give aid to criminals. Especially if they are familiy members or other close contacts.\\
-61 - 70 & \textbf{Emancipation:} The character sees slavery and indentured servitude as an abomination that must be undone. She'll go out of her way to aid or attempt to free anyone kept in slavery.\\
-71 - 80 & \textbf{Preservation} The character despises Defilement and works to make sure that Life on Athas can thrive again.  \\
-81 - 90 & \textbf{Capitalism:} The character is an ubabashed capitalist and fights for the rights of the dune traders and the merchant guilds, sometimes running counter to the wishes of either a Sorcerer-king or criminels\\
-91 - 00 & \textbf{Support the Tirant:} The character actually supports the goals and methods of am important tirant and does her best to advance its cause. This could be a Sorcerer-king, or an other important tyranical figure.\\
+D10 Dice Roll & Result \\
+ 1 & \textbf{Religion/Spirituality:} The character actively supports some sort of religious or spirital belief.\\
+ 2 & \textbf{The Weak/Charity:} The character fights for the underdog, disliking bullies, slavers and nobles. She'll put the interests of those in need before her own and may donate time or money to the less fortunate.\\
+ 3 & \textbf{Defilement} The character seeks to destroy all life on Athas and uses or supports Defilement wherever possible. \\
+ 4 & \textbf{The Way} You seek to advance The Way of the Mind in whatever capacity. You probably remain neutral in most affairs of politics and seek to advance your, or your schools, understanding of the Way. \\
+ 5 & \textbf{Overthrow the Tirant:} The character despises an important authority figure and everything that it stands for. The character actively gets involved in attempts to make life hard for that figure.\\
+ 6 & \textbf{Crime:} The character supports the idea of black-markets, scams, thieves and others that fall outside of the law. The character needs not to be a criminal herself but may give aid to criminals. Especially if they are familiy members or other close contacts.\\
+ 7 & \textbf{Emancipation:} The character sees slavery and indentured servitude as an abomination that must be undone. She'll go out of her way to aid or attempt to free anyone kept in slavery.\\
+ 8 & \textbf{Preservation} The character despises Defilement and works to make sure that Life on Athas can thrive again.  \\
+ 9 & \textbf{Capitalism:} The character is an ubabashed capitalist and fights for the rights of the dune traders and the merchant guilds, sometimes running counter to the wishes of either a Sorcerer-king or criminels\\
+10 & \textbf{Support the Tirant:} The character actually supports the goals and methods of am important tirant and does her best to advance its cause. This could be a Sorcerer-king, or an other important tyranical figure.\\
 \end{GenesysTable}
 \end{table*}
 
 \begin{table*}[!htb]
 \begin{GenesysTable}{Motivation: Relationship}{motivation-relationship}{ =l +X}
-D100 Dice Roll & Result \\
-01 - 10 & \textbf{Place of Origin:} The character is deeply prideful of where she grew up. This could be a specific city or tribe or race. The character strives to better the place of origin and its people and will defend it with her life.\\
-11 - 20 & \textbf{Pet:} The character is close with a pet or animal companion of some sort of relatively small non-combatant.\\
-21 - 30 & \textbf{Childhood Friend:} The character maintains close ties with a childhood friend. Although the two may be far apart, the character desires only the best for this companion.\\
-31 - 40 & \textbf{Comrades:} The character shows loyalty for those she servers alongside. This could either be the current group of PCs, or former associates.\\
-41 - 50 & \textbf{Sibling/Siblings:} The character has one or more siblings with whom she maintains a close relationship.\\
-51 - 60 & \textbf{Mentor:} The character is particular close to a mentor or teacher or other figure that provided support.\\
-61 - 70 & \textbf{Parents:} The character has close ties with her parent(s) and seeks their constant approval. This may or may not be a healthy relationship.\\
-71 - 80 & \textbf{Extended Family/Clan:} The character has a large extended family clan or tribe that she deeply loves. She seeks both their approval and comfort despite the many voices clamoring in her ear for attention.\\
-81 - 90 & \textbf{Master:} The player is a (former) slave and seeks his approval. \\
-91 - 00 & \textbf{Former Nemesis:} The character has formed a close bond with a former nemesis or rival. Although things are patched beteen them, they could still be competitive.\\
+D10 Dice Roll & Result \\
+ 1 & \textbf{Place of Origin:} The character is deeply prideful of where she grew up. This could be a specific city or tribe or race. The character strives to better the place of origin and its people and will defend it with her life.\\
+ 2 & \textbf{Pet:} The character is close with a pet or animal companion of some sort of relatively small non-combatant.\\
+ 3 & \textbf{Childhood Friend:} The character maintains close ties with a childhood friend. Although the two may be far apart, the character desires only the best for this companion.\\
+ 4 & \textbf{Comrades:} The character shows loyalty for those she servers alongside. This could either be the current group of PCs, or former associates.\\
+ 5 & \textbf{Sibling/Siblings:} The character has one or more siblings with whom she maintains a close relationship.\\
+ 6 & \textbf{Mentor:} The character is particular close to a mentor or teacher or other figure that provided support.\\
+ 7 & \textbf{Parents:} The character has close ties with her parent(s) and seeks their constant approval. This may or may not be a healthy relationship.\\
+ 8 & \textbf{Extended Family/Clan:} The character has a large extended family clan or tribe that she deeply loves. She seeks both their approval and comfort despite the many voices clamoring in her ear for attention.\\
+ 9 & \textbf{Master:} The player is a (former) slave and seeks his approval. \\
+10 & \textbf{Former Nemesis:} The character has formed a close bond with a former nemesis or rival. Although things are patched beteen them, they could still be competitive.\\
 \end{GenesysTable}
 \end{table*}
 
-\section{Wild Talents}
+\subsection{Wild Talents}
 
 Psionics is rampant on Athas and your character is now exception. Wether she has particular training in \textit{The Way of the Mind} or has never thought about it, she has atleast some minor psionic wild talent.
 This talent has been with you since the day you were born and it is not something you consiously think about. You may choose one such talent from \tableref{psionic-wild-talents}, or work with your GM to create a new one.
 
 \begin{table*}[!htb]
 \begin{GenesysTable}{Psionic Wild Talents}{psionic-wild-talents}{ =l +l +X}
-Roll & Name               & Description \\
+D20 Dice Roll & Name               & Description \\
 1   & Psionic Charge      & Once per encounter, the psionic may suffer 2 Strain and use its free maneuver to move from medium
                             range to engaged to attack a target, and add 2 Damage to the attack.\\
 2   & Psionic Communication & The psionic can communicate with other beings at medium range using a simple form of telepathy. This
                             is a free action and the psionic can designate whom can hear the communication. The communication is
                             one-way, unless the receiving party also is able to communication Psionicly.\\
-3   & Psionic Howl            & Once per encounter, as a free action, the psionic may suffer 1 Strain to generate a Psionic Howl.
+3   & Psionic Howl        & Once per encounter, as a free action, the psionic may suffer 1 Strain to generate a Psionic Howl.
                             Any enemy hearing the howl must make a \textbf{Hard} Discipline (\difficulty\difficulty\difficulty)
                             check or become \iqtyref{disorient} for one round plus one additional round for every \threat
                             generated.\\
@@ -247,7 +251,7 @@ Roll & Name               & Description \\
                             Once activated the psionic may \textbf{Hard} (\difficulty\difficulty\difficulty) check. If he succeeds,
                             all enemies in Short range add \threat to all skill checks while Psionic MindFog is sustained.\\
 10  & Psionic Negotiator  & Add \boost to any Negotiation or Streetwise checks unless the target is resistant to Psionic powers.\\
-11  & Psionic Precognition & The psionic occasionally sees glimpses of the future, letting them predict certain events even
+11  & Psionic Precognition & The psionic occasionally sees glimpses of a possible future, letting them predict certain events even
                             before they occur.\\
 12  & Psionic Sensitivity & Once per scene, the psionic may make an \textbf{Average} (\difficulty\difficulty) Perception check to detect all Psionic-sensitive
                             creatures or characters with a Psionics rating within medium range.\\
@@ -259,10 +263,13 @@ Roll & Name               & Description \\
                             [when multiple opponents are present, the best Vigilance skill determines difficulty] to
                             create illusion of greater size and threat. If the psionic succeeds, all opponents present must
                             make a \textbf{Hard} (\difficulty\difficulty\difficulty) Fear check.\\
+16  & Psionic Tool        & You are able to create simple tools using your force of mind. The tool lasts until the end of the scene or until
+                            you use this power again.\\
+17-20 & Roll Again        & Roll Again.\\
 \end{GenesysTable}
 \end{table*}
 
-\section{Buy Starting Gear}
+\subsection{Buy Starting Gear}
 By default, your character starts with 500cp with which you can buy gear from during character creation and 9d10cp pocket money, which you can not use during character creation.
 See \chapterref{equipment} for more information.
 

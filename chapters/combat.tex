@@ -1,14 +1,115 @@
 \chapter{Combat}\label{chap:combat}
+
+\begin{centering}
+    \textit{This is a very rough summary of the Core Rules. Refer to the Genesys Core Rulebook for the full Rules.}
+\end{centering}
+
 \begin{multicols}{2}
 
 \section{Turns}
 \subsection{Manouvers}
-\subsection{Actions}
+Maneuvers are activities that aren’t complex enough to
+warrant a skill check, but still involve time and effort
+on the part of a character. Characters are allowed one
+maneuver during their turn, and certain circumstances
+may allow them a second maneuver as well, such as spending two \advantage.
+The following are some examples of maneuvers:
+\begin{description}
+    \item Aiming a weapon (\boost per aim maneuver).
+    \item Assisting an ally (Add \boost to that characters specific check per ally helping).
+    \item Moving one range band closer or farther away from an enemy.
+    \item Opening a door.
+    \item Diving behind cover.
+    \item Flipping over a table.
+    \item Standing up or dropping prone.
+    \item Mount or dismount.
+    \item Guarded Stance. (gain \setback and Melee Defense +1 until the end of their next turn)
+\end{description}
 
-\section{Spending Dice}
-\subsection{Melee Difficulty}
-\subsection{Ranged Difficulty}
-\subsection{Resolving Dice}
+\subsection{Actions}
+Actions are important activities that are vital to a character's accomplishment
+of a goal. Each character may normally only perform one action during their
+turn, likely the most important activity they undertake during their turn.
+Actions almost always involve performing a skill check, although certain
+character abilities may require using an action to activate them.
+
+The following are some examples of actions:
+\begin{description}
+    \item Unlocking a locked door.
+    \item Shooting a bow
+    \item Punching or grappling an opponent.
+    \item Instructing allies with a series of orders.
+    \item Performing first aid on an ally.
+    \item Sneaking up on a vigilant foe.
+    \item Climbing a cliff.
+\end{description}
+Out of all of these options, the most common during combat are those that
+involve attacking an opponent. Attacking an opponent requires a combat
+skill check, sometimes referred to in shorthand as a combat check or
+simply an attack.
+
+\section{Performing a Combat Check}
+\begin{table}[H]
+\begin{GenesysTable}{Ranged Attack Difficulties}{attack-ranged-difficulties}{ =l +X}
+Range Band                           & Difficulty\\
+Engaged     & \textbf{Easy} (\difficulty) plus modifiers depending of the weapon used.\\
+Short       & \textbf{Easy} (\difficulty)\\
+Medium      & \textbf{Average} (\difficulty\difficulty)\\
+Long        & \textbf{Hard }(\difficulty\difficulty\difficulty)\\
+Extreme     & \textbf{Daunting }(\difficulty\difficulty\difficulty\difficulty)\\
+\end{GenesysTable}
+\end{table}
+
+\subsection{Spending Advantage and Triumph in Combat}
+\begin{table*}[!htb]
+\begin{GenesysTable}{Spending Advantage and Triumph in Combat}{attack-spending-advantage}{ =l +X}
+Cost        & Result Option\\
+\advantage or \triumph  & Recover 1 strain.\newline
+                          Add \boost to the next allied character's check\newline
+                          Notice a single important point in the ongoing conflict, such as a weakspot in the armour.\newline
+                          Inflict a Critical Injury with a successful attack that deals damage poast soak (\advantage cost may vary).\newline
+                          Activate an item quality (\advantage cost may vary).\\
+\advantage\advantage or \triumph  & Perform an immediate free maneuver that does not exceed the limit of two maneuvers per turn.\newline
+                                    Add \setback to the targeted character's next check.\newline
+                                    Add \boost to any allied character's next check, including that of the active character.\\
+\advantage\advantage\advantage or \triumph  & Negate the targeted enemy's defense (such as the defense gained from cover, equipment, or performing the guarded stance
+                                              maneuver) until the end of the current round.\newline
+                                              Ignore penalizing environmental effects such as inclement weather, zero gravity, or similar circumstances until the end of the
+                                              active character’s next turn.\newline
+                                              When dealing damage to a target, have the attack disable the opponent or one piece of gear rather than dealing wounds or strain.\newline
+                                              This could include hobbling them temporarily with a shot to the legThis should be agreed upon by the
+                                              player and the GM, and the effects are up to the GM. The effects should be temporary and not too excessive.\newline
+                                              Gain +1 melee or ranged defense until the end of the active character's next turn.\newline
+                                              Force the target to drop a melee or ranged weapon they are wielding.\\
+\triumph  &         Upgrade the difficulty of the targeted character’s next check.\newline
+                    Upgrade the ability of any allied character’s next check, including that of the current active character.\newline
+                    Do something vital, such as shooting the controls to the nearby blast doors to seal them shut.\newline
+                    On an Initiative check, perform an immediate free maneuver before combat begins.\\
+\triumph\triumph  & When dealing damage to a target, have the attack destroy a
+                    piece of equipment the target is using, such as blowing up
+                    their assault rifle or slicing their sword in half. \\
+\end{GenesysTable}
+\end{table*}
+
+\subsection{Spending Setback and Despair in Combat}
+\begin{table*}[!htb]
+\begin{GenesysTable}{Spending Setback and Despair in Combat}{attack-spending-setback}{ =l +X}
+Cost        & Result Option\\
+\setback or \despair  & The active character suffers 1 strain.\newline
+                          The active character loses the benefits of a prior maneuver (such as from taking cover or assuming a guarded stance) until they perform the maneuver again.\\
+\setback\setback or \despair  & An opponent may immediately perform one free maneuver as an incidental in response to the active character's check.\newline
+                                    Add \boost to the targeted character's next check.\newline
+                                    The active character or an allied character suffers \boost on their next action.\\
+\setback\setback\setback or \despair  & The active character falls prone.\newline
+                                              The active character grants the enemy a significant advantage in the ongoing
+                                              encounter, such as accidentally blasting the controls to a bridge the active
+                                              character was planning to use for their escape.\\
+\despair  & Upgrade the difficulty of an allied character's next check or the next check of the current active character.\newline
+            The tool, Brawl, or Melee weapon the character is using becomes damaged.\\
+\despair\despair  & The character's weapon immediately breaks if it has the \iqtyref{fragile} Quality.\\
+                    
+\end{GenesysTable}
+\end{table*}
 
 \end{multicols}
 
