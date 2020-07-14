@@ -187,7 +187,7 @@ the number of \setback dice indicated.
 \begin{GenesysTable}{Concealment}{concealment}{ =l +X}
 Dice Added  & Examples\\
 +1          & Mist, shadow, waist-high grass.\\
-+2          & Fog, the darkness of early morning or late evening, thick, shoulder-high grass.\\
++2          & Dust Storm, Fog, the darkness of early morning or late evening, thick, shoulder-high grass.\\
 +3          & Sand storm, Heavy fog, thick and chocking smoke, the darkness of night, dense, head-high underbrush and thick grass.\\
 \end{GenesysTable}
 \end{table*}
@@ -196,7 +196,6 @@ Dice Added  & Examples\\
 Most cover adds a \setback against Ranged attacks. Being especially well covered
 would add \setback\setback, such as shooting at a target hiding in a trench.
 
-\subsection{Dehydration}
 \subsection{Difficult and Impassable Terrain}
 Difficult terrain is a catch-all description of terrain that is hard to move through
 or over. It can include tight passageways, shifting sand or loose rubble. Essentially,
@@ -204,63 +203,102 @@ it's terrain that characters move through with difficulty. Characters entering o
 moving through difficult terrain must perform twice as many maneuvers to move the
 same distance they would in normal terrain.
 
-\subsubsection{Quick Sand}
-
-\textit{TODO: Add content}
-
-\subsection{Fire, Acid, and Corrosive Atmosphere}
-\textit{TODO: Add content}
 \subsection{Falling}
-\textit{TODO: Add content}
+
+On Athas, gravity has a habit of ruining someones day. When a character falls,
+consult \tableref{falling-damage} and apply the damage. Soak will reduce the
+damage, however any strain damage is not reduced.
+
+A character can reduce the damage taken from falling by makeing an
+\textbf{Average} (\difficulty\difficulty) Athletics or Coordination Check.
+Each \success reduces to damage sufferec by one while each \advantage
+reduces to strain suffered by one. A \triumph could, at the GM's
+discretion, reduce the overall distance fallen by one range band
+as the character grabs onto a hanhold or does something else to
+slow their fall.
+
+\begin{table}[H]
+\begin{GenesysTable}{Falling Damage}{falling-damage}{ =l +X +l}
+Range   & Damage                                            & Strain\\
+Short   & 10                                                & 10\\
+Medium  & 30                                                & 20\\
+Long    & Incapacitated, Critical Injury at +50             & 30\\
+Extreme & Incapacitated, Critical Injury at +75 (or Death)  & 40\\
+\end{GenesysTable}
+\end{table}
+
 \subsection{Sandstorms}
-\textit{TODO: Add content}
-\subsection{Survival Day}
-\textit{TODO: Add content}
-\subsection{Sun Sickness}
-\textit{TODO: Add content}
+
+In addition to causing concealment, sandstorms make it hard to navigate. Sandstorms add \setback\setback\setback to any attempt to navigate.
+
+\subsection{Survival}
 
 %SandStorms
-%
 %Blowing sand can quickly turn into a nasty sandstorm. There are two types of sandstorms - mild and driving.
-%
-%Mild sandstorms last 1d20 rounds. On a roll of 20, a mild sandstorm becomes a driving sandstorm after 10 rounds. In a mild sandstorm, visibility is reduced (see DS Rules Book p. 84). In addition, movement must be reduced to half speed or the party risks getting lost. If the party does not reduce its rate of movement, the lead character (or animal driver) must make a Wisdom check every round the storm lasts to stay on course. Don't tell the players that this is what the roll is for because, if they fail, they should not know that they have gone the wrong way. How badly a party fails its Wisdom check determines how much time is added to their trek. In mild sandstorms, the difference translates into hours. For example, Azhul the Hasty leads the way through a mild sandstorm. His Wisdom is 10, but he rolls a 14. The party travels an extra four hours (14- 10 = 4).
-%
-%Driving sandstorms last 1d10 rounds. In a driving sandstorm, visibility is reduced and movement must be reduced to one-quarter speed to keep from getting lost. Wisdom checks are needed every round as described above, but these checks are made at +5. How badly the party fails determines how much time is added to travel in the form of days. For example, if Azhul, with his Wisdom of 10, rolls a 7, the party adds two days to their trek (7 + 5 - 10 = 2).
-%
+%Mild sandstorms last 1d20 rounds. On a roll of 20, a mild sandstorm becomes a driving sandstorm after 10 rounds.
+%In a mild sandstorm, visibility is reduced (see DS Rules Book p. 84). In addition, movement must be reduced to
+%half speed or the party risks getting lost. If the party does not reduce its rate of movement, the lead character
+%(or animal driver) must make a Wisdom check every round the storm lasts to stay on course. Don't tell the players
+%that this is what the roll is for because, if they fail, they should not know that they have gone the wrong way.
+%How badly a party fails its Wisdom check determines how much time is added to their trek. In mild sandstorms,
+%the difference translates into hours. For example, Azhul the Hasty leads the way through a mild sandstorm.
+%His Wisdom is 10, but he rolls a 14. The party travels an extra four hours (14- 10 = 4).
+%Driving sandstorms last 1d10 rounds. In a driving sandstorm, visibility is reduced and movement must be reduced
+%to one-quarter speed to keep from getting lost. Wisdom checks are needed every round as described above, but
+%these checks are made at +5. How badly the party fails determines how much time is added to travel in the
+%form of days. For example, if Azhul, with his Wisdom of 10, rolls a 7, the party adds two days to their trek (7 + 5 - 10 = 2).
 %Source: Arcane Shadows, Part Three: E - The Wilderness
 %
 %Sandstorm effects
-%
-%Characters with the Weather Sense nonweapon proficiency should make four checks as the day progresses. Characters who succeed at least three times realize that a sandstorm is coming in time for the PCs to find shelter.
-%
-%Characters who succeed only two of the checks know that a sandstorm is imminent, but must endure the storm as best they can with minimum preparations. In this case, they can simply stay where they are or try to keep moving. Moving through a sand storm, even when prepared, is a tricky proposition. The lead character must reduce the party's movement to one-quarter speed or risk getting lost. A Wisdom check must be made with a -5 penalty. Success means the party stays on course. Failure indicates they get lost. How badly the check fails determines the number of days that must be added to the PC's trek. For example, if a character with a Wisdom of 12 leads the way through the sandstorm and rolls an 8, the party adds one day to its trek 8 + 5 - 12 = 1). Characters with the Direction Sense proficiency or Know Direction psionic talent suffer no penalties to their checks.
-%
-%Characters who succeed at only one check or less are caught by surprise when the sandstorm hits. In addition to possibly getting lost, the party also suffers the effects listed on the table below (DM rolls 1d100).
+%Characters with the Weather Sense nonweapon proficiency should make four checks as the day progresses. Characters
+%who succeed at least three times realize that a sandstorm is coming in time for the PCs to find shelter.
+%Characters who succeed only two of the checks know that a sandstorm is imminent, but must endure the storm as
+%best they can with minimum preparations. In this case, they can simply stay where they are or try to keep moving.
+%Moving through a sand storm, even when prepared, is a tricky proposition. The lead character must reduce the
+%party's movement to one-quarter speed or risk getting lost. A Wisdom check must be made with a -5 penalty.
+%Success means the party stays on course. Failure indicates they get lost. How badly the check fails determines
+%the number of days that must be added to the PC's trek. For example, if a character with a Wisdom of 12 leads
+%the way through the sandstorm and rolls an 8, the party adds one day to its trek 8 + 5 - 12 = 1). Characters
+%with the Direction Sense proficiency or Know Direction psionic talent suffer no penalties to their checks.
+%Characters who succeed at only one check or less are caught by surprise when the sandstorm hits. In addition
+%to possibly getting lost, the party also suffers the effects listed on the table below (DM rolls 1d100).
 %
 %1d100 Roll Effect
-%
 %01-40 Party manages to ride out the storm. Apart from exhaustion and possibly getting lost, no other effects.
-%
 %41-65 Party loses two pieces of equipment.
-%
 %66-80 Party loses two pieces of equipment plus 80% of its water.
-%
 %81-95 Every character and riding animal takes 2d6 damage and items are lost on a roll of 1-3 on 1d6.
-%
 %96-00 Every character and riding animal takes 4d6 damage and items are lost on a roll of 1-3 on 1d4. Every creature has a 4% chance of being buried alive.
 %
 %Source: Dragon's Crown, p.42
 %
 %Wind and Sand
 %
-%Dehydration is not the only enemy for those journeying through the desert. High winds can lift sand and dust into a choking, blinding storm that can scour individuals as well as property. Characters trapped in such a storm without protection suffer 1d2 points of damage per round. In addition, they must make a saving throw vs. wands; those who fail are blinded (per the spell) for 1d6 turns. A tent or rock outcropping offers sufficient protection from the storm; so does lying prone with a cloth across the eyes, nose, and mouth. Further, the protection from normal missiles spell and similar magics can protect the individual unless the storm is magical in origin.
-%
-%In addition to inflicting the damage noted above, desert storms can bury characters alive, eventually causing them to suffocate. So can certain spells that trigger sandslides or move dunes. (See Chapter 8 for details on spells.) Characters who are buried alive by a desert storm can dig themselves out in 1d3 rounds. Those buried by an avalanche of sand — whether natural or caused by a spell — can dig free in 1d6 rounds unless otherwise noted in the spell description.
-%
-%Crawling out of a sandy grave is no simple task. For each round spent digging toward the surface, a character must make a Strength check as well as a Constitution check. A successful Strength check reduces the time required for escape by one round; failure has no effect. In contrast, a failed Constitution check results in the loss of 1d4 points of Constitution, while a successful Constitution check neither helps nor hinders the character. An individual reduced to 0 Constitution cannot move. If no help is forthcoming, the paralyzed character will suffocate in 1d10 rounds.
-%
-%A number of variables can delay or retard suffocation, however, including spells and magical items which reduce or eliminate the need to breathe. The endurance proficiency enables a character to make a Constitution check every other round instead of every round, but it does not affect the required Strength checks.
-%
-%Assuming they know where to dig, other characters can rescue an individual who has been buried alive. For every round in which they dig downward, wouldbe rescuers reduce the number of rounds required for escape by one. Excavating time is the same no matter how many characters dig. Rescuers can dig out an individual who has reached 0 Constitution, and is unable to move.
-%
-%Constitution lost while a character is buried alive is regained at 1 point per turn. Hit points are unaffected by Constitution lost in this fashion. Constitution may never be regained to a level higher than a character’s usual maximum.
+%Dehydration is not the only enemy for those journeying through the desert. High winds can lift sand and dust
+%into a choking, blinding storm that can scour individuals as well as property. Characters trapped in such a
+%storm without protection suffer 1d2 points of damage per round. In addition, they must make a saving throw vs.
+%wands; those who fail are blinded (per the spell) for 1d6 turns. A tent or rock outcropping offers sufficient
+%protection from the storm; so does lying prone with a cloth across the eyes, nose, and mouth. Further, the
+%protection from normal missiles spell and similar magics can protect the individual unless the storm is magical
+%in origin.
+%In addition to inflicting the damage noted above, desert storms can bury characters alive, eventually causing
+%them to suffocate. So can certain spells that trigger sandslides or move dunes. (See Chapter 8 for details on
+%spells.) Characters who are buried alive by a desert storm can dig themselves out in 1d3 rounds. Those buried
+%by an avalanche of sand — whether natural or caused by a spell — can dig free in 1d6 rounds unless otherwise
+%noted in the spell description.
+%Crawling out of a sandy grave is no simple task. For each round spent digging toward the surface, a character
+%must make a Strength check as well as a Constitution check. A successful Strength check reduces the time
+%required for escape by one round; failure has no effect. In contrast, a failed Constitution check results in
+%the loss of 1d4 points of Constitution, while a successful Constitution check neither helps nor hinders the
+%character. An individual reduced to 0 Constitution cannot move. If no help is forthcoming, the paralyzed
+%character will suffocate in 1d10 rounds.
+%A number of variables can delay or retard suffocation, however, including spells and magical items which
+%reduce or eliminate the need to breathe. The endurance proficiency enables a character to make a Constitution
+%check every other round instead of every round, but it does not affect the required Strength checks.
+%Assuming they know where to dig, other characters can rescue an individual who has been buried alive. For
+%every round in which they dig downward, wouldbe rescuers reduce the number of rounds required for escape by
+%one. Excavating time is the same no matter how many characters dig. Rescuers can dig out an individual who
+%has reached 0 Constitution, and is unable to move.
+%Constitution lost while a character is buried alive is regained at 1 point per turn. Hit points are unaffected
+%by Constitution lost in this fashion. Constitution may never be regained to a level higher than a character’s
+%usual maximum.

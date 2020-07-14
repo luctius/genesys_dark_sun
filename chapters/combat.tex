@@ -51,7 +51,7 @@ simply an attack.
 \section{Performing a Combat Check}
 \begin{table}[H]
 \begin{GenesysTable}{Ranged Attack Difficulties}{attack-ranged-difficulties}{ =l +X}
-Range Band                           & Difficulty\\
+Range Band  & Difficulty\\
 Engaged     & \textbf{Easy} (\difficulty) plus modifiers depending of the weapon used.\\
 Short       & \textbf{Easy} (\difficulty)\\
 Medium      & \textbf{Average} (\difficulty\difficulty)\\
@@ -113,3 +113,41 @@ Cost        & Result Option\\
 
 \end{multicols}
 
+
+\section{Injury}
+\subsection{Critical hits}
+
+\begin{table*}[!htb]
+\begin{GenesysTable}{Spending Setback and Despair in Combat}{attack-spending-setback}{ =l +l +X}
+D100    & Severity              & Result\\
+01-05   & \textbf{Easy} (\difficulty)    & Minor Nick: The target suffers 1 strain.\\
+06-10   & \textbf{Easy} (\difficulty)    & Slowed Down: The target can only act during the last allied Initiative slot on their next turn.\\
+11-15   & \textbf{Easy} (\difficulty)    & Sudden Jolt: The target drops whatever is in hand.\\
+16-20   & \textbf{Easy} (\difficulty)    & Distracted: The target cannot perform a free maneuver during their next turn.\\
+21-25   & \textbf{Easy} (\difficulty)    & Off-Balance: Add  to the target’s next skill check.\\
+26-30   & \textbf{Easy} (\difficulty)    & Discouraging Wound: Move one player pool Story Point to the Game Master pool (reverse if NPC).\\
+31-35   & \textbf{Easy} (\difficulty)    & Stunned: The target is staggered until the end of their next turn.\\
+31-40   & \textbf{Easy} (\difficulty)    & Stinger: Increase the difficulty of the target’s next check by one.\\
+41-45   & \textbf{Average} (\difficulty\difficulty)    & Bowled Over: The target is knocked prone and suffers 1 strain.\\
+46-50   & \textbf{Average} (\difficulty\difficulty)    & Head Ringer: The target increases the difficulty of all Intellect and Cunning checks by one until this Critical Injury is healed.\\
+51-55   & \textbf{Average} (\difficulty\difficulty)    & Fearsome Wound: The target increases the difficulty of all Presence and Willpower checks by one until this ritical Injury is healed.\\
+51-60   & \textbf{Average} (\difficulty\difficulty)    & Agonizing Wound: The target increases the difficulty of all Brawn and Agility checks by one until this Critical Injury is healed.\\
+61-65   & \textbf{Average} (\difficulty\difficulty)    & Slightly Dazed: The target is disoriented until this Critical Injury is healed.\\
+61-70   & \textbf{Average} (\difficulty\difficulty)    & Scattered Senses: The target removes all  from skill checks until this Critical Injury is healed.\\
+71-75   & \textbf{Average} (\difficulty\difficulty)    & Hamstrung: The target loses their free maneuver until this Critical Injury is healed.\\
+71-80   & \textbf{Average} (\difficulty\difficulty)    & Overpowered: The target leaves themself open, and the attacker may immediately attempt another attack against them as an incidental, using the exact same pool as the original attack.\\
+81-85   & \textbf{Average} (\difficulty\difficulty)    & Winded: The target cannot voluntarily suffer strain to activate any abilities or gain additional maneuvers until this Critical Injury is healed.\\
+81-90   & \textbf{Average} (\difficulty\difficulty)    & Compromised: Increase difficulty of all skill checks by one until this Critical Injury is healed.\\
+91-95   & \textbf{Hard} (\difficulty\difficulty\difficulty)    & At the Brink: The target suffers 2 strain each time they perform an action until this Critical Injury is healed.\\
+91-100  & \textbf{Hard} (\difficulty\difficulty\difficulty)    & Crippled: One of the target’s limbs (selected by the GM) is impaired until this Critical Injury is healed. Increase difficulty of all checks that require use of that limb by one.\\
+101-105 & \textbf{Hard} (\difficulty\difficulty\difficulty)    & Maimed: One of the target’s limbs (selected by the GM) is permanently lost. Unless the target has a cybernetic or prosthetic replacement, the target cannot perform actions that would require the use of that limb. All other actions gain  until this Critical Injury is healed.\\
+106-110 & \textbf{Hard} (\difficulty\difficulty\difficulty)    & Horrific Injury: Roll 1d10 to determine which of the target’s characteristics is affected: 1–3 for Brawn, 4–6 for Agility, 7 for Intellect, 8 for Cunning, 9 for Presence, 10 for Willpower. Until this Critical Injury is healed, treat that characteristic as one point lower.\\
+111-115 & \textbf{Hard} (\difficulty\difficulty\difficulty)    & Temporarily Disabled: The target is immobilized until this Critical Injury is healed.\\
+116-120 & \textbf{Hard} (\difficulty\difficulty\difficulty)    & Blinded: The target can no longer see. Upgrade the difficulty of all checks twice, and upgrade the difficulty of Perception and Vigilance checks three times, until this Critical Injury is healed.\\
+121-125 & \textbf{Hard} (\difficulty\difficulty\difficulty)    & Knocked Senseless: The target is staggered until this Critical Injury is healed.\\
+126-130 & \textbf{Daunting} (\difficulty\difficulty\difficulty\difficulty)    & Gruesome Injury: Roll 1d10 to determine which of the target’s characteristics is affected: 1–3 for Brawn, 4–6 for Agility, 7 for Intellect, 8 for Cunning, 9 for Presence, 10 for Willpower. That characteristic is permanently reduced by one, to a minimum of 1.\\
+131-140 & \textbf{Daunting} (\difficulty\difficulty\difficulty\difficulty)    & Bleeding Out: Until this Critical Injury is healed, every round, the target suffers 1 wound and 1 strain at the beginning of their turn. For every 5 wounds they suffer beyond their wound threshold, they suffer one additional Critical Injury. Roll on the chart, suffering the injury (if they suffer this result a second time due to this, roll again).\\
+141-150 & \textbf{Daunting} (\difficulty\difficulty\difficulty\difficulty)    & The End Is Nigh: The target dies after the last Initiative slot during the next round unless this Critical Injury is healed.\\
+151+    &                       & Dead: Complete, obliterated death.\\
+\end{GenesysTable}
+\end{table*}
