@@ -47,6 +47,7 @@
 \input{talents/improved_spur}
 \input{talents/indistinguishable}
 \input{talents/inspiring_rhetoric}
+\input{talents/intense_focus}
 \input{talents/intense_presence}
 \input{talents/intimidating}
 \input{talents/invigorate}
@@ -55,6 +56,7 @@
 \input{talents/just_kidding}
 \input{talents/kill_with_kindness}
 \input{talents/knockdown}
+\input{talents/knowledge_specialization}
 \input{talents/know_somebody}
 \input{talents/lethal_blows}
 \input{talents/lets_ride}
@@ -62,6 +64,7 @@
 \input{talents/loom}
 \input{talents/master_doctor}
 \input{talents/master_of_shadows}
+\input{talents/mental_fortress}
 \input{talents/more_power}
 \input{talents/natural_athlete}
 \input{talents/natural_brawler}
@@ -71,6 +74,7 @@
 \input{talents/natural_negotiator}
 \input{talents/natural_outdoorsman}
 \input{talents/natural_rogue}
+\input{talents/natural_scholar}
 \input{talents/nobodys_fool}
 \input{talents/one_with_nature}
 \input{talents/overwhelm_emotions}
@@ -85,6 +89,9 @@
 \input{talents/quick_fix}
 \input{talents/quick_strike}
 \input{talents/rapid_reaction}
+\input{talents/researcher}
+\input{talents/resolve}
+\input{talents/respected_scholar}
 \input{talents/second_wind}
 \input{talents/sense_danger}
 \input{talents/shapeshifter}
@@ -102,6 +109,7 @@
 \input{talents/stalker}
 \input{talents/steely_nerves}
 \input{talents/street_wise}
+\input{talents/stroke_of_genius}
 \input{talents/strong_arm}
 \input{talents/stunning_blow}
 \input{talents/surgeon}
@@ -114,130 +122,140 @@
 \input{talents/uncanny_reactions}
 \input{talents/uncanny_senses}
 \input{talents/well_read}
+\input{talents/well_rounded}
 \input{talents/wheel_and_deal}
 \input{talents/works_like_a_charm}
 \input{talents/walk_the_walk}
 
 \newcommand\normalTalentCollection{
-   \adversaryTalent
-   \alchemicalArtsTalent
-   \anatomyLessonsTalent
-   \animalCompanionTalent
-   \apothecaryTalent
-   \arcanaCasterTalent
-   \balanceTalent
-   \beastWranglerTalent
-   \bloodedTalent
-   \biggestFanTalent
-   \bouncingSpellTalent
-   \commandTalent
-   \confidenceTalent
-   \congenialTalent
-   \convincingDemeanorTalent
-   \coordinationDodgeTalent
-   \cripplingBlowTalent
-   \deadlyAccuracyTalent
-   \deceptiveTauntTalent
-   \dedicationTalent
-   \defensiveStanceTalent
-   \disarmingSmileTalent
-   \disableDeviceTalent
-   \disguiseCastingTalent
-   \distantSpellTalent
-   \distractingBehaviourTalent
-   \dodgeTalent
-   \dontShootTalent
-   \durableTalent
-   \elvenMarketContactsTalent
-   \expertHandlerTalent
-   \expertTrackerTalent
-   \fearsomeTalent
-   \foragerTalent
-   \forceOfWillTalent
-   \feralStrengthTalent
-   \fieldCommanderTalent
-   \frenziedAttackTalent
-   \gentlePreserverTalent
-   \gritTalent
-   \hardyTalent
-   \heroicFortitudeTalent
-   \hunterTalent
-   \improvedDistractingBehaviourTalent
-   \improvedFieldCommanderTalent
-   \improvedInspiringRhetoricTalent
-   \improvedSpurTalent
-   \indistinguishableTalent
-   \inspiringRhetoricTalent
-   \intensePresenceTalent
-   \intimidatingTalent
-   \invigorateTalent
-   \itsNotThatBadTalent
-   \jumpUpTalent
-   \justKiddingTalent
-   \killWithKindnessTalent
-   \knockdownTalent
-   \knowSomebodyTalent
-   \lethalBlowsTalent
-   \letsRideTalent
-   \lingeringSpellTalent
-   \loomTalent
-   \physicianTalent
-   \plausibleDeniabilityTalent
-   \potentDefilerTalent
-   \preciseAimTalent
-   \pressurePointTalent
-   \masterDoctorTalent
-   \masterOfShadowsTalent
-   \morePowerTalent
-   \naturalAthleteTalent
-   \naturalBrawlerTalent
-   \naturalCharmerTalent
-   \naturalDoctorTalent
-   \naturalMarksmanTalent
-   \naturalNegotiatorTalent
-   \naturalOutdoorsmanTalent
-   \naturalRogueTalent
-   \nobodysFoolTalent
-   \oneWithNatureTalent
-   \overwhelmEmotionsTalent
-   \primalCasterTalent
-   \quickenSpellTalent
-   \quickDrawTalent
-   \quickFixTalent
-   \quickStrikeTalent
-   \rapidReactionTalent
-   \shapeshifterTalent
-   \secondWindTalent
-   \senseDangerTalent
-   \shapeSpellTalent
-   \sideStepTalent
-   \shortcutTalent
-   \signatureSpellTalent
-   \sleightOfMindTalent
-   \slipperyMindTalent
-   \smoothTalkerTalent
-   \sniperShotTalent
-   \softSpotTalent
-   \soothingToneTalent
-   \spurTalent
-   \stalkerTalent
-   \steelyNervesTalent
-   \strongArmTalent
-   \streetWiseTalent
-   \stunningBlowTalent
-   \surgeonTalent
-   \swiftTalent
-   \talkTheTalkTalent
-   \targetedBlowTalent
-   \touchOfFateTalent
-   \toughenedTalent
-   \trueAimTalent
-   \uncannyReactionsTalent
-   \uncannySensesTalent
-   \wellReadTalent
-   \wheelAndDealTalent
-   \worksLikeACharmTalent
-   \walkTheWalkTalent
+    \adversaryTalent
+    \alchemicalArtsTalent
+    \anatomyLessonsTalent
+    \animalCompanionTalent
+    \apothecaryTalent
+    \arcanaCasterTalent
+    \balanceTalent
+    \beastWranglerTalent
+    \bloodedTalent
+    \biggestFanTalent
+    \bouncingSpellTalent
+    \commandTalent
+    \confidenceTalent
+    \congenialTalent
+    \convincingDemeanorTalent
+    \coordinationDodgeTalent
+    \cripplingBlowTalent
+    \deadlyAccuracyTalent
+    \deceptiveTauntTalent
+    \dedicationTalent
+    \defensiveStanceTalent
+    \disarmingSmileTalent
+    \disableDeviceTalent
+    \disguiseCastingTalent
+    \distantSpellTalent
+    \distractingBehaviourTalent
+    \dodgeTalent
+    \dontShootTalent
+    \durableTalent
+    \elvenMarketContactsTalent
+    \expertHandlerTalent
+    \expertTrackerTalent
+    \fearsomeTalent
+    \foragerTalent
+    \forceOfWillTalent
+    \feralStrengthTalent
+    \fieldCommanderTalent
+    \frenziedAttackTalent
+    \gentlePreserverTalent
+    \gritTalent
+    \hardyTalent
+    \heroicFortitudeTalent
+    \hunterTalent
+    \improvedDistractingBehaviourTalent
+    \improvedFieldCommanderTalent
+    \improvedInspiringRhetoricTalent
+    \improvedSpurTalent
+    \indistinguishableTalent
+    \inspiringRhetoricTalent
+    \intensePresenceTalent
+    \intenseFocusTalent
+    \intimidatingTalent
+    \invigorateTalent
+    \itsNotThatBadTalent
+    \jumpUpTalent
+    \justKiddingTalent
+    \killWithKindnessTalent
+    \knockdownTalent
+    \knowledgeSpecializationTalent
+    \knowSomebodyTalent
+    \lethalBlowsTalent
+    \letsRideTalent
+    \lingeringSpellTalent
+    \loomTalent
+    \physicianTalent
+    \plausibleDeniabilityTalent
+    \potentDefilerTalent
+    \preciseAimTalent
+    \pressurePointTalent
+    \masterDoctorTalent
+    \masterOfShadowsTalent
+    \mentalFortressTalent
+    \morePowerTalent
+    \naturalAthleteTalent
+    \naturalBrawlerTalent
+    \naturalCharmerTalent
+    \naturalDoctorTalent
+    \naturalMarksmanTalent
+    \naturalNegotiatorTalent
+    \naturalOutdoorsmanTalent
+    \naturalRogueTalent
+    \naturalScholarTalent
+    \nobodysFoolTalent
+    \oneWithNatureTalent
+    \overwhelmEmotionsTalent
+    \primalCasterTalent
+    \quickenSpellTalent
+    \quickDrawTalent
+    \quickFixTalent
+    \quickStrikeTalent
+    \rapidReactionTalent
+    \researcherTalent
+    \resolveTalent
+    \respectedScholarTalent
+    \shapeshifterTalent
+    \secondWindTalent
+    \senseDangerTalent
+    \shapeSpellTalent
+    \sideStepTalent
+    \shortcutTalent
+    \signatureSpellTalent
+    \sleightOfMindTalent
+    \slipperyMindTalent
+    \smoothTalkerTalent
+    \sniperShotTalent
+    \softSpotTalent
+    \soothingToneTalent
+    \spurTalent
+    \stalkerTalent
+    \steelyNervesTalent
+    \strongArmTalent
+    \streetWiseTalent
+    \strokeOfGeniusTalent
+    \stunningBlowTalent
+    \surgeonTalent
+    \swiftTalent
+    \talkTheTalkTalent
+    \targetedBlowTalent
+    \touchOfFateTalent
+    \toughenedTalent
+    \trueAimTalent
+    \uncannyReactionsTalent
+    \uncannySensesTalent
+    \wellReadTalent
+    \wellRoundedTalent
+    \wheelAndDealTalent
+    \worksLikeACharmTalent
+    \walkTheWalkTalent
 }
 
 \input{talents/psionic_powers/bind_power.tex}
