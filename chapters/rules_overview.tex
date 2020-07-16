@@ -1,4 +1,4 @@
-\chapter{Combat}\label{chap:combat}
+\chapter{Rules Overview}\label{chap:rules_overview}
 
 \begin{centering}
     \textit{This is a very rough summary of the Core Rules. Refer to the Genesys Core Rulebook for the full Rules.}
@@ -6,8 +6,8 @@
 
 \begin{multicols}{2}
 
-\section{Turns}
-\subsection{Manouvers}
+\subsection{Turns}
+\subsubsection{Manouvers}
 Maneuvers are activities that aren’t complex enough to
 warrant a skill check, but still involve time and effort
 on the part of a character. Characters are allowed one
@@ -26,7 +26,7 @@ The following are some examples of maneuvers:
     \item Guarded Stance. (gain \setback and Melee Defense +1 until the end of their next turn)
 \end{description}
 
-\subsection{Actions}
+\subsubsection{Actions}
 Actions are important activities that are vital to a character's accomplishment
 of a goal. Each character may normally only perform one action during their
 turn, likely the most important activity they undertake during their turn.
@@ -48,7 +48,7 @@ involve attacking an opponent. Attacking an opponent requires a combat
 skill check, sometimes referred to in shorthand as a combat check or
 simply an attack.
 
-\section{Performing a Combat Check}
+\subsection{Performing a Combat Check}
 \begin{table}[H]
 \begin{GenesysTable}{Ranged Attack Difficulties}{attack-ranged-difficulties}{ =l +X}
 Range Band  & Difficulty\\
@@ -60,7 +60,7 @@ Extreme     & \textbf{Daunting }(\difficulty\difficulty\difficulty\difficulty)\\
 \end{GenesysTable}
 \end{table}
 
-\subsection{Spending Advantage and Triumph in Combat}
+\subsubsection{Spending Advantage and Triumph in Combat}
 \begin{table*}[!htb]
 \begin{GenesysTable}{Spending Advantage and Triumph in Combat}{attack-spending-advantage}{ =l +X}
 Cost        & Result Option\\
@@ -91,7 +91,7 @@ Cost        & Result Option\\
 \end{GenesysTable}
 \end{table*}
 
-\subsection{Spending Setback and Despair in Combat}
+\subsubsection{Spending Setback and Despair in Combat}
 \begin{table*}[!htb]
 \begin{GenesysTable}{Spending Setback and Despair in Combat}{attack-spending-setback}{ =l +X}
 Cost        & Result Option\\
@@ -113,6 +113,7 @@ Cost        & Result Option\\
 
 \end{multicols}
 
+\FloatBarrier
 
 \section{Injury}
 \subsection{Critical hits}
@@ -151,3 +152,84 @@ D100    & Severity              & Result\\
 151+    &                       & Dead: Complete, obliterated death.\\
 \end{GenesysTable}
 \end{table*}
+
+\FloatBarrier
+
+\section{Environmental Effects}
+
+\begin{multicols}{2}
+
+\subsection{Concealment}
+Concealment is a situation that occurs when a character is harder to spot because
+of environmental effects such as darkness, fog or a sand storm. Concealment imposes
+penalties on attacks and sight-based skill checks. Conversely it can provide bonuses
+for other skill checks, such as Stealth.
+
+As a general guide the following guide can be used to dermine the number of \setback
+dice to add against targets with concealment, or \boost dice to add when engaging in
+Stealth based checks. As a guide, using Melee skills in darkness of fog should add 1/2
+the number of \setback dice indicated.
+
+\begin{table}[H]
+\begin{GenesysTable}{Concealment}{concealment}{ =l +X}
+Dice Added  & Examples\\
++1          & Mist, shadow, waist-high grass.\\
++2          & Dust Storm, Fog, the darkness of early morning or late evening, thick, shoulder-high grass.\\
++3          & Sand storm, Heavy fog, thick and chocking smoke, the darkness of night, dense, head-high underbrush and thick grass.\\
+\end{GenesysTable}
+\end{table}
+
+\subsection{Cover}
+Most cover adds a \setback against Ranged attacks. Being especially well covered
+would add \setback\setback, such as shooting at a target hiding in a trench.
+
+\subsection{Difficult and Impassable Terrain}
+Difficult terrain is a catch-all description of terrain that is hard to move through
+or over. It can include tight passageways, shifting sand or loose rubble. Essentially,
+it's terrain that characters move through with difficulty. Characters entering or
+moving through difficult terrain must perform twice as many maneuvers to move the
+same distance they would in normal terrain.
+
+\subsection{Falling}
+
+On Athas, gravity has a habit of ruining someones day. When a character falls,
+consult \tableref{falling-damage} and apply the damage. Soak will reduce the
+damage, however any strain damage is not reduced.
+
+A character can reduce the damage taken from falling by makeing an
+\textbf{Average} (\difficulty\difficulty) Athletics or Coordination Check.
+Each \success reduces to damage sufferec by one while each \advantage
+reduces to strain suffered by one. A \triumph could, at the GM's
+discretion, reduce the overall distance fallen by one range band
+as the character grabs onto a hanhold or does something else to
+slow their fall.
+
+\begin{table}[H]
+\begin{GenesysTable}{Falling Damage}{falling-damage}{ =l +X +l}
+Range   & Damage                                            & Strain\\
+Short   & 10                                                & 10\\
+Medium  & 30                                                & 20\\
+Long    & Incapacitated, Critical Injury at +50             & 30\\
+Extreme & Incapacitated, Critical Injury at +75 (or Death)  & 40\\
+\end{GenesysTable}
+\end{table}
+
+\subsection{Sandstorms}
+
+In addition to causing concealment, sandstorms make it hard to navigate. Sandstorms add \setback\setback\setback\setback to any attempt to navigate.
+
+\subsection{Survival}
+
+Survival Rations are an abstract mechanism to simulate the need to prepare for journies in Dark Sun.
+
+\begin{table}[H]
+\begin{GenesysTable}{Survival Rations}{survival-rations}{ =l +c +c +c}
+Journey Length & Encumbrance & Cost   & Rating\\
+Short          &     1       &  20cp  &   2\\
+Medium         &     2       &  40cp  &   4\\
+Long           &     3       & 100cp  &   8\\
+Very Long      &     4       & 200cp  &   10\\
+\end{GenesysTable}
+\end{table}
+
+\end{multicols}
