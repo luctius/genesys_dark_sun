@@ -31,24 +31,24 @@ show: output/dark_sun_rpg_swgdice.pdf
 	xdg-open $<
 spell: $(NAME)
 	find . -iname ".tex" -exec aspell --lang=en_US -t -c {} \;
-output/dark_sun_rpg.pdf: docs/dark_sun_rpg.tex $(FILES)
+output/dark_sun_rpg.pdf: dark_sun_rpg.tex #$(FILES)
 	rubber -v --pdf $< ; mv -f *.aux *.log *.toc *.pdf output/
 	mv $@ $@.big
 	pdftk $@.big output/character_sheet.pdf cat output $@
 	rm output/*.big
 	#gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPreserveAnnots=true -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big output/character_sheet.pdf
-output/dark_sun_rpg_swgdice.pdf: docs/dark_sun_rpg_swgdice.tex $(FILES)
+output/dark_sun_rpg_swgdice.pdf: dark_sun_rpg_swgdice.tex #$(FILES)
 	rubber -v --pdf $< ; mv -f *.aux *.log *.toc *.pdf output/
 	mv $@ $@.big
 	pdftk $@.big output/character_sheet.pdf cat output $@
 	rm output/*.big
 	#gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPreserveAnnots=true -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big output/character_sheet.pdf
-output/ds_specs.pdf: docs/ds_specs.tex $(FILES)
+output/ds_specs.pdf: ds_specs.tex #$(FILES)
 	rubber -v --pdf $< ; mv -f *.aux *.log *.pdf output/
 	mv $@ $@.big
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPreserveAnnots=true -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big
 	rm output/*.big
-output/ds_races.pdf: docs/ds_races.tex $(FILES)
+output/ds_races.pdf: ds_races.tex #$(FILES)
 	rubber -v --pdf $< ; mv -f *.aux *.log *.pdf output/
 	mv $@ $@.big
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPreserveAnnots=true -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big
