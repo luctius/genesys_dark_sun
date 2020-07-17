@@ -6,8 +6,8 @@
 \usepackage{tabu}
 \usepackage{array}
 \usepackage{tabularx}
-\usepackage{tikz}
-\usetikzlibrary{positioning,shapes,arrows,decorations.markings, matrix}
+\usepackage{tikz,graphicx}
+\usetikzlibrary{external,positioning,shapes,arrows,decorations.markings, matrix}
 \usepackage[bookmarksopen=false,bookmarks=true,bookmarksdepth=4, colorlinks = true, linkcolor = orange, urlcolor  = orange, citecolor = orange, anchorcolor = orange]{hyperref}
 \usepackage{bookmark}
 \usepackage{multicol}
@@ -17,8 +17,8 @@
 \geometry{ a4paper, total={170mm,257mm}, left=10mm, right=10mm, top=10mm, bottom=20mm, }
 \usepackage{eso-pic,graphicx,transparent}
 \usepackage{pgfkeys}
-\usepackage{enumitem}
 \usepackage{placeins}
+
 
 \definecolor{race}{RGB}{243, 108, 33}
 \definecolor{creature}{RGB}{243, 108, 33}
@@ -61,7 +61,7 @@
 }%
 
 \newcommand{\cref}[1]{%
-    \autoref{chap:#1}: ~\nameref{chap:#1}%
+    \autoref{#1}: ~\nameref{#1}%
 }%
 
 \newcommand{\chapterref}[1]{%
