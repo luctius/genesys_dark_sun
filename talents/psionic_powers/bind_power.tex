@@ -5,27 +5,27 @@
     If the character used any \dark to generate \darklight, the target also suffers 1 wound per \darklight spent on the
     check (ignoring soak).
 }
-\newcommand\psionicBindTalent{ \Talent[name=\psionicBindTitle, active=false, ranked=true]{\psionicBindDescription} }
+\newcommand\psionicBindTalent{ \Talent[name=\psionicBindTitle, label=psionicbind, active=false, ranked=true]{\psionicBindDescription} }
 
 \newcommand\bindDurationTitle{ Bind Duration}
 \newcommand\bindDurationDescription{ Commit \force\force\force to sustain the ongoing effects of the power on each affected target. }
-\newcommand\bindDurationTalent{ \Talent[name=\bindDurationTitle, active=false, ranked=true]{\bindDurationDescription} }
+\newcommand\bindDurationTalent{ \Talent[name=\bindDurationTitle, label=psionicbindduration, active=false, ranked=true]{\bindDurationDescription} }
 
 \newcommand\bindControlTitle{ Bind Control}
 \newcommand\bindControlDescription{ Spend \darklight. While affected by Bind, a target suffers strain equal to the user's Willpower whenever the target takes an action.  }
-\newcommand\bindControlTalent{ \Talent[name=\bindControlTitle, active=false, ranked=true]{\bindControlDescription} }
+\newcommand\bindControlTalent{ \Talent[name=\bindControlTitle, label=psionicbindcontrol, active=false, ranked=true]{\bindControlDescription} }
 
 \newcommand\bindMagnitudeTitle{ Bind Magnitude}
 \newcommand\bindMagnitudeDescription{ Spend \darklight\darklight to affect 1 additional target within range per rank of Magnitude purchased.  }
-\newcommand\bindMagnitudeTalent{ \Talent[name=\bindMagnitudeTitle, active=false, ranked=true]{\bindMagnitudeDescription} }
+\newcommand\bindMagnitudeTalent{ \Talent[name=\bindMagnitudeTitle, label=psionicbindmagnitude, active=false, ranked=true]{\bindMagnitudeDescription} }
 
 \newcommand\bindRangeTitle{ Bind Range}
 \newcommand\bindRangeDescription{ Spend \darklight to increase power's range by a number of range bands equal to Range upgrades purchased.  }
-\newcommand\bindRangeTalent{ \Talent[name=\bindRangeTitle, active=false, ranked=true]{\bindRangeDescription} }
+\newcommand\bindRangeTalent{ \Talent[name=\bindRangeTitle, label=psionicbindrange, active=false, ranked=true]{\bindRangeDescription} }
 
 \newcommand\bindStrengthTitle{ Bind Strength}
 \newcommand\bindStrengthDescription{ Spend \darklight to disorient the target for a number of rounds equal to Strength upgrades purchased.  }
-\newcommand\bindStrengthTalent{ \Talent[name=\bindStrengthTitle, active=false, ranked=true]{\bindStrengthDescription} }
+\newcommand\bindStrengthTalent{ \Talent[name=\bindStrengthTitle, label=psionicbindstrength, active=false, ranked=true]{\bindStrengthDescription} }
 
 \newcommand\bindMasteryTitle{ Bind Mastery}
 \newcommand\bindMasteryDescription{ 
@@ -35,5 +35,5 @@
     the end of his next turn. If any \dark were used to generate \darklight and the check succeeds, the target
     suffers a Critical Injury, adding +10 to the roll per \darklight spent on the check.
 }
-\newcommand\bindMasteryTalent{ \Talent[name=\bindMasteryTitle, active=false, ranked=true]{\bindMasteryDescription} }
+\newcommand\bindMasteryTalent{ \Talent[name=\bindMasteryTitle, label=psionicbindmastery, active=false, ranked=true]{\bindMasteryDescription} }
 
