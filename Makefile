@@ -19,7 +19,6 @@ FILES= \
 	talents/psionic_powers/* \
 	adversaries/* \
 	images/* \
-	output/character_sheet.pdf \
 	$(null)
 
 all: output/dark_sun_rpg.pdf output/dark_sun_rpg_swgdice.pdf output/ds_races.pdf output/ds_specs.pdf output/character_sheet.pdf
@@ -29,15 +28,15 @@ show_specs: output/ds_specs.pdf
 	xdg-open $<
 show: output/dark_sun_rpg_swgdice.pdf
 	xdg-open $<
-spell: $(NAME)
-	find . -iname ".tex" -exec aspell --lang=en_US -t -c {} \;
-output/dark_sun_rpg.pdf: dark_sun_rpg.tex output/character_sheet.pdf #$(FILES)
+spell: $(FILES)
+	aspell --lang=en_UK -t -c $(FILES)
+output/dark_sun_rpg.pdf: dark_sun_rpg.tex $(FILES) output/character_sheet.pdf
 	rubber -v --pdf $< ; mv -f *.aux *.log *.toc *.pdf output/
 	mv $@ $@.big
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=$@ $@.big output/character_sheet.pdf
 	rm output/*.big
 	#pdftk $@.big output/character_sheet.pdf cat output $@
-output/dark_sun_rpg_swgdice.pdf: dark_sun_rpg_swgdice.tex output/character_sheet.pdf #$(FILES)
+output/dark_sun_rpg_swgdice.pdf: dark_sun_rpg_swgdice.tex $(FILES) output/character_sheet.pdf
 	rubber -v --pdf $< ; mv -f *.aux *.log *.toc *.pdf output/
 	mv $@ $@.big
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=$@ $@.big output/character_sheet.pdf

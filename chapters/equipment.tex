@@ -46,7 +46,7 @@ drastically. A raider attack or sandstorm can result in lack of necessities such
 as food and water, for which people will pay almost any amount of coin. Coins
 are not the only means of exchange. Barter and trade in commodities is widespread.
 
-\section{Item Qualities}
+\section{Item Qualities}\label{sec:item-qualities}
 Some variety equipment and depth features to the weapons, special qualities
 armor, and that items add your character may encounter. Item qualities are
 special rules that can change how the item acts.
@@ -62,9 +62,22 @@ Active qualities require \advantage\advantage to activate unless otherwise state
 in their description. Active item qualities on weapons can only trigger on a
 successful attack, unless specified otherwise.
 
-As a general rule, items in Dark Sun break with can break with spending either
+\subsection{Repairing Gear}
+
+As a general rule, Athasian items break with can break with spending either
 \threat\threat\threat or \despair, instead of only on a \despair. Items with the
-\iqtyref{superior} quality or made from metal are exempt from this rule.
+\iqtyref{superior} quality or made from metal are exempt from both rules.
+
+\begin{table}[H]
+\begin{GenesysTable}{Item Repair}{item-repair}{ =l +c +r}
+Repair Required   & Difficulty                                  & Penalty when in use\\
+No Repair Needed  & -                                           & -\\
+Minor             & \textbf{Easy} (\difficulty)                          & \setback\\
+Moderate          & \textbf{Average} (\difficulty\difficulty)            & Increase difficulty by one.\\
+Major             & \textbf{Hard} (\difficulty\difficulty\difficulty)    & Unusable.\\
+\end{GenesysTable}
+\end{table}
+
 
 \subsection {General Qualities}
 
@@ -106,6 +119,7 @@ As a general rule, items in Dark Sun break with can break with spending either
 \input{items/qualities/vicious}
 
 \end{multicols}
+\FloatBarrier
 \section{Items}\label{sec:items}
 
 \begin{figure}[!htb]
@@ -132,6 +146,7 @@ As a general rule, items in Dark Sun break with can break with spending either
 \hrulefill
 \input{items/armor}
 
+\FloatBarrier
 \subsection{Goods and Services}
 \input{items/adventure}
 \hrulefill
@@ -139,11 +154,7 @@ As a general rule, items in Dark Sun break with can break with spending either
 \hrulefill
 \input{items/magic}
 
-
-\subsection{Repairing Gear}
-
-\textit{Todo: Fill This}
-
+\FloatBarrier
 \section{Item Attachments}
 
 Item attachments are ways to customize weapons or armor. They include specialised

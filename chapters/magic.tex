@@ -29,9 +29,8 @@ Cost                               &    Result\\
 \threat or \despair                &    The magical energies exhaust the player, they suffer 2 strain or 1 wound (GM's choice)\newline
                                         \newline
                                         (When using the Defiling action) Plantlife in the area turns to ash. Using more \threat or \despair upgrades the area, or even includes wildlife.
-                                        This is narrative penalty and can include the attention of creatures who are quite unhappy with the state of the new area.
                                         \newline
-                                        All arcane and primal casters, including the caster, suffer \setback untill this players next turn \\
+                                        All arcane and primal casters, including the caster, suffer \setback untill this players next turn. \\
 \threat\threat or \despair         &    The spell doesn’t take effect until the start of the next round, or after a minute in narrative gameplay.\newline
                                         \newline
                                         Until the end of the encounter, enemy spellcasters add \boost when casting a spell that targets this character.\\
@@ -41,6 +40,8 @@ Cost                               &    Result\\
                                         their disposition, may be very interested in finding them and doing them harm). \\
 \despair                           &    The character overexerts themself or loses their magical connection and is unable to cast spells for the rest of the encounter or scene.\newline
                                         \newline
+                                        The Spell Component used is exhausted and cannot be used anymore this scene. If it is an Arcane Spell Components, it is also damaged.\\
+                                        \newline
                                         The GM picks the target of the character's spell. If the caster is an NPC, the controlling player picks the target of the spell instead.\\
 \despair\despair                   &    The character completely lose control of their magical energies or draws the ire of their deity, suffering one Critical Injury (at the GM's
                                         discretion, this may instead take the form of some of terrible or hilarious misfortune, such as temporarily being turned into a small woodland
@@ -49,15 +50,17 @@ Cost                               &    Result\\
                                         \newline
                                         (When using the Defiling action) A ally of the player gains a number of wounds equal to the number of \threat rolled.
                                         \newline
-                                        If the caster is using an component from an component pouch, the pouch is now empty, and as to be refilled.\\
+                                        If the caster is using an Arcane Spell Component, the component has lost it's magical potential and is destroyed.\\
 \end{GenesysTable}
 \end{table*}
+
+\FloatBarrier
 
 \begin{multicols}{2}
 
 \section{Magical Manouvers}
 To use these manouvers, the character has to have atleast 1 rank in either
-the Arcane or the Primal skills and have a talent allowing them to use that
+an Arcane or an Primal skills and have a talent allowing them to use that
 skill to cast spells.
 
 \subsection{Counterspell}
@@ -76,21 +79,24 @@ until the end of the character’s following turn, instead. This can be sustaine
 indefinitely by performing the concentrate maneuver each turn.
 
 \section{Arcane}
-Characters can only use the Arcane skill to cast a spell if they have a talent
+Characters can only use one of the Arcane skills to cast a spell if they have a talent
 allowing such use. Each spell has various options to raise the overal difficulty
 of the check, in exchange for various benefits. The overal difficulty of
 such a check can never be raised beyond (\difficulty\difficulty\difficulty\difficulty\difficulty),
 after reductions. Casting a spell costs 2 Strain. In addition, when casting an
-arcane spell the user adds a number of \force die equal to their Arcana rank.
-\darklight thrown during the skill check can be used to substitute a \success or
-an \advantage. However, using \light cost an extra Strain, simulating the
-extra energy used from within and \dark used during casting constitude the use
-of Defiling magic. The GM is encouraged to narrate this effect on the environment
-and it is certainly possible that there are actual consequences for its use. People
-notice defiling magic, especially when it is used often or a lot \darklight is used at
-once.\\
-\\
-\textit{TODO: Is it better to use 1:1.5 \force die instead of 1.1?}
+arcane spell the user adds a number of \force die equal to the ranks of the skill
+used in the spell. Any one \darklight thrown during the skill check can be used to
+substitute a \advantage, and \darklight\darklight\darklight can be used to substitute
+a \success.\\
+However, using \light cost an extra Strain, simulating the extra energy used from
+within and \dark used during casting constitude the use of Defiling magic. The GM
+is encouraged to narrate this effect on the environment and it is certainly possible
+that there are actual consequences for its use, with more \darklight constituting
+greater defilement. People will notice defiling magic, especially when it is used
+often or a lot \darklight is used at once.
+
+Finally Arcane magic can use Spell Components to enhance the potenty of their spells
+or reduce their difficulty. (See \cref{itmmgc:spellcomponentpouch} for more information).
 
 \paragraph{Preserving}
 \textbf{Preserving} is when an arcane spell is cast without using any \dark, regardless of the number of \light used.
@@ -101,12 +107,15 @@ Talents requiring preserving can thus be only used when the caster does not use 
 Talents requiring defiling can thus only be used when the caster uses atleast any \dark.
 
 \end{multicols}
+
+\hrulefill
+
 \begin{multicols}{2}
 \subsection{Arcane Spells}
 \input{magic/spells/attack}
 \input{magic/spells/barrier}
 \input{magic/spells/dispel}
-%\input{magic/spells/enchantment}
+\input{magic/spells/enchantment}
 \input{magic/spells/illusion}
 \input{magic/spells/utility}
 \end{multicols}
@@ -118,12 +127,11 @@ Talents requiring defiling can thus only be used when the caster uses atleast an
 
 \section{Primal}
 
-As with Arcana, Characters can only use the Primal skill to cast a spell if they
+As with Arcana, Characters can only use one of the Primal skills to cast a spell if they
 have a talent allowing such use. Each spell has various options to raise the overal
-difficulty, but while there are no implements to be used, Primal magic can use Spell
-Components to enhance the potenty of their spells or reduce their difficulty.
-(See \cref{itmmgc:spellcomponentpouch} for more information). Unlike Arcana spells,
-users do not throw \force dice, but use the above mentioned spell components to add potency.
+difficulty and the use of Primal Spell Components can be used to enhance the potenty
+of their spells or reduce their difficulty. (See \cref{itmmgc:spellcomponentpouch}
+for more information). Primal Castes do not use \force dice.
 
 \subsection{Primal Spells}
 \input{magic/spells/augment}
