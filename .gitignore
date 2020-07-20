@@ -5,3 +5,4 @@ output/*.toc
 output/*.upa
 output/*.upb
 output/*.lox
+output/*.lot
