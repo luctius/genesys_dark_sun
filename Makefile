@@ -30,25 +30,27 @@ show: output/dark_sun_rpg_swgdice.pdf
 	xdg-open $<
 spell: $(FILES)
 	aspell --lang=en_UK -t -c $(FILES)
+check: dark_sun_rpg_swgdice.tex $(FILES) 
+	pdflatex -halt-on-error -file-line-error -output-directory output $<
 output/dark_sun_rpg.pdf: dark_sun_rpg.tex $(FILES) output/character_sheet.pdf
-	rubber -v --pdf $< ; mv -f *.aux *.log *.toc *.pdf output/
+	rubber --into output -v --pdf $< || true #; mv -f *.aux *.log *.toc *.pdf output/
 	mv $@ $@.big
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=$@ $@.big output/character_sheet.pdf
 	rm output/*.big
 	#pdftk $@.big output/character_sheet.pdf cat output $@
 output/dark_sun_rpg_swgdice.pdf: dark_sun_rpg_swgdice.tex $(FILES) output/character_sheet.pdf
-	rubber -v --pdf $< ; mv -f *.aux *.log *.toc *.pdf output/
+	rubber --into output -v --pdf $< || true #; mv -f *.aux *.log *.toc *.pdf output/
 	mv $@ $@.big
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=$@ $@.big output/character_sheet.pdf
 	rm output/*.big
 	#pdftk $@.big output/character_sheet.pdf cat output $@
 output/ds_specs.pdf: ds_specs.tex output/character_sheet.pdf #$(FILES)
-	rubber -v --pdf $< ; mv -f *.aux *.log *.pdf output/
+	rubber --into output -v --pdf $< || true #; mv -f *.aux *.log *.pdf output/
 	mv $@ $@.big
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPreserveAnnots=true -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big
 	rm output/*.big
 output/ds_races.pdf: ds_races.tex output/character_sheet.pdf #$(FILES)
-	rubber -v --pdf $< ; mv -f *.aux *.log *.pdf output/
+	rubber --into output -v --pdf $< || true #; mv -f *.aux *.log *.pdf output/
 	mv $@ $@.big
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPreserveAnnots=true -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.big
 	rm output/*.big

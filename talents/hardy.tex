@@ -1,8 +1,8 @@
-%TODO: For some weird reason I cannot call this enduring....
 \newcommand\hardyTitle{ Hardy }
 \newcommand\hardyActive{false}
 \newcommand\hardyRanked{true}
-\newcommand\hardyDescription{ Gain +1 Soak value }
+\newcommand\hardyDescription{ Gain +1 Soak value per rank of \hardyTitle }
 \newcommand\hardyTalent{ \Talent[name=\hardyTitle, label=hardy, active=\hardyActive, ranked=\hardyRanked]{
-The character gains + 1 soak value per rank of Hardy.
+    \fxnote{\currentname: This was to be called enduring, but it caused an error :-?.}
+    \hardyDescription
 } }

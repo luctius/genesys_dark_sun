@@ -1,4 +1,7 @@
-*.aux
-#*.pdf
-*.log
-*.toc
+output/*.aux
+#output/*.pdf
+output/*.log
+output/*.toc
+output/*.upa
+output/*.upb
+output/*.lox

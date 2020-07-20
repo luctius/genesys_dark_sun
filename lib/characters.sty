@@ -125,10 +125,8 @@
     \pgfkeys{/race, default, #1}%
 
     \vspace{1em}
-    \noindent\begin{minipage}[c]{\linewidth}
-    %\belowpdfbookmark{\raceName}{race-\raceName}
-    %\noindent{\LARGE\sffamily\color{race} \raceName}\\
     \section{\raceName}
+    \noindent\begin{minipage}[c]{\linewidth}
 
     \ifthenelse{ \equal{\constRacesShowImage}{true} }{
         \ifthenelse{ \equal{\raceImage}{None} }{}{
