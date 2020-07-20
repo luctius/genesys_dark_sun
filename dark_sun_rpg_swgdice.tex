@@ -4,7 +4,9 @@
 \usepackage[11pt]{moresize}
 \usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
 
-%Show image in race section
+\usepackage{pdfpages}
+
+%Show SWRPG Dice
 \renewcommand{\constUseSWGRPGDice}{true}
 %use \nameref for item qualities or show default name
 \renewcommand{\constReferItemQualities}{true}
@@ -18,8 +20,6 @@
 \begin{document}
 \currentpdfbookmark{Title Page}{titlepage}
 \incgraph[documentpaper][width=\paperwidth,height=\paperheight]{images/front.jpg}
-
-\listoffixmes
 
 \tableofcontents
 
@@ -38,5 +38,16 @@
 \input{chapters/adversaries}
 \input{chapters/rules_overview}
 \input{chapters/dark_sun_primer}
+
+\listoftables 
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoffixmes
+\addcontentsline{toc}{chapter}{List of Corrections}
+
+\clearpage
+\ClearShipoutPictureBG
+
+\includepdf[landscape=true, pages=1]{character_sheet.pdf}
+\addcontentsline{toc}{chapter}{Character Sheet}
 
 \end{document}
