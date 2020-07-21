@@ -4,27 +4,44 @@
     \textit{This is a very rough summary of the Core Rules. Refer to the Genesys Core Rulebook for the full Rules.}
 \end{centering}
 
+\begin{table*}[!htb]
+\begin{GenesysTable}{Maneuvers}{maneuvers}{ =l +X}
+Maneuver                &   Description\\
+Aim                     &   Gain \boost on next combat check, or gain \boost\boost on next combat check if aiming for 2 consecutive maneuvers.\\
+Aim (Called Shot)       &   Gain \setback\setback on next combat check, or gain \setback on next combat check if aiming for 2 consecutive maneuvers.\\
+Assist                  &   Engaged ally adds \boost to their next check, Can stack from other assists.\\
+Guarded Stance          &   Gain melee defense 1. Add \setback to combat checks, until end of the next turn.\\
+Interact w. Enviroment  &   Move a large item, open/close door, press button, pick up weapon, etc.\\
+Taking Cover            &   Gain ranged defense 1. Opponents add \setback to skill checks (e.g Perception), or \setback\setback if particularly well-covered.\\
+Mange Gear              &   Draw, holster, ready or load a weapon. Retrieve/put away stored item.\\
+Mount/Dismount          &   A domestic animal, vehicle, cockpit, gunnery station etc.\\
+Direct Mount            &   Mount moves 2 maneuvers.\\
+Move                    &   Change range increment or Engage/disengage from melee. Difficult Terrain doubles the amount of maneuvers required.\newline
+                            Engaged $\Rightarrow$ 1 $\Rightarrow$ Short $\Rightarrow$ 1 $\Rightarrow$ Medium $\Rightarrow$ 2 $\Rightarrow$ Long $\Rightarrow$ 2 $\Rightarrow$ Extreme.\\
+Drop Prone / Stand up   &   While you are prone, add \setback to all ranged attacks targeting you and add \boost to all melee attacks made against you.\\
+Preparation             &   Some actions require additional preparation to perform effecively.\\
+\end{GenesysTable}
+\end{table*}
+
 \begin{multicols}{2}
 
 \subsection{Turns}
 \subsubsection{Manouvers}
 Maneuvers are activities that aren’t complex enough to
 warrant a skill check, but still involve time and effort
-on the part of a character. Characters are allowed one
-maneuver during their turn, and certain circumstances
-may allow them a second maneuver as well, such as spending two \advantage.
-The following are some examples of maneuvers:
+on the part of a character.
+
+To perform a second maneuver the character must spend either:
 \begin{description}
-    \item Aiming a weapon (\boost per aim maneuver).
-    \item Assisting an ally (Add \boost to that characters specific check per ally helping).
-    \item Moving one range band closer or farther away from an enemy.
-    \item Opening a door.
-    \item Diving behind cover.
-    \item Flipping over a table.
-    \item Standing up or dropping prone.
-    \item Mount or dismount.
-    \item Guarded Stance. (gain \setback and Melee Defense +1 until the end of their next turn)
+    \item An action.
+    \item Two strain.
+    \item \advantage\advantage generated on a skill check.
 \end{description}
+
+Characters may not perform more than two maneuvers during their turn.
+The following are some examples of maneuvers:
+
+\FloatBarrier
 
 \subsubsection{Actions}
 Actions are important activities that are vital to a character's accomplishment
@@ -60,9 +77,9 @@ Extreme     & \textbf{Daunting }(\difficulty\difficulty\difficulty\difficulty)\\
 \end{GenesysTable}
 \end{table}
 
-\subsubsection{Spending Advantage and Triumph in Combat}
+\subsubsection{Spending Dice in Combat}
 \begin{table*}[!htb]
-\begin{GenesysTable}{Spending Advantage and Triumph in Combat}{attack-spending-advantage}{ =l +X}
+\begin{GenesysTable}{Spending Advantage and Triumph in Combat}{combat-advantage}{ =l +X}
 Cost        & Result Option\\
 \advantage or \triumph  & Recover 1 strain.\newline
                           Add \boost to the next allied character's check\newline
@@ -89,11 +106,7 @@ Cost        & Result Option\\
                     piece of equipment the target is using, such as blowing up
                     their assault rifle or slicing their sword in half. \\
 \end{GenesysTable}
-\end{table*}
-
-\subsubsection{Spending Setback and Despair in Combat}
-\begin{table*}[!htb]
-\begin{GenesysTable}{Spending Setback and Despair in Combat}{attack-spending-setback}{ =l +X}
+\begin{GenesysTable}{Spending Threat and Despair in Combat}{combat-threat}{ =l +X}
 Cost        & Result Option\\
 \setback or \despair  & The active character suffers 1 strain.\newline
                           The active character loses the benefits of a prior maneuver (such as from taking cover or assuming a guarded stance) until they perform the maneuver again.\\
@@ -107,7 +120,6 @@ Cost        & Result Option\\
 \despair  & Upgrade the difficulty of an allied character's next check or the next check of the current active character.\newline
             The tool, Brawl, or Melee weapon the character is using becomes damaged.\\
 \despair\despair  & The character's weapon immediately breaks if it has the \iqtyref{fragile} Quality.\\
-                    
 \end{GenesysTable}
 \end{table*}
 
