@@ -32,7 +32,6 @@ Parchment (sheet)                 & 0     & 4cp   & 3      \\
 Pick, miner's                     & 2     & 15cp  & 1      \\
 Pitcher, clay                     & 1     & 1cp   & 0      \\
 Pouch, belt (empty)               & 0     & 5cp   & 0      \\
-Rations, trail (per day)          & 0     & 3cp   & 0      \\
 \nameref{advitm:ram}              & 4     & 10cp  & 6      \\
 \nameref{advitm:rope_hemp}        & 1     & 5cp   & 1      \\
 \nameref{advitm:rope_silk}        & 1     & 50cp  & 3      \\
@@ -209,7 +208,7 @@ It can also be used to damage a lock beyond repair.
 You can throw a flask of alchemist’s fire as a weapon
 with an Ranged light or Alchemy combat check with
 a base damage of 6 fire damage, with a range of short,
-and \iqtyref{blast} 3, \iqtyref{burn} 2 .
+and \iqtyref{blast} 3, \iqtyref{burn} 2.
 
 \paragraph{Antitoxin} \label{alcitm:antitoxin}
 If you drink a vial of antitoxin, you get an upgrade on
@@ -245,7 +244,7 @@ target and then becoming tough and resilient upon
 exposure to air.
 
 \paragraph{Thunderstone} \label{alcitm:thunderstone}
-You can throw this stone as a weapon with an Ranged(Light) or
+You can throw this stone as a weapon with an Ranged or
 Alchemy combat check with a range of short and deals no damage.
 When it strikes a hard surface (or is struck hard), it creates
 a deafening bang that is treated as a sonic attack. Each creature
@@ -253,7 +252,7 @@ within short range of where it went off must make an Average
 (\difficulty\difficulty) Resilence check or be deafened for 1
 hour. A deafened creature, in addition to the obvious effects,
 takes \setback\setback on initiative rolls and has a \setback
-when casting a spell
+when casting a spell.
 
 \paragraph{Tindertwig} \label{alcitm:tindertwig}
 The alchemical substance on the end of this small,
@@ -275,12 +274,13 @@ lighting any other fire with one is a maneuver.
 \begin{GenesysTable}{Poisons}{poisons}{ =X +l +l}
 Name                        & Price & Rarity \\
 \nameref{poison:anesthetic} &  375  & 5      \\
-\nameref{poison:befuddle}   &  460  & 6      \\
-\nameref{poison:blinding}   &  900  & 8      \\
-\nameref{poison:weakness}   &  900  & 8      \\
+\nameref{poison:befuddle}   &  230  & 6      \\
+\nameref{poison:blinding}   &  400  & 8      \\
+\nameref{poison:weakness}   &  450  & 8      \\
 \nameref{poison:suggestion} & 1000  & 9      \\
-\nameref{poison:paralysis}  &  525  & 6      \\
-\nameref{poison:neurotoxin} &  300  & 4      \\
+\nameref{poison:paralysis}  &  260  & 6      \\
+\nameref{poison:dendriton}  &  150  & 4      \\
+\nameref{poison:raquor}     &  150  & 4      \\
 \end{GenesysTable}
 \end{table}
 
@@ -346,17 +346,31 @@ the next 3 turns, they also suffer 1 strain per \threat
 rolled, and if they roll a \despair they have to make the
 check again next round.
 
-\paragraph{Neurotoxin} \label{poison:neurotoxin}
-This poison may be introduced into the target's body via
-aerosol deployment, food ingestion, or injection (via an
-applicator or dart). Resisting a single dose has an \textbf{Average} (\difficulty\difficulty)
-difficulty, while two or more doses combined into a single
-application have a \textbf{Hard} (\difficulty\difficulty\difficulty) difficulty.
-The poison inflicts 5 wounds if the target fails the check. Each
-threat generated inflicts one strain on the target as the effort
-of fighting the poison overwhelms him. Finally, the CM can
-spend \despair to make the target test against the poison
-again during the next round, as the poison remains in his system.
+\paragraph{Dendriton Poison} \label{poison:dendriton}
+\fxnote{Rename to something Athasian}
+Dendriton Poison is an exceedingly lethal toxin favoured by assassins who
+prefer their victims to suffer. Once exposed to the poison, the victom begins
+to suffer fatique and dull pain, which gradually increases until he is
+paralyzed and in agony.\\
+\\
+Any size dose has a \textbf{Daunting} (\difficulty\difficulty\difficulty\difficulty).
+If the target fails the check, the poison inflicts 1 strain at the end of his
+next turn, 3 strain at the end of his subsquent turn, and 5 strain at the end
+of the turn after that one (this ignores soak). In addition, the target sufferts
+\setback to any check he attempts while under the effects of the poison, and
+each \threat he generates on those checks inflicts 1 dditional strain (ignoring
+soak) as the target is wracked with pain and violent muscle spasm. The GM may
+spend \despair on the initial Resilience check to make the target make another
+check against the poison at the end of his third turn or suffer an additional
+5 strain (ignoring soak) as the poison torments him.
+
+\paragraph{Raquor Venom} \label{poison:raquor}
+\fxnote{Rename to something Athasian}
+Extracted from the glandular toxin sacs of <animal>. Raquor venom is a powerful
+paralytic enzyme inhibitor. The Venom has a \textbf{Daunting} (\difficulty\difficulty\difficulty\difficulty).
+The poison Staggers the target for 2 rounds if the target fails the check. in
+addition, each \threat generated inflicts 2 strain on the target (ignoring soak),
+and the GM may spend \despair to Immobilize the target for 2 rounds.
 
 \end{multicols}
 \hrulefill

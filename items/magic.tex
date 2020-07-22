@@ -20,55 +20,41 @@ eaten on a day grants 5 healing, the second eaten the same day
 
 \subsubsection{Spell Component Pouch}
 \label{itmmgc:spellcomponentpouch}
-A spell component pouch contains the spell components neccesary to cast Arcane
-Spells. A spell component pouch can contain one or more components, which must
-be bought seperately or be sought out. An spell component is empty when a \despair
-is used to 'damage' the spell component using a magic skill check, in which case
-the spell component cannot be used for that scene.
-
-Only one spell component can be used per casting, and doing so is included in the
-casting action.
-
-See~\tableref{spell-components} for a list for Spell Components.
-
-\fxnote{\currentname: Create more and better named spell components}
-
-\paragraph{Arcane Spell Components}
-
-In addition to the usual exhausted rule for Spell Components, Arcane Spell
-Components can be damaged. When a specific component is damaged 3 times, it
-is destroyed. In which case it must be resought or bought again.
+A spell component pouch contains the spell components neccesary to cast spells, the
+come with the pouch and are relatively common. There are also components which can
+enhance or simplify the casting. Must be sought out by the spell caster and are either
+expensive or difficult to gather. Only one component can be used per casting, and a
+\despair can signal that the component has been exhausted for the scene. Unlike Primal
+Components, Arcane Components can be damaged (but not repaired), or destroyed. See
+\cref{sec:repairing-gear} for information regarding damage levels.
 
 \begin{table*}[!htb]
-\begin{GenesysTable}{Spell Components}{spell-components}{ =l +l +l +X}
-Component   & Cost      & Rarity    & Description \\
-S2          & (I) 400   & 6         & When casting a spell, adding the first Range effect added
-                                            to the spell does not increase the spell's difficulty.\\
-S3          & (I) 1000  & 9         & When casting a spell, the caster may count any additional
-                                            \success beyond those needed to hit as \advantage\advantage\advantage
-                                            required to activate any added effect.\\
-S4          & 1000cp    & 6         &  When the user casts a spell, adding the Additional Target
-                                        effect does not increase its difficulty. In addition,
-                                        attack spells cast by the user increase their base
-                                        damage by three.\\
-%S4          &          & Rarity     & Attack spells cast by the user increase their base damage by 4.\\
+\begin{GenesysTable}{Arcane Spell Components}{arcane-components}{ =l +l +X}
+Component               & Rarity    & Description \\
+Roc's Talon             & 6         & When casting an Arcana spell, adding the first Range effect
+                                                    added to the spell does not increase the spell's difficulty.\\
+Anakore King's Spleen   & 9         & When casting a spell, the caster may count any additional
+                                                    \success beyond those needed to hit as \advantage\advantage\advantage
+                                                    required to activate any added effect.\\
+Braxat's Liver          & 6         &  When the user casts a spell, adding the Additional Target
+                                                    effect does not increase its difficulty. In addition,
+                                                    attack spells cast by the user increase their base
+                                                    damage by three.\\
+Elemental's Heart       & 3         & The cost to activate the elemental's quality is reducede to \advantage.
+\end{GenesysTable}
+\begin{GenesysTable}{Primal Spell Components}{primal-components}{ =l +l +l +X}
+Component           & Cost      & Rarity    & Description \\
+Raw Obsidian        & 800       & 7         & When casting an Conjure spell to summon an elemental,
+                                                adding the Summon Ally effect does not increas its
+                                                difficulty. In addition, the creature remains
+                                                summoned untill the end of the encounter without
+                                                your character having to use a concentrate manouvre.\\
+Brain Seed          & 1000      & 6         & When the user casts a Conjure spell, adding Additional
+                                                Summon effects do not increase its difficulty.\\
+Need Root           &  900      & 5         & When the user casts an Augment spell, adding Additional
+                                                Target effects do not increase its difficulty.\\
 \end{GenesysTable}
 \end{table*}
-
-\paragraph{Primal Spell Components}
-\label{itmmgc:primal_implements}
-
-\begin{table*}[!htb]
-\begin{GenesysTable}{Primal Implements}{primal_implements}{ =l +l +l +X}
-Component    & Cost      & Rarity    & Description \\
-Raw Obsidian & (I) 800   & 7         & When casting an conjure spell to summon an elemental,
-                                            adding the Summon Ally effect does not increas its
-                                            difficulty. In addition, the creature remains
-                                            summoned untill the end of the encounter without
-                                            your character having to use a concentrate manouvre.\\
-\end{GenesysTable}
-\end{table*}
-
 
 \end{multicols}
 \FloatBarrier
