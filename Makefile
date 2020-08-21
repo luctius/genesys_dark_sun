@@ -56,7 +56,11 @@ output/ds_races.pdf: ds_races.tex output/character_sheet.pdf #$(FILES)
 	rm output/*.big
 output/character_sheet.pdf: images/character_sheet.svg
 	inkscape -z --file=$< --export-pdf=$@
+upload: output/dark_sun_rpg_swgdice.pdf output/ds_specs.pdf output/ds_races.pdf
+	for f in $^; do pdf2htmlEX --font-size-multiplier 1 --zoom 1 --external-hint-tool=ttfautohint --dest-dir output ./$$f; done
+	scp output/*.pdf nas:/volume1/web/dokuwiki/data/media/darksun/
+	scp output/*.html nas:/volume1/web/dokuwiki/
 clean:
-	rm -f output/*.dvi output/*.log output/*.pdf output/*.toc
+	rm -f output/*
 distclean: clean
 	rm -f output/*.aux

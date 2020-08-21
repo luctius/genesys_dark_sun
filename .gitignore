@@ -6,3 +6,4 @@ output/*.upa
 output/*.upb
 output/*.lox
 output/*.lot
+output/*.html
