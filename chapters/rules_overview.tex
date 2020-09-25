@@ -266,4 +266,54 @@ scene until \textbf{Rationing} is stopped.
 If the \textbf{Survival Rating} of the group hits half or less, the group will automatically go into \textbf{Rationing}.
 If the \textbf{Survival Rating} drops to zero, all non-magical healing is prohibited.
 
+\section{Social Encounters}
+
+\begin{table}[H]
+\begin{GenesysTable}{Difficulties Based on Group Size}{difficulties-group-size}{ =l +c}
+Number of Targets & Difficulty\\
+    2-5     &   Average (\difficulty\difficulty)\\
+    6-15    &   Hard (\difficulty\difficulty\difficulty)\\
+    16-50   &   Daunting (\difficulty\difficulty\difficulty\difficulty)\\
+    51+     &   Formidable (\difficulty\difficulty\difficulty\difficulty\difficulty)\\  
+\end{GenesysTable}
+\end{table}
+
+\begin{table*}[!htb]
+\begin{GenesysTable}{Spending Advantage and Triumph in Social Encounters}{social-advantage}{ =l +X}
+Cost        & Result Option\\
+\advantage or \triumph  & Recover 1 strain.\newline
+                          Add \boost to the next allied character's check\newline
+                          Notice a single important point in the ongoing conflict, such as a weakspot in the armour.\\
+\advantage\advantage or \triumph  & Learn the Strength or Flaw of the tageted character.\newline
+                                    Add \setback to the targeted character's next check.\newline
+                                    Add \boost to any allied character's next check, including that of the active character.\\
+\advantage\advantage\advantage or \triumph  & Learn the Desure or Fear of the targeted character.\newline
+                                              Successfully conceal your true goal in the encounter.\newline
+                                              Learn the true goal of your target, if your target has one.\\
+\triumph  &     Learn any one Motivation facet of any character in the encounter (with the GM's approval)\newline
+                    Upgrade the difficulty of the targeted character's next check.\newline
+                    Upgrade the difficulty of any allied character's next check, including that of the current active character.\newline
+                    Do something vital, such as getting everyone's attention, or distracting all the guards so your
+                    character's friends have a chance to do something important.\\
+\end{GenesysTable}
+\begin{GenesysTable}{Spending Threat and Despair in Social Encounters}{social-threat}{ =l +X}
+Cost        & Result Option\\
+\setback or \despair  & The active character suffers 1 strain.\newline
+                          The active character gets distracted or sidetracked momentarily. This can result in
+                          their being unable to activate an ability that requires spending a maneuver on their
+                          next turn, or it may just result in their being dragged into a lengthy and boring conversation.\\
+\setback\setback or \despair  & The active character accidentally reveals their own Strength or Flaw.\newline
+                                Add \boost to the targeted character's next check.\newline
+                                The active character or an allied character suffers \boost on their next action.\\
+\setback\setback\setback or \despair  & The active character accidentally reveals their own Desire or Fear.\newline
+                                        The active character accidentally reveals their true goal in the encounter.\\
+\despair  & The acive character accidentally reveals a Motivation facet of one of their allies.\newline
+            Learn on false Motivation facet of the target character (the active character believes it to be true).\newline
+            Upgrade the difficulty of an allied character's next check or the next check of the current active character.\newline
+            The active character becomes so embroiled in irrelevant events in the encounter that they cannot do anything
+            important during the next round.\\
+\end{GenesysTable}
+\end{table*}
+
+
 \end{multicols}
