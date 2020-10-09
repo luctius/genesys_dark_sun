@@ -66,26 +66,6 @@
     \end{tikzpicture}
 }
 
-
-
-
-%%%%%
-% Vehicle Stat Line
-%%%%%
-
-\newcommand\Vehicle[7]{\noindent\begin{minipage}[c]{.47\linewidth} % Sil, Speed, Handling, Def, Armor, HTT, STT
-\vspace*{-2em}
-\charPart{Silhouette}{#1}\quad\charPart{Max Speed}{#2}\quad\charPart{Handling}{#3}
-
-\end{minipage}\hfill\noindent\begin{minipage}[c]{.47\linewidth}
-
-\Derived{Defense}{#4} \Derived{Armor}{#5}
-
-\Derived{HT Threshold}{#6} \Derived{SS Threshold}{#7}
-\end{minipage}
-}
-
-
 %%%%%
 % Race
 %%%%%
@@ -296,3 +276,89 @@
     %\end{minipage}
 }
 
+%%%%%
+% Vehicle
+%%%%%
+
+% Set up the keys.  Only the ones directly under /myparbox
+% can be accepted as options to the \myparbox macro.
+\pgfkeys{
+    /vehicle/.is family, /vehicle,
+    % Here are the options that a user can pass
+    default/.style = {
+        name = NoName,
+        price = 850,
+        rarity = 2,
+        silhouette = 2,
+        maxspeed = 2,
+        handling = -1,
+        defense = 0,
+        armour = 0,
+        ht_threshold = 0,
+        ss_threshold = 0,
+        skill = Riding,
+    },
+    name/.estore in = \vehicleName,
+    price/.estore in = \vehiclePrice,
+    rarity/.estore in = \vehicleRarity,
+    silhouette/.estore in = \vehicleSilhouette,
+    maxspeed/.estore in = \vehicleMaxSpeed,
+    handling/.estore in = \vehicleHandling,
+    defense/.estore in = \vehicleDefense,
+    armour/.estore in = \vehicleArmour,
+    ht_threshold/.estore in = \vehicleHtThreshold,
+    ss_threshold/.estore in = \vehicleSsThreshold,
+    skill/.estore in = \vehicleSkill,
+}
+
+\newcommand\Vehicle[7][]{
+    \pgfkeys{/vehicle, default, #1}%
+
+    \vspace{1em}
+    \subsection{\vehicleName}\label{vehicle:\vehicleName}
+
+    #2
+
+    \vspace{.2em}
+    \noindent\begin{minipage}[c]{\linewidth}
+        \noindent\begin{minipage}[c]{\linewidth}
+        \noindent
+        \hspace{4em}
+            \charPart{SILHOUTTE}{\vehicleSilhouette}
+            \hspace{-1.2em}
+            \charPart{MAX SPEED}{\vehicleMaxSpeed}
+            \hspace{-1.2em}
+            \charPart{HANDLING}{\vehicleHandling}
+        \hfill
+        \null
+        \end{minipage}
+
+        \hspace{-0.6em}
+        \noindent\begin{minipage}[c]{\linewidth}
+        \noindent
+        \hfill
+        \hspace*{\fill}
+            \hspace{-8.0em}
+            \Derived{DEFENSE}{\vehicleDefense}
+            \hspace{-4.5em}
+            \Derived{ARMOUR}{\vehicleArmour}
+            \hspace{-4.2em}
+            \Derived{HT THRESHOLD}{\vehicleHtThreshold}
+            \hspace{-4.0em}
+            \Derived{SS THRESHOLD}{\vehicleSsThreshold}
+        \hspace*{\fill}
+        \null
+        \end{minipage}
+    \end{minipage}
+
+    \noindent \textbf{Price:} \vehiclePrice\\
+    \noindent \textbf{Rarity:} \vehicleRarity\\
+    \noindent \textbf{Control Skill:} \vehicleSkill\\
+    \noindent \textbf{Complement:} #3 \\
+    \noindent \textbf{Passenger Capacity:} #4 \\
+    \noindent \textbf{Encumbrance Capacity:} #5 \\
+    \noindent \textbf{Weapons:} #6 \\
+
+    #7
+    %\end{minipage}
+}

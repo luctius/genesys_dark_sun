@@ -28,6 +28,7 @@
 
 \definecolor{race}{RGB}{243, 108, 33}
 \definecolor{creature}{RGB}{243, 108, 33}
+\definecolor{vehicle}{RGB}{243, 108, 33}
 \definecolor{characteristic}{RGB}{204, 68, 0}
 \definecolor{derived}{RGB}{204, 0, 0}
 
@@ -89,6 +90,10 @@
     }{%
         \MakeUppercase{#1}%
     }%
+}%
+
+\newcommand{\vehicleref}[1]{%
+    \nameref{vehicle:#1}%
 }%
 
 \newcommand{\talentref}[1]{%
