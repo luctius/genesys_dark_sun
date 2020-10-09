@@ -242,22 +242,12 @@ Wearing heavy armour will increas this to \setback\setback.
 In addition to causing concealment, sandstorms make it hard to navigate. Sandstorms
 add \setback\setback\setback\setback to any attempt to navigate.
 
-\subsection{Survival Rating}
+\subsection{Survival Rating}\label{chap:rules:survival}
 
 \textbf{Survival Rating} are an abstract mechanism to simulate the need to prepare for journies in Dark Sun.
 They are a group mechanic, as the whole group is expected to share it's resources. Any time there is
 a roll while outside a settlement, and a \despair or \threat\threat\threat is rolled, the DM can use
 that to remove 1 from the \textbf{Survival Rating} and narrate that as appropriate.
-
-\begin{table}[H]
-\begin{GenesysTable}{Survival Rating}{survival-rating}{ =l +c +c +c}
-Journey Length & Encumbrance & Cost   & Rating\\
-Short          &     1       &  20cp  &   5\\
-Medium         &     2       &  40cp  &  10\\
-Long           &     4       & 100cp  &  25\\
-Very Long      &     8       & 200cp  &  50\\
-\end{GenesysTable}
-\end{table}
 
 The group can call for \textbf{Rationing}, which will mean that it will take \despair\despair to remove 1
 \textbf{Survival Rating}. However doing so will prohibit the group from recouperating any strain after any
@@ -265,6 +255,8 @@ scene until \textbf{Rationing} is stopped.
 
 If the \textbf{Survival Rating} of the group hits half or less, the group will automatically go into \textbf{Rationing}.
 If the \textbf{Survival Rating} drops to zero, all non-magical healing is prohibited.
+
+See \chapterref{equipment:survival} for the prices.
 
 \section{Social Encounters}
 
@@ -317,3 +309,143 @@ Cost        & Result Option\\
 
 
 \end{multicols}
+
+
+\section{Skill Challenges}
+
+Sometimes characters are faced with an overarching problemthat can't be solved simply- something
+more complex than aquick bribe or single door to break. Something that requires continual effort,
+where the characters bring a broad range ofskills to bear to incrementally work their way towards
+a goal- be that trying to gather blackmail material on a problematicofficial, survive on an alien
+planet whilst they repair theirship, or navigate a high-stakes business negotiation. Skillchallenges
+offer a framework for handling these situations.
+
+\paragraph(You Have Failed Me For The Last Time)
+Whilst it may seem sensible to have a skill challenge fail if the PCs fail enough checks or generate
+enough \despair, this should be avoided as it will encourage the party to only allow the most competent
+PC to contribute to the challenge. Adding a cost per round the challenge continues as outlined in Costly
+Challenges may discourage this, but low-skilled PCs will still be dissuaded from contributing. When
+spending \threat and \despair  accrued from low-skilled PCs attempting to contribute to the challenge,
+it is generally better to use them to disadvantage the character who rolled them, rather than having them
+'drag down' the rest of the party. In general, any action that might encourage players to have their
+character sit out a challenge to avoid failing it (or making the challenge harder for the rest) should be
+avoided.
+
+%\begin{multicols}
+
+\subsection{Challenge Overview}
+Skill challenges are a type of Structured Gameplay, as outlined in Chapter VI: Combat and Conflict
+of the core rulebook. As with combat, time is split into a series of rounds, and within each round
+each PC takes a turn. On their turn, a PC may spend their action to activate a talent or use an item
+as normal, or to make a skill check that contributes to completing the skill challenge. In order to
+complete a skill challenge, the PCs must score a total number of \success decided beforehand. This
+can be anywhere from 15-30, which will take from 3-5 rounds depending on the number of PCs and their
+skill ratings. For skill challenges involving NPCs, the skill checks can be set at a difficulty based
+on the skills of the NPCs involved, using Table 3-3: Social Skill Interactions from the core rulebook.
+Otherwise, PCs can use any skill they can justify,with the most relevant skills rolled against
+Average (\difficulty\difficulty) Difficulty, and less relevant skills at Hard (\difficulty\difficulty\difficulty) Difficulty.
+Particularly tenuous choices of skill may be allowed at higher difficulties. Some example uses of skills
+can be seen in \tableref{skill-challenge-example}. If the skill check succeeds, add the \success
+generated to the PCs score. Any \advantage \triumph \threat and \despair generated during skill challenge
+checks can be spent on effects from \tableref{skill-challenges-advantage} and \tableref{skill-challenges-threat},
+or similar benefits agreed upon by the players and the GM. After making a successful check with a skill,
+a PC cannot use that skill to contribute to the challenge again in the next round. Once the PCs have
+scored the target number of \success, they have successfully completed the challenge and achieved their
+goal. Within a skill challenge, how much time a round represents depends on the subject. if the PCs are
+attempting to ingratiate themselves at a party or repair fix the reins of a chariot as it hurls towards
+an abyss, a round may be as little as a few minutes long. For PCs engaged in high-stakes negotiation or
+mapping an unexplored wilderness, rounds may be as long as an hour, a day or more. If a round of structured
+time within the skill challenge lasts a day or longer, PCs should not recover strain or wounds as they
+normally would. As with combat, PCs may instead benefit from one Medicine check per encounter. Diminishing
+returns from Poultrices also remain in place for the duration of the encounter, however long. When a skill
+challenge ends, it should be treated just as when any other structured encounter finishes; each PC rolls a
+Simple (-) Discipline or Cool check to recover strain.
+
+\subsection(Adding Challenge)
+For an evenly-balanced pool of skill and difficulty dice, \success with \triumph is the most likely result.
+As such, the longer it takes the PCs to successfully complete a skill challenge the more strain they will
+suffer and the more expenses they will accrue. Skill challenges can also be set up to be more difficult or
+dangerous. All checks on a challenge might be made at a higher difficulty, or upgraded once or twice.
+Alternatively, PCs might be prevented from re-using skills that they have made successful checks with. There
+are also a range of other ways.
+
+\paragraph(Costly Challenges)
+For strenuous challenges such as hiking across a mountainrange or building a shelter in the wilderness,
+the PCs may suffer 1-3 strain at the end of each round, whilst a more dangerous challenge, like tracking
+a fugitive through a dangerous cavern, may deal damage instead. Particularly deadly challenges, like
+attempting to escape building on fire, may cause one of the PCs to suffer a Critical Injury at the
+end of each round. Some skill challenges may require expenses to be paid at the end of each round as PCs
+pay for room and board. A suggested value is 100-1000 copper pieces per round, with the lower end of the
+scale corresponding to a day in low-end accommodation whilst the higher end represents longer stays of
+weeks or months per round, or living in expensive, high-class areas.
+
+\paragraph(Timed Challenges)
+For some skill challenges the possibility of failure should exist- for example, if the PCs are trying to
+hunt down a fugitive before they flee, disguise a secret gambling den before an Templar arrives, or complete
+a makeshift shelter before a storm arrives. The challenge should becompleted within a set number of rounds,
+that should be communicated to the PCs before the challenge starts.
+
+If the PCs fail to score enough \success to complete the challenge before the deadline, then the PCs should
+suffer some sort of consequence, proportional to the degree of failure. Example penalties per missing \success
+could include each PC suffering 1 strain or 1 wound, a fine totalling 500-2000 copper pieces, or one PC suffering
+a Critical Injury.
+
+\paragraph(Challenges In Combat)
+Skill challenges fit neatly into other structured time encounters such as combat. If the PCs need to repair
+a chart while under attack, or persuade an attacking mob to retreat, the skill challenge can simply be run at
+the same time. PCs may spend their actions fighting or to make a check to contribute to the challenge, and are
+forced to balance self-defence and achieving their goal.
+
+As positioning is more important in combat encounters, the GM may require PCs to move into Engaged range of
+some objects or people in order to make a check. In addition, the GM may allow PCs to spend \triumph generated
+on combat checks to contribute to the skill challenge.
+
+%\end{multicols}
+
+\begin{table*}[!htb]
+\begin{GenesysTable}{Example Skill Challenges}{skill-challenge-examples}{ =l +X +X}
+Challenge            & Example Skill Uses & Extra\\
+Hike across a desert & Average (\difficulty) Athletics to cover ground,\newline
+                       Hard (\difficulty\difficulty\difficulty) Resilience or Discipline to endure the conditions. & Add b to checks from heat\newline
+                                                                                       Each PC suffers 2 strain at the end of each round.\\
+Escape an burning building & Average (\difficulty\difficulty) Athletics to plan the jump,\newline
+                                 Hard (\difficulty\difficulty\difficulty) Leadership to co-ordinate the fire extinguish efforts. & One random PC suffers a Critical Injury at the end of each round.\\
+Disguise a smuggling den before an inspection & Average (\difficulty\difficulty) Skulduggery or Stealth to hide evidence,
+                                                Hard (\difficulty\difficulty\difficulty) Streetwise to get tips on the search. & The PCs have 3 rounds to complete the challenge. If they fail, they suffer a fine of 1000 copper pieces per missing success.\\
+Persuade an angry mob to retreat & Average (\difficulty\difficulty) Charm or Coercion to persuade themto retreat.\newline
+                                   Hard (\difficulty\difficulty\difficulty) Cool to keep calm and face them down. & Occurs during combat.\newline
+                                                                                      If the PCs fire weapons without using the Stun setting, add \boost to Coercion and \setback\setback to all other social checks.\\
+\end{GenesysTable}
+\begin{GenesysTable}{Spending Advantage and Triumph in Skill Challenges}{skill-challenge-advantage}{ =l +X}
+Cost                   & Result Options\\
+\advantage or \triumph & Recover 1 strain (this option may be selected more than once).\newline
+                         Add \boost to the next allied active character's check.\\
+\advantage\advantage or \triumph & Perform an immediate free maneuver, provided the active character has not already performed two maneuversthat turn.\newline
+                                   Add b to any allied active character's next check, including the active character.\\
+\advantage\advantage\advantage or \triumph & Ignore penalising environmental effects such as inclement weather, zero gravity, or other similar effects until theend of the active character's next turn.\newline
+                                             Gain a benefit worth 100-1000 copper pieces, including cash, items or services in kind such as armour repairs. Lower end rewards
+                                             are appropriate for informal dealings in bars, whilst higher rewards are appropriate for deals involving wealthy businessmen.\newline
+                                             Gain some sort of benefit not directly related to the challenge goal, but nevertheless useful. This could include
+                                             making a black market contact, or finding some lucrative or secret information, or another moderate benefit.\\
+\triumph               & Upgrade any allied character's next check, including the active character.\newline
+                         Allow an allied character to contribute using a skill that would not normally be useful (e.g. Coordination in a social encounter) as a Hard (\difficulty\difficulty\difficulty) check.\\
+\end{GenesysTable}
+
+\begin{GenesysTable}{Spending Threat and Despair in Skill Challenges}{skill-challenge-threat}{ =l +X}
+Cost                       & Result Options\\
+\threat or \despair        & The active character suffers 1 strain (this option may be selected more than once).\\
+\threat\threat or \despair & The active character loses their free maneuver next turn.\newline
+                             The active character or an allied character suffers \setback on their next action.\newline
+                             The active character loses the ongoing benefits of a maneuver or action (such as Improved Inspiring Rhetoric).\newline
+                             The active character cannot use the skill used on this check to contribute to the skill challenge for two rounds.\\
+\threat\threat\threat or \despair & A tool or item used by the active character becomes damaged.\newline
+                                    A tool or item used by the active character cannot be used for the remainder of the encounter.\newline
+                                    Incur expenses worth 100-1000 copper pieces, including cash, items or services in kind such as medical aid that may cost an action to repay.
+                                    Lower end expenses are appropriate for informal dealings in bars, whilst higher expenses are appropriate for deals involving or wealthy businessmen.\newline
+                                    Suffer some sort of drawback not directly related to the challenge goal. This could include offending an important local figure,
+                                    letting slip some future plans, accidentally destroying a rare flower or another moderate drawback.\\
+\despair & The active character cannot contribute using the checked skill again for the remainder of the encounter.\newline
+           The active character suffers a Critical Injury (if the challenge is sufficiently dangerous).\newline
+           Upgrade the difficulty of an allied character's next check, including the active character.\\
+\end{GenesysTable}
+\end{table*}
