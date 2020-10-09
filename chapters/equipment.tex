@@ -24,20 +24,18 @@
 
 \begin{multicols}{2}
 
-\textit{Dark Sun} characters must be well equipped in order to
-endure the rigors of Athas. This chapter covers a variety
-of topics related to mundane equipment that every hero
-needs to survive and prosper.
+\textit{Dark Sun} characters must be well equipped in order to endure the rigors of Athas.
+This chapter covers a variety of topics related to mundane equipment that every
+hero needs to survive and prosper.
 
 \section{Equipping a Character}
 \subsection{Money}
-The default money unit is an \textit{Ceramic Piece} or \textit{cp}. This
-unit can be subdivided in \textit{Ceramic Bits} (\textit{bit}). Larger units
-are \textit{Silver Pieces} (\textit{sp}) and \textit{Gold Pieces}
-(\textit{gp}).\\
+The default money unit is an \textit{Ceramic Piece} or \textit{cp}. This unit can be subdivided in
+\textit{Ceramic Bits} (\textit{bit}) and \textit{Lead Bead (bd)}. Larger units are \textit{Silver Pieces} (\textit{sp}) and
+\textit{Gold Pieces} (\textit{gp}).\\
 \\
-10,000 bd = 1,000 bits = 100 cp = 10 sp = 10gp.
-
+10,000 bd = 1,000 bits = 100 cp = 10 sp = 1gp.\\
+\\
 Ceramics are made from glazed clay and baked in batches once a year in a secure
 process supervised by the high templar that supervises the city’s treasury. Bits
 are literally one‐tenth parts of a ceramic piece—the ceramic pieces break easily
@@ -50,6 +48,56 @@ communities and trade outposts the price situation on certain goods can sway
 drastically. A raider attack or sandstorm can result in lack of necessities such
 as food and water, for which people will pay almost any amount of coin. Coins
 are not the only means of exchange. Barter and trade in commodities is widespread.
+
+\section{Rarity}\label{sec:equipment-rarity}
+
+When selling an item, your character needs to make
+a successful Negotiation check. Use the difficulty set by
+the item's rarity (as determined by \tableref{equipment-rarity}).\\
+\\
+For the cost modifiers of selling an item, please refer to \tableref{trading-modifiers}
+
+\begin{table}[H]
+\begin{GenesysTable}{Rarity}{equipment-rarity}{ =l +X}
+Rarity & Difficulty\\
+0\newline
+1      & Simple (-)\\
+2\newline
+3      & Easy (\difficulty)\\
+4\newline
+5      & Average (\difficulty\difficulty)\\
+6\newline
+7      & Hard (\difficulty\difficulty\difficulty)\\
+8\newline
+9      & Daunting (\difficulty\difficulty\difficulty\difficulty)\\
+10     & Formidable (\difficulty\difficulty\difficulty\difficulty\difficulty)\\
+\end{GenesysTable}
+\end{table}
+
+\begin{table}[H]
+\begin{GenesysTable}{Rarity Modifiers}{equipment-rarity-modifiers}{ =l +X}
+Rarity Modifiers & Circumstances\\
+-1 & Item or resource in complete abundance\\
++0 & Trading Hub\\
++1 & Vassal Village\\
++2 & Small Village\\
++3 & Secret Slave Village\\
++4 & War Zone or Burned Down Village\\
+\end{GenesysTable}
+\end{table}
+
+\begin{table}[H]
+\begin{GenesysTable}{Increased Costs when Trading}{equipment-rarity-costs}{ =l +X}
+Rarity Increase & Cost Increase\\
+-2              & x0.75\\
+-1              & x0.9\\
++0              & x1\\
++1              & x1.5\\
++2              & x2\\
++3              & x3\\
++4 or Higher    & x4\\
+\end{GenesysTable}
+\end{table}
 
 \section{Item Qualities}\label{sec:item-qualities}
 Some variety equipment and depth features to the weapons, special qualities
@@ -82,7 +130,6 @@ Moderate          & \textbf{Average} (\difficulty\difficulty)            & Incre
 Major             & \textbf{Hard} (\difficulty\difficulty\difficulty)    & Unusable.\\
 \end{GenesysTable}
 \end{table}
-
 
 \subsection {General Qualities}
 
@@ -189,6 +236,7 @@ depending on the item and attachment involved.
 \input{items/attachments/balanced_hilt}
 \input{items/attachments/metal_weapon}
 \input{items/attachments/paired_weapon}
+\input{items/attachments/obsidian_weapon}
 \input{items/attachments/razor_edge}
 \input{items/attachments/recurve_limbs}
 \input{items/attachments/serrated_edge}
@@ -203,3 +251,127 @@ depending on the item and attachment involved.
 \input{items/attachments/spikes}
 
 \end{multicols}
+
+\section{Selling and Trading}\label{chap:sec:trading}
+
+This Section is extremely experimental.\\
+\\
+In some cases, the PCs might wish to engage in trade, buying multiple items at one
+location and then selling them at another location where they are rarer. We generally
+advise that you handle this narratively. However, if your GM wishes to use some
+mechanical guidelines for this process, we’ve provided some basic rules that cover trading.\\
+\\
+Trade works the same whether with black-market items or with legal items. Selling
+either type of item follows the rules listed previously with the caveat that trading
+in legal items requires a Negotiation check, while trading in illegal items requires a
+Streetwise check. However, when determining the sell price based on the success of the
+Negotiation or Streetwise check, first multiply the cost of the item by the difference
+between the item's rarity where it was bought and its rarity where it is to be sold,
+referring to \tableref{equipment-rarity-modifiers} and \tableref{equipment-rarity-costs}.
+Then take the new, increased cost and determine the sell price by the results of the
+Negotiation or Streetwise check.\\
+\\
+Of course, these rules do not account for all sorts of details, such as buying in bulk,
+marketing and advertising, and myriad other factors that may affect prices.\\
+\\
+This is why the rules for buying, selling, and trading are all modifiable by the GM and
+subject to their judgement. It is also important to note that these rules only apply when
+engaging in commercial trade. So, if your group sells a load of guns in a town, then
+later your character buys one of those guns in that town, they’re going to have to pay
+usual, listed price for the gun. The final thing to remember is that your GM always has the
+final say on what can be sold, where it can be sold, and how much it can be sold for.
+Because this isn't likely to be a major part of the game, we deliberately made a system
+that is simple and doesn't account for a lot of the variables that would normally matter
+when trying to sell an item.
+
+\begin{table*}[!htb]
+\begin{GenesysTable}{Selling and Trading Modifiers}{trading-modifiers}{ =l +X}
+Difficulty Or Modifier                 & Result Options\\
+\difficulty                            & Standard Selling Price of X 0.25\%\\
+\difficulty\difficulty                 & Increased Selling Price of X 0.50\%\\
+\difficulty\difficulty\difficulty      & High Selling Price of X 0.75\%\\
+Each \advantage\advantage or \triumph  & Change the price by 10\% in favour of the active players.\\
+Each \success                          & Change the price by  5\% in favour of the active players.\\
+Each \threat\threat or \despair        & Change the price by 10\% against the active players.\\
+Each \failure                          & Change the price by  5\% against the active players.\\
+\triumph                               & The goods are of exceptional quality. The merchant will gladly take them of your hands and owes you a favour!\\
+\despair                               & The other party is simply not interrested in making a deal, and the players should find another merchant to deal with. Increase the difficulty as normal.\newline
+                                         Fake goods! The merchant wil get angry by this swindling attempt!\\
+\boost                                 & Minor positive local modifer for the trade.\\
+\setback                               & Minor negative local modifer for the trade.\\
++1 \difficulty                         & Each time the players decide not to go through with a deal after an negotiation, the difficulty to retry with a different merchant in the same city increases by one, for the duration of one week.\\
+\end{GenesysTable}
+\end{table*}
+
+\begin{table*}[!htb]
+\begin{GenesysTable}{Trading Cost and Rarity Increase}{trading}{ =l +X +X +X +X +X +X +X +X}
+Item             & Base Cost per 1 enc & Balic & Draj & Gulg & Nibenay & Raam & Tyr & Urik\\
+Ale              & 20cp                &   +1  &   +2 &  +1  &    +1   &   0  &   0 &   +1\\
+Amber            & 8000cp              &   +1  &   +2 &   0  &    +2   &  +1  &   0 &   +1\\
+Beer             & 50cp                &   +1  &   +1 &   0  &    +1   &  +2  &  +1 &   +1\\
+Bronze           & 700cp               &   +2  &   +2 &  +1  &    +1   &  +1  &   0 &   +2\\
+Candy            & 1cp                 &   +1  &   +1 &  +2  &    +2   &   0  &   0 &   +1\\
+Ceramics         & 50cp                &   +2  &   +1 &  +1  &    +2   &   0  &   0 &   +1\\
+Chalk            & 1cp                 &   +1  &   +2 &  +2  &    +1   &   0  &   0 &    0\\
+Chitin           & 400cp               &   +1  &   +2 &  +2  &     0   &  +1  &  +1 &   +2\\
+Cider            & 30cp                &   +2  &   +1 &   0  &    +1   &  +2  &  +1 &   +1\\
+Cinnabar         & 1600cp              &   +2  &   +1 &   0  &    +2   &  +1  &  +1 &    0\\
+Cloth            &                     &       &      &      &         &      &     &    \\
+  Common         & 50cp                &   +1  &   +1 &   0  &    +1   &  +1  &  +2 &   +2\\
+  Fine           & 100cp               &   +2  &    0 &  +2  &    +1   &  +1  &  +1 &   +1\\
+  Rich           & 1000cp              &   +1  &    0 &  +2  &    +2   &   0  &  +1 &    0\\
+Coal             &                     &   +1  &   +1 &   0  &    +1   &  +2  &  +2 &    0\\
+Copper           & 500cp               &   +2  &   +2 &  +2  &     0   &  +1  &   0 &   +2\\
+Cosmetics        & 1600cp              &   +2  &   +1 &  +1  &    +1   &   0  &   0 &    0\\
+Cotton           & 20cp                &   +1  &   +2 &  +1  &    +1   &   0  &   0 &   +2\\
+Dyes/Pigments    & 1600cp              &   +1  &   +2 &   0  &    +1   &   0  &  +1 &   +2\\
+Feathers         &                     &       &      &      &         &      &     &     \\
+  Common         & 1cp                 &   +1  &   +2 &   0  &    +1   &  +1  &   0 &    0\\
+  Rare           & 50cp                &   +2  &   +2 &   0  &    +1   &   0  &   0 &    0\\
+Figs             & 10cp                &   +2  &   +1 &   0  &    +1   &  +2  &  +2 &   +1\\
+Fruits           & 20cp                &   +1  &   +1 &   0  &    +1   &  +2  &  +2 &   +1\\
+Furs             & 100cp               &   +2  &   +1 &  +2  &    +1   &   0  &  +1 &    0\\
+Glass            & 100cp               &   +2  &   +1 &  +2  &    +1   &  +1  &   0 &   +1\\
+Gold             & 50000cp             &   +1  &    0 &  +1  &    +2   &   0  &  +1 &   +1\\
+Hardwood         & 150cp               &   +1  &   +2 &   0  &     0   &  +1  &   0 &   +2\\
+Herbs            & 30cp                &    0  &   +1 &  +1  &    +1   &  +2  &  +2 &    0\\
+Incence          & 3200cp              &   +1  &   +2 &  +1  &    +2   &   0  &  +1 &    0\\
+Ink              & 640cp               &   +1  &   +2 &  +2  &    +1   &  +1  &   0 &    0\\
+Iron             & 1000cp              &   +2  &   +1 &  +2  &    +1   &  +2  &   0 &   +2\\
+Jade             & 100cp               &   +1  &   +1 &  +2  &    +1   &  +1  &   0 &   +1\\
+Kank Nectar      & 10cp                &    0  &    0 &  +2  &    +1   &  +2  &  +2 &   +1\\
+Leather          & 25cp                &    0  &    0 &  +1  &    +1   &  +2  &  +1 &   +2\\
+Marble           & 40cp                &   +2  &    0 &   0  &    +1   &  +1  &  +2 &    0\\
+Medicines        & 800cp               &   +1  &   +2 &  +1  &    +1   &  +2  &   0 &   +1\\
+Mirrors          & 100cp               &   +1  &   +1 &  +2  &     0   &  +1  &   0 &    0\\
+Nuts/Dried Fruit & 10cp                &   +2  &   +1 &   0  &    +1   &  +2  &  +2 &    0\\
+Obsidian         & 50cp                &   +2  &   +2 &  +1  &     0   &  +2  &   0 &   +2\\
+Oil              &                     &       &      &      &         &      &     &     \\
+  Flabbable      & 40cp                &    0  &   +2 &  +1  &     0   &   0  &  +1 &   +2\\
+  Lamp           & 2cp                 &   +1  &    0 &  +1  &    +2   &  +1  &  +1 &   +1\\
+  Cooking        & 15cp                &   +1  &   +1 &   0  &     0   &  +2  &  +2 &   +1\\
+Paper            & 200cp               &   +2  &   +2 &  +1  &    +1   &   0  &  +1 &   +1\\
+Perfume          & 800cp               &   +2  &   +1 &  +1  &    +2   &  +1  &   0 &    0\\
+Resins           & 600cp               &   +1  &    0 &  +1  &    +1   &  +1  &  +2 &    0\\
+Rice             & 10cp                &   +1  &   +2 &  +1  &     0   &  +2  &  +2 &   +1\\
+Rope             &                     &       &      &      &         &      &     &     \\
+  Hemp           & 5cp                 &   +2  &    0 &  +1  &    +1   &  +1  &  +1 &   +1\\
+  Silk           & 10cp                &   +2  &    0 &   0  &    +2   &  +1  &   0 &   +1\\
+Rugs             &                     &    0  &   +2 &  +1  &    +2   &  +1  &   0 &    0\\
+Salt             & 20cp                &    0  &   +1 &  +1  &    +1   &  +2  &  +2 &    0\\
+Silk, raw        & 500cp               &    0  &   +1 &  +2  &    +1   &   0  &   0 &    0\\
+Silver           & 5000cp              &    0  &   +1 &  +2  &    +1   &   0  &  +1 &   +2\\
+Songbirds        &                     &    0  &   +1 &  +1  &    +2   &  +1  &   0 &    0\\
+Spice            &                     &       &      &      &         &      &     &     \\
+  Exotic         & 1500cp              &    0  &   +1 &   0  &     0   &  +1  &   0 &   +2\\
+  Rare           & 200cp               &   +1  &   +1 &   0  &     0   &  +2  &  +1 &   +2\\
+  Uncommon       & 100cp               &   +1  &   +1 &   0  &     0   &  +2  &  +1 &   +2\\
+Sugar            & 4cp                 &   +1  &   +1 &   0  &    +1   &  +2  &  +2 &    0\\
+Tools            & 50cp                &    0  &   +1 &  +1  &     0   &  +2  &  +1 &   +1\\
+Vegetables       & 20cp                &   +1  &   +1 &  +1  &     0   &  +2  &  +2 &   +1\\
+Water            & 10cp                &   +2  &   +1 &  +1  &     0   &  +2  &  +2 &   +1\\
+Wax              & 70b                 &   +1  &   +1 &  +2  &    +1   &   0  &  +1 &   +1\\
+Wine             & 100cp               &   +2  &   +1 &   0  &    +1   &  +2  &  +2 &    0\\
+Wheat            & 50cp                &   +1  &    0 &  +1  &    +1   &  +2  &  +2 &   +1\\
+\end{GenesysTable}
+\end{table*}
