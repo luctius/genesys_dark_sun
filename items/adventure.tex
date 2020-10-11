@@ -272,15 +272,16 @@ lighting any other fire with one is a maneuver.
 
 \begin{table}[H]
 \begin{GenesysTable}{Poisons}{poisons}{ =X +l +l}
-Name                        & Price & Rarity \\
-\nameref{poison:anesthetic} &  375  & 5      \\
-\nameref{poison:befuddle}   &  230  & 6      \\
-\nameref{poison:blinding}   &  400  & 8      \\
-\nameref{poison:weakness}   &  450  & 8      \\
-\nameref{poison:suggestion} & 1000  & 9      \\
-\nameref{poison:paralysis}  &  260  & 6      \\
-\nameref{poison:dendriton}  &  150  & 4      \\
-\nameref{poison:raquor}     &  150  & 4      \\
+Name                                & Price & Rarity \\
+\nameref{poison:anesthetic}         &  375  & 5      \\
+\nameref{poison:befuddle}           &  230  & 6      \\
+\nameref{poison:blinding}           &  400  & 8      \\
+\nameref{poison:blossomkiller}      &   75  & 6      \\
+\nameref{poison:weakness}           &  450  & 8      \\
+\nameref{poison:suggestion}         & 1000  & 9      \\
+\nameref{poison:paralysis}          &  260  & 6      \\
+\nameref{poison:dendriton}          &  150  & 4      \\
+\nameref{poison:raquor}             &  150  & 4      \\
 \end{GenesysTable}
 \end{table}
 
@@ -316,6 +317,31 @@ each round the poison is active they add \setback die to any check
 that requires vision.(1 die first turn, 2 second, etc.) if \threat\threat\threat
 are rolled, the target also upgrades the difficulty of the same tests
 by 1. \despair forces the target to make the check again on their next turn.
+
+\paragraph{Blossomkiller Venom} \label{poison:blossomkiller}
+This venom is extracted from the blossomkiller plant. The plant uses
+it to paralyse it's victims, after which it can smother it to death
+with it's vines.
+
+The venom may only be administered through injection.
+
+To resist the effects, the target must roll a \textbf{Hard} (\difficulty\difficulty\difficulty)
+Resilience check. If failed, the target is immobilized for 3
+rounds. Every disadvantage from the roll deals 1 strain on the
+target, and a critical fail means the poison remains in their
+system.
+
+%The venom may only be administered through injection.
+%
+%The target must succeed an \textbf{Average} (\difficulty\difficulty) Resilience check
+%for a single dose, and a \textbf{Hard} (\difficulty\difficulty\difficulty) check for
+%anything more than 2 doses.
+%
+%It deals 5 strain on a failed check. If the check generates 1-2
+%\threat, the target cannot make a free maneuver. \threat\threat\threat
+%may result in the target being staggered for one turn. A critical failure
+%the poison remains in their system.
+
 
 \paragraph{Poison of Weakness} \label{poison:weakness}
 A single dose has an \textbf{Average} (\difficulty\difficulty), while two or more
