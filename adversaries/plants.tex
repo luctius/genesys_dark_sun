@@ -1,6 +1,6 @@
 \subsection{Plants}
 
-\Creature[name=Blossomkiller, type=Rival, brawn=3, agility=0, intellect=0, presence=0, soak=1, wounds=10, meleedef=0, rangeddef=0, magicdef=0, psionicdef=0]
+\Creature[name=Blossomkiller, type=Rival, brawn=3, agility=3, intellect=1, cunning=1, willpower=1, presence=1, soak=1, wounds=10, meleedef=0, rangeddef=0, magicdef=0, psionicdef=0]
 {
     The Blossomkiller is a very unique plant found in all the vegetated
     areas of Athas. The plant has many different features, including
@@ -25,14 +25,29 @@
     % talents
     None
 }{
-    \\ % ability
+    % ability
     \textbf{- Shoot Quills: } As a reaction on being stepped on, a
         Blossomkiller will shoot quills in all direction. This is
         treated as a ranged attack with \iqtyref{blast} 2, Damage 0,
         Range: Engaged. This attack will do no damage, by anyone
-        successfully hit will be affected by \nameref{poison:blossomkiller}.
+        successfully hit will be affected by \nameref{poison:blossomkiller}.\\
     \textbf{- Vines: } When a target is paralyzed, the Bloomkiller can,
         as an Action, move to wrangle the target with it's vines. These
-        Do Brawn +2 Strain Damage, \iqtyref{pierce} 1, \iqtyref{ensnare}.
+        Do Brawn +2 Strain Damage, \iqtyref{pierce} 1, \iqtyref{ensnare}.\\
 }{
+}
+
+\Creature[name=Crasna, type=Rival, brawn=3, agility=2, intellect=1, willpower=1, presence=1, soak=3, wounds=13, meleedef=0, rangeddef=0, magicdef=0, psionicdef=0]
+{
+    Crasna are a dangerous carnivorous plant. It hunts by stretching forth its tentacle-like vines to grab its prey, pulling it into the canopy above.
+}{
+    % skill
+    Athletics 2, Brawl 2, Cool 3, Perception 1, Stealth 2, Vigilance 2
+}{
+    % talents
+    None
+}{
+    % ability
+}{
+    \textbf{- Four Hunting Tentacles:} Brawl; Damage: 2; Critical: 3; Range [Engaged]; \iqtyref{ensnare} 2, \iqtyref{linked} 4\\
 }
