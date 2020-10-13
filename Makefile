@@ -1,5 +1,7 @@
 NAME=output/dark_sun_rpg.pdf output/dark_sun_rpg_swgdice.pdf
 
+GIT_VERSION=$(shell git describe --abbrev=10 --dirty --always --tags)
+
 FILES= \
 	lib/characters.sty \
 	lib/dice.sty \
@@ -33,12 +35,14 @@ spell: $(FILES)
 check: dark_sun_rpg_swgdice.tex $(FILES) 
 	pdflatex -halt-on-error -file-line-error -output-directory output $<
 output/dark_sun_rpg.pdf: dark_sun_rpg.tex $(FILES) output/character_sheet.pdf
+	sed -i "s/Version.*\}/Version ${GIT_VERSION}\}/g" chapters/credits.tex
 	rubber --into output -v --pdf $< || true
 	mv $@ $@.big
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=$@ $@.big output/character_sheet.pdf
 	rm output/*.big
 	#pdftk $@.big output/character_sheet.pdf cat output $@
 output/dark_sun_rpg_swgdice.pdf: dark_sun_rpg_swgdice.tex $(FILES) output/character_sheet.pdf
+	sed -i "s/Version.*\}/Version ${GIT_VERSION}\}/g" chapters/credits.tex
 	rubber --into output -v --pdf $< || true
 	mv $@ $@.big
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=$@ $@.big #output/character_sheet.pdf
