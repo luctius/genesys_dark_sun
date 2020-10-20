@@ -2,55 +2,66 @@
 \begin{table*}[!htb]
 \begin{GenesysTable}{Adventuring Gear}{adventuring-gear}{ =X +l +l +l}
 Name                              & Encum & Price & Rarity \\
-\nameref{advitm:backpack}         & 0     & 10cp  & 2      \\
-Bedroll                           & 2     & 1cp   & 1      \\
-Bottle, glass                     & 1     & 10cp  & 1      \\
+\nameref{advitm:backpack}         & 0     & 50cp  & 2      \\
+Bedroll                           & 1     & 1cp   & 1      \\
+Bottle, glass                     & 0     & 10cp  & 1      \\
 \nameref{advitm:caltrops}         & 1     & 5cp   & 3      \\
 Candle                            & 0     & 10bit & 0      \\
 Canvas (m\textsuperscript{2})     & 1     & 1cp   & 1      \\
-Chain (3m)                        & 2     & 500cp & 8      \\
+Chain (3m)                        & 1     & 500cp & 8      \\
 Chalk, 1 piece                    & 0     & 5bit  & 1      \\
 \nameref{advitm:crowbar}          & 1     & 2cp   & 8      \\
 Firewood (per day)                & 1     & 2cp   & 2      \\
-Flask (empty)                     & 1     & 1cp   & 1      \\
+Flask (empty)                     & 0     & 1cp   & 1      \\
 \nameref{advitm:grapplinghook}    & 1     & 5cp   & 2      \\
-Hammer                            & 1     & 3cp   & 0      \\
-Hourglass                         & 1     & 125cp & 4      \\
+Hammer                            & 0     & 3cp   & 0      \\
+Hourglass                         & 0     & 125cp & 4      \\
 \nameref{advitm:ink}              & 0     & 100cp & 6      \\
 Inkpen                            & 0     & 10cp  & 6      \\
 Jug, clay                         & 1     & 1cp   & 0      \\
-Ladder, 3m                        & 5     & 1cp   & 1      \\
+Ladder, 3m                        & 3     & 1cp   & 1      \\
 \nameref{advitm:lamp_common}      & 1     & 1cp   & 1      \\
 \nameref{advitm:lantern_bullseye} & 1     & 65cp  & 3      \\
 \nameref{advitm:lantern_hooded}   & 1     & 30cp  & 2      \\
 \nameref{advitm:lock}             & 0     & 750cp & 8      \\
 \nameref{advitm:manacles}         & 1     & 300cp & 8      \\
 Mirror                            & 0     & 50cp  & 3      \\
-Mug/Tankard, clay                 & 1     & 1cp   & 0      \\
+Mug/Tankard, clay                 & 0     & 1cp   & 0      \\
+Musical Instruments, Common       & 1-5   & 50-100cp   & 0 \\
+Musical Instruments, High Quality & 1-5   & 500-1500cp & 0 \\
+Musical Instruments, Legendary    & 1-5   & 5000+cp    & 0 \\
 \nameref{advitm:oil}              & 1     & 1cp   & 1      \\
 Parchment (sheet)                 & 0     & 4cp   & 3      \\
 Pick, miner's                     & 2     & 15cp  & 1      \\
 Pitcher, clay                     & 1     & 1cp   & 0      \\
 Pouch, belt (empty)               & 0     & 5cp   & 0      \\
+\nameref{advitm:poisoner_ring}    & 0     & (R) 500cp  & 7 \\
 \nameref{advitm:ram}              & 4     & 10cp  & 6      \\
+\nameref{advitm:ration}           & 2     & 20cp  & 1      \\
+\nameref{advitm:riding-tack}      & 3     & 100cp & 4      \\
 \nameref{advitm:rope_hemp}        & 1     & 5cp   & 1      \\
 \nameref{advitm:rope_silk}        & 1     & 50cp  & 3      \\
+\nameref{advitm:saddlebags}       & -     & 25cp  & 4      \\
 Sealing wax                       & 0     & 5cp   & 0      \\
 Sewing needle                     & 0     & 3cp   & 1      \\
-Shovel or spade                   & 2     & 10cp  & 0      \\
+\nameref{advitm:shovel}           & 1     & 10cp  & 0      \\
 Signal whistle                    & 0     & 4cp   & 1      \\
 Sledge                            & 2     & 5cp   & 4      \\
 Soap (per 500g.)                  & 0     & 3cp   & 1      \\
-Tent                              & 2     & 50cp  & 2      \\
+Tent, 2ps                         & 2     & 50cp  & 2      \\
+Tent, 6ps                         & 4     & 100cp & 2      \\
 \nameref{advitm:torch}            & 1     & 1cp   & 0      \\
-\nameref{advitm:vial}             & 1     & 5cp   & 0      \\
-Waterskin                         & 1     & 5cp   & 0      \\
+\nameref{advitm:vial}             & 0     & 5cp   & 0      \\
 Whetstone                         & 0     & 1cp   & 1      \\
 \end{GenesysTable}
 \end{table*}
 \begin{multicols}{2}
 
 \paragraph{Backpack} \label{advitm:backpack}
+As the name indicates, this is used to carry things around
+on one's back - effectively increasing one's encumbrance
+threshold.
+
 Backpacks increase the characters encumbrance by 4.
 
 \paragraph{Caltrops} \label{advitm:caltrops}
@@ -154,11 +165,37 @@ smooth. If lit,the oil burns for 2 rounds and deals
 the base damage of the weapon to each creature in
 the area.
 
+\paragraph{Poisoner's Ring} \label{advitm:poisoner_ring}
+There are many solutions for those wanting to carry poisons
+into restricted areas, and keeping it in a hidden
+compartment of jewelry is relatively commonplace.
+
+Holds a single dose of any toxin or drug.
+
+May make an opposed skulduggery check against vigilance
+of onlookers to deposit the poison into a meal or drink.
+
 \paragraph{Ram, Portable} \label{advitm:ram}
 This iron-shod wooden beam gives you an \boost on
 Brawn checks made to break open a door and
 allows a second person to help give you \boost\boost
 instead of one.
+
+\paragraph{Ration} \label{advitm:ration}
+Rations are packages containing everything a person needs
+to eat and drink to survive in an wilderness settings.
+This includes food and water.
+
+Any day an adventurer in a wilderness setting wishes
+to recover either strain or wounds, they need to consume
+1 ration.
+
+See \chapterref{rules:survival}.
+
+\paragraph{Riding Tack} \label{advitm:riding-tack}
+This is simply a saddle, built to be placed on the back
+of a beast for ease of riding.
+Allows riding of the beast without suffering the bareback penalty.
 
 \paragraph{Rope, Hemp (20m)} \label{advitm:rope_hemp}
 This rope can be burst with a Hard (\difficulty\difficulty\difficulty)
@@ -167,6 +204,22 @@ Brawn check.
 \paragraph{Rope, Silk (20m)} \label{advitm:rope_silk}
 This rope can be burst with a Hard (\difficulty\difficulty\difficulty\setback)
 Brawn check.
+
+\paragraph{Saddlebags} \label{advitm:saddlebags}
+This simple set of bags are designed to be fitted to the back of a beast.
+Can only be worn by riding animals. Increase encumbrance threshold by 4.
+
+\paragraph{Shovel or spade} \label{advitm:shovel}
+A simpel shovel with an wooden or bone head. Used to dig
+holes in the ground, commonly about 6ft in depth.
+
+It can also be used as a weapon with the following profile;
+\begin{table}[H]
+\begin{GenesysTable}{Shovel in Melee}{shovel-in-melee}{ =X +l +l +l +l}
+Skill 	& Dam 	& Crit 	& Range 	& Special \\
+Melee 	& +2 	& 4 	& Engaged   & N/A     \\
+\end{GenesysTable}
+\end{table}
 
 \paragraph{Torch} \label{advitm:torch}
 A torch burns for 1 hour, shedding lighting on
@@ -185,15 +238,17 @@ A vial is made out of glass and holds 1 ounce of liquid.
 \begin{multicols}{2}
 \begin{table}[H]
 \begin{GenesysTable}{Alchemical Items}{alchemical-items}{ =X +l +l +l}
-Name                              & Encum & Price & Rarity \\
-\nameref{alcitm:acid}             & 0     & 50    & 2      \\
-\nameref{alcitm:alchemistsfire}   & 0     & 100   & 2      \\
-\nameref{alcitm:antitoxin}        & 0     & 250   & 3      \\
-\nameref{alcitm:healingpoultrice} & 0     & 10    & 2      \\
-\nameref{alcitm:smokestick}       & 0     & 100   & 2      \\
-\nameref{alcitm:tanglefootbag}    & 1     & 250   & 3      \\
-\nameref{alcitm:thunderstone}     & 0     & 150   & 3      \\
-\nameref{alcitm:tindertwig}       & 0     & 5     & 0      \\
+Name                               & Encum & Price & Rarity \\
+\nameref{alcitm:acid}              & 0     & 50    & 2      \\
+\nameref{alcitm:alchemistsfire}    & 0     & 100   & 2      \\
+\nameref{alcitm:amanita-powder}    & 0     & 500   & 7      \\
+\nameref{alcitm:antitoxin}         & 0     & 250   & 3      \\
+\nameref{alcitm:healingpoultrice}  & 0     & 10    & 2      \\
+\nameref{alcitm:painkilling-spice} & 0     & 80    & 1      \\
+\nameref{alcitm:smokestick}        & 0     & 100   & 2      \\
+\nameref{alcitm:tanglefootbag}     & 1     & 250   & 3      \\
+\nameref{alcitm:thunderstone}      & 0     & 150   & 3      \\
+\nameref{alcitm:tindertwig}        & 0     & 5     & 0      \\
 \end{GenesysTable}
 \end{table}
 
@@ -210,6 +265,20 @@ with an Ranged light or Alchemy combat check with
 a base damage of 6 fire damage, with a range of short,
 and \iqtyref{blast} 3, \iqtyref{burn} 2.
 
+\paragraph{Amanita Powder} \label{alcitm:amanita-powder}
+Ground to dust from certain mushrooms grown in caves, this
+powder can make one resistant to being tired. However, it
+is extremely addictive and builds dependence immediately.
+
+Taken once every 24 hours allows one to not suffer the
+penalties from lacking sleep. May remove strain as if
+having slept, every 8 hours spent outside an engagement
+(combat, intense study or argument). Going without a
+dose for longer than 24 hours makes the user extremely
+sleepy.
+
+Purple stains appear on the site of application.
+
 \paragraph{Antitoxin} \label{alcitm:antitoxin}
 If you drink a vial of antitoxin, you get an upgrade on
 your Resilience check against poison for 1 hour.
@@ -220,6 +289,18 @@ medicated, that is spread on cloth over the skin to treat an
 aching, inflamed or painful part of the body. It can be used
 on wounds such as cuts. It is a one-use item and provide a \boost
 to medicine checks to treat cuts, bruises and minor ailments.
+
+\paragraph{Painkilling Spice} \label{alcitm:painkilling-spice}
+This is a powerful substitute for medical painkillers,
+however, is toxic enough that the buildup may slow down
+the individual's reflexes. It also especially affects those
+with psionic abilities, suppressing their abilities.
+
+When consumed, it allows non-psionics to remove 3 setback
+dice imposed by pain or illness for 12 hours. It adds a
+\threat result on all checks for 24 hours. Psionics
+suffer the effects for twice as long and count their Psionics
+rating as 1 lower.
 
 \paragraph{Smokestick} \label{alcitm:smokestick}
 This alchemically treated wooden stick instantly creates
@@ -273,15 +354,15 @@ lighting any other fire with one is a maneuver.
 \begin{table}[H]
 \begin{GenesysTable}{Poisons}{poisons}{ =X +l +l}
 Name                                & Price & Rarity \\
-\nameref{poison:anesthetic}         &  375  & 5      \\
-\nameref{poison:befuddle}           &  230  & 6      \\
-\nameref{poison:blinding}           &  400  & 8      \\
-\nameref{poison:blossomkiller}      &   75  & 6      \\
-\nameref{poison:weakness}           &  450  & 8      \\
-\nameref{poison:suggestion}         & 1000  & 9      \\
-\nameref{poison:paralysis}          &  260  & 6      \\
-\nameref{poison:dendriton}          &  150  & 4      \\
-\nameref{poison:raquor}             &  150  & 4      \\
+\nameref{poison:anesthetic}         & (R)  375  & 5      \\
+\nameref{poison:befuddle}           & (R)  230  & 6      \\
+\nameref{poison:blinding}           & (R)  400  & 8      \\
+\nameref{poison:blossomkiller}      & (R)   75  & 6      \\
+\nameref{poison:weakness}           & (R)  450  & 8      \\
+\nameref{poison:suggestion}         & (R) 1000  & 9      \\
+\nameref{poison:paralysis}          & (R)  260  & 6      \\
+\nameref{poison:dendriton}          & (R)  150  & 4      \\
+\nameref{poison:raquor}             & (R)  150  & 4      \\
 \end{GenesysTable}
 \end{table}
 
@@ -398,6 +479,21 @@ The poison Staggers the target for 2 rounds if the target fails the check. in
 addition, each \threat generated inflicts 2 strain on the target (ignoring soak),
 and the GM may spend \despair to Immobilize the target for 2 rounds.
 
+%\paragraph{Bearsloth Venom} \label{poison:bearsloth}
+%Extracted from the fearsome Bearsloths of Arbooine, this venom
+%is known for its lingering properties in the system of the afflicted.
+%
+%It is bought in single doses;
+%Price 	Encum 	Rarity
+%150 	0 	3 (Arbooine Only)
+%
+%The poison may be administered by injection (bite or scratches too).
+%
+%The target must make a daunting (\difficulty\difficulty\difficulty\difficulty) resilience
+%check. If failed, they receive the "Wracking Venom"
+%critical injury (hard [\difficulty\difficulty\difficulty] to heal). Whenever
+%the individual would suffer 1 or more wounds or strain; suffer +2.
+
 \end{multicols}
 \hrulefill
 
@@ -411,9 +507,9 @@ Name                             & Encum & Price & Rarity \\
 \nameref{kititm:alchemistslab}   & 5     & 50    & 6      \\
 \nameref{kititm:artisanstools}   & 4     & 150   & 0      \\
 \nameref{kititm:climberskit}     & 1     & 50    & 2      \\
-\nameref{kititm:disguisekit}     & 2     & 100   & 4      \\
+\nameref{kititm:disguisekit}     & 2     & (R) 100   & 4      \\
 \nameref{kititm:healerskit}      & 1     & 100   & 2      \\
-\nameref{kititm:thievestools}    & 0     & 100   & 7      \\
+\nameref{kititm:thievestools}    & 0     & (R) 100   & 7      \\
 \end{GenesysTable}
 \end{table}
 
@@ -448,18 +544,3 @@ use improvised tools, and you take a \setback on Skulduggery
 checks, with these tools you get a \boost to a lock or a latch.
 
 \end{multicols}
-
-\subsection{Survival Ratings}\label{chap:equipment:survival}
-
-See \chapterref{rules:survival} for information regarding Survival Ratings.
-
-\begin{table}[H]
-\begin{GenesysTable}{Survival Rating}{survival-rating}{ =l +c +c +c}
-Journey Length & Encumbrance & Cost   & Rating\\
-Short          &     1       &  20cp  &   1\\
-Medium         &     2       &  40cp  &   2\\
-Long           &     4       & 100cp  &   4\\
-Very Long      &     8       & 200cp  &   8\\
-\end{GenesysTable}
-\end{table}
-
