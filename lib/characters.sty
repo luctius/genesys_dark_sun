@@ -266,9 +266,9 @@
         \end{minipage}
     \end{minipage}
 
-    \ifthenelse{ \equal{\creatureSummon}{None} } {}{
-        \noindent \textbf{Summon:} true \\
-    }
+    \ifthenelse{ \equal{\creatureSummon}{true} } {
+        \noindent \textbf{Summon:} Allowed\\
+    }{}
     \noindent \textbf{Skills (group only):} #3 \\ %\creatureSkills\\
     \noindent \textbf{Talents:} #4 \\ %\creatureTalents\\
     \noindent \textbf{Abilities:} #5 \\ %#3\\
