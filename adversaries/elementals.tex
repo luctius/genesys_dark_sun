@@ -1,62 +1,48 @@
 \subsection{Elementals}
 
-\Creature[name=Minor Earth Elemental, type=Rival, image=images/elemental_earth.png, summon=true, brawn=3, agility=2, presence=0, soak=4, wounds=14, meleedef=0, rangeddef=0, magicdef=1, psionicdef=0]{
+\Creature[name=Elemental Sprite, type=Minion, image=images/elemental_earth.png, summon=true, brawn=2, agility=2, intellect=1, cunning=1, willpower=1, presence=1, soak=2, wounds=5, meleedef=1, rangeddef=1, magicdef=1, psionicdef=0]{
 } {
     % skill
-    Brawl 3, Perception 2, Resilience 2, Vigilance 2
+    Brawl, Vigilance, Resistance
 }{
     % talents
-    None
+    \textbf{- Amorphous:} As an incidental, a Elemental Sprite may
+        increase or decrease its silhouette by 1\\
 }{
     \\ % ability
-    \textbf{- Rock Solid:} An Earth Elemental is Immune to \iqtyref{knockdown}\\
+    \textbf{- Inconspicuous:} A Elemental Sprite in a natural
+        environment appears indistinguishable from an ordinary
+        example of its element; a character can make a Hard
+        [\difficulty\difficulty\difficulty] Perception or
+        Vigilance check to identify a Elemental Sprite.\\
 }{
     \\ % equipment
-    \textbf{- Crushing Fist:} Brawl; Damage: 6; Critical: 3; Range [Engaged]; \iqtyref{knockdown}, Empowered:\iqtyref{concussive} 1\\
+    \textbf{- Pseudopods:} Brawl; Damage 6; Critical 3; Range[Engaged]; \iqtyref{burn} 1 [flame only], \iqtyref{ensnare} 1 [water only], \iqtyref{disorient} 1 [air only], \iqtyref{knockdown} 1 [earth only], \iqtyref{linked} 1)
 }
 
-\Creature[name=Minor Air Elemental, type=Rival, image=images/elemental_air.png, summon=true, brawn=2, agility=3, presence=0, soak=4, wounds=12, meleedef=1, rangeddef=1, magicdef=1, psionicdef=0]{
+\Creature[name=Elemental Ancient, type=Nemesis, image=images/elemental_fire_ancient.png, summon=true, brawn=4, agility=4, intellect=2, cunning=2, willpower=2, presence=2, soak=6, wounds=28, strain=18, meleedef=4, rangeddef=4, magicdef=4, psionicdef=0]{
 } {
     % skill
-    Brawl 3, Perception 2, Resilience 2, Vigilance 2
+    Brawl 3, Cool 2, Vigilance 3, Stealth 2, Survival 2\\
 }{
     % talents
-    None
+    \textbf{- Amorphous:} As an incidental, a Elemental Sprite may
+        increase or decrease its silhouette by 1\\
+    \textbf{- Silhouette 3}\\
 }{
     \\ % ability
-    \textbf{- Flighty:} An Air Elemental is Immune to Immobilize\\
-    \textbf{- Light as the Wind:} Flying (Hovering)\\
+    \textbf{- Inconspicuous:} A Elemental Ancient in a natural
+        environment appears indistinguishable from an ordinary
+        example of its element; a character can make a Hard
+        [\difficulty\difficulty\difficulty] Perception or
+        Vigilance check to identify a Elemental Sprite.
+    \textbf{- Engulf:} May make an opposed Brawl check to engulf
+        an engaged target. If the check is successful, engulf
+        characters are immobilized and suffer 6 damage at the
+        start of each round but can escape if the elemental is
+        killed or by making a successful Hard [\difficulty\difficulty\difficulty]
+        Athletics check.
 }{
     \\ % equipment
-    \textbf{- Lightning Strike:} Ranged; Damage: 6; Critical: 3; Range [Short]; \iqtyref{disorient} 1, \iqtyref{stun} 1, Empowered:\iqtyref{disorient} 2, \iqtyref{stun} 4\\
-}
-
-\Creature[name=Minor Fire Elemental, type=Rival, image=images/elemental_fire.png, summon=true, brawn=2, agility=2, presence=0, soak=4, wounds=12, meleedef=0, rangeddef=0, magicdef=1, psionicdef=0]{
-} {
-    % skill
-    Brawl 3, Perception 2, Resilience 2, Vigilance 2
-}{
-    % talents
-    None
-}{
-    \\ % ability
-    \textbf{- Burning:} An Fire Elemental is Immune to Fire damage\\
-}{
-    \\ % equipment
-    \textbf{- Fire Blast:} (Melee; Damage: 7; Critical: 3; Range [Engaged]; \iqtyref{burn} 1, Empowered:\iqtyref{blast} 4\\
-}
-
-\Creature[name=Minor Water Elemental, type=Rival, image=images/elemental_water.png, summon=true, brawn=2, agility=2, presence=0, soak=5, wounds=12, meleedef=1, rangeddef=1, magicdef=1, psionicdef=0]{
-} {
-    % skill
-    Brawl 3, Perception 2, Resilience 2, Vigilance 2
-}{
-    % talents
-    None
-}{
-    \\ % ability
-    \textbf{- Wet:} An Water Elemental is Immune to Immobilize.\\
-}{
-    \\ % equipment
-    \textbf{- Fire Blast:} Melee; Damage: 7; Critical: 3; Range [Engaged]; \iqtyref{ensnare} 2, Empowered:\iqtyref{disorient} 2, \iqtyref{ensnare} 4\\
+    \textbf{- Pseudopods:} Brawl; Damage 9; Critical 3; Range[Engaged]; \iqtyref{burn} 2 [flame only], \iqtyref{ensnare} 2 [water only], \iqtyref{disorient} 3 [air only], \iqtyref{knockdown} 3 [earth only], \iqtyref{linked} 1)
 }
